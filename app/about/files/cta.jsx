@@ -9,7 +9,7 @@ const CtaSection = () => {
                     </div>
                     <div className="lg:h-full flex flex-col items-center text-center justify-center space-y-8 mx-auto max-w-5xl">
                     <h1 className="font-bold text-gray-900 dark:text-white text-4xl uppercase">
-    Join over <span className="text-transparent bg-clip-text bg-gradient-to-bl from-orange-600 to-orange-400 dark:from-blue-300 dark:to-violet-400">Thousand's</span> of successful clients
+    Join over <span className="text-transparent bg-clip-text bg-gradient-to-bl from-orange-600 to-orange-400 dark:from-blue-300 dark:to-violet-400">Thousand&apos;s</span> of successful clients
 </h1>
 <p className="text-gray-700 dark:text-gray-300 text-center max-w-xl">
     Our expert team is dedicated to helping you navigate the UK visa and immigration process smoothly, ensuring a hassle-free experience every step of the way.

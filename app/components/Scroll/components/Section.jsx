@@ -1,19 +1,19 @@
 import Image from 'next/image';
 import Background from '../../../../public/banner-2.png';
-import country1 from '../../../../public/c1.png';
-import country2 from '../../../../public/c2.png';
-import country3 from '../../../../public/c3.png';
-import country4 from '../../../../public/c4.png';
-import country5 from '../../../../public/c5.png';
-import country6 from '../../../../public/c6.png';
-import country7 from '../../../../public/c7.png';
-import country8 from '../../../../public/c8.png';
-import country9 from '../../../../public/c9.png';
-import country10 from '../../../../public/c10.png';
-import country11 from '../../../../public/c11.png';
-import country12 from '../../../../public/c12.png';
-import country13 from '../../../../public/c13.png';
-import country14 from '../../../../public/c14.png';
+// import country1 from '../../../../public/c1.png';
+// import country2 from '../../../../public/c2.png';
+// import country3 from '../../../../public/c3.png';
+// import country4 from '../../../../public/c4.png';
+// import country5 from '../../../../public/c5.png';
+// import country6 from '../../../../public/c6.png';
+// import country7 from '../../../../public/c7.png';
+// import country8 from '../../../../public/c8.png';
+// import country9 from '../../../../public/c9.png';
+// import country10 from '../../../../public/c10.png';
+// import country11 from '../../../../public/c11.png';
+// import country12 from '../../../../public/c12.png';
+// import country13 from '../../../../public/c13.png';
+// import country14 from '../../../../public/c14.png';
 import { useScroll, useTransform, motion } from 'framer-motion';
 import { useRef } from 'react';
 
@@ -26,10 +26,10 @@ export default function Section() {
     const y = useTransform(scrollYProgress, [0, 1], ["-10%", "10%"]);
 
     // Array of 14 image URLs
-    const images = [
-        country1, country2, country3, country4, country5, country6, country7,
-        country8, country9, country10, country11, country12, country13, country14,
-    ];
+    // const images = [
+    //     country1, country2, country3, country4, country5, country6, country7,
+    //     country8, country9, country10, country11, country12, country13, country14,
+    // ];
 
     return (
         <div
