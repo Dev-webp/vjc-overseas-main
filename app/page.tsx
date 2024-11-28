@@ -4,7 +4,6 @@ import React, { useEffect, Suspense } from "react";
 import dynamic from "next/dynamic"; 
 import Hero from "@/app/components/Hero";
 import Footer from "@/app/components/Footer";
-import Motion from "@/app/components/motion/motion";
 
 // Dynamic Imports
 const ScrollPer = dynamic(() => import('@/app/components/ScrollPer/index'));

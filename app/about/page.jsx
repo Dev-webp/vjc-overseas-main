@@ -6,7 +6,6 @@ import Three from "@/app/about/files/three";
 import Four from "@/app/about/files/four";
 import Price from "@/app/components/Price";
 import Footer from "@/app/about/files/Footer";
-import Scroll from "@/app/about/files/scrollable";
 
 const page = () => {
   return (

@@ -1,10 +1,10 @@
 import Image from 'next/image'
-import { FaCommentDots, FaClipboardCheck, FaFileAlt, FaPaperPlane, FaMicrophone, FaPlaneDeparture, FaArrowRight, FaHeadset } from 'react-icons/fa';
+import { FaClipboardCheck, FaFileAlt, FaPaperPlane, FaMicrophone, FaPlaneDeparture, FaHeadset } from 'react-icons/fa';
 import { useState } from 'react';
 import { MdOutlineDoubleArrow } from "react-icons/md";
 import { MdKeyboardDoubleArrowLeft } from "react-icons/md";
 
-export default function compFour() {
+export default function CompFour() {
     // State to hold the current image based on the selected service
     const [selectedImage, setSelectedImage] = useState('/default-image.jpg');
     const [selectedService, setSelectedService] = useState(null);
@@ -123,18 +123,18 @@ export default function compFour() {
                             </div>
                             <div
                                 className={`flex items-start gap-x-2 p-2 md:p-3 lg:p-4 bg-orange-50 dark:bg-gray-900 border border-gray-100/80 dark:border-gray-900/80 rounded-lg min-h-[120px] ${selectedService === 6 ? 'relative' : ''}`}
-                                onClick={() => handleImageChange('/26.jpg', 6)}
+                                onClick={() => handleImageChange('/21.webp', 6)}
                             >
                                 {selectedService === 6 && (
-                                    <MdKeyboardDoubleArrowLeft  className="absolute left-2 mt-10 top-1/2 transform -translate-y-1/2 text-orange-500 w-6 h-6" />
+                                    <MdKeyboardDoubleArrowLeft  className="absolute left-2 mt-12 top-1/2 transform -translate-y-1/2 text-orange-500 w-6 h-6" />
                                 )}
                                 <span className="min-w-max text-orange-500 p-2 md:p-3 rounded-lg bg-gray-100 dark:bg-gray-800 border border-gray-100/70 dark:border-gray-900/70 dark:text-gray-200">
                                     <FaPlaneDeparture className="w-6 h-6" />
                                 </span>
                                 <div>
-                                    <span className="font-semibold text-gray-800 dark:text-gray-200 text-lg">6. Travel Assistance</span>
+                                    <span className="font-semibold text-gray-800 dark:text-gray-200 text-lg">6. Visa Approval & Departure</span>
                                     <p className="text-gray-700 dark:text-gray-300 text-justify">
-                                        We provide travel assistance and ensure that your journey is as smooth as possible.
+                                        Once the visa is approved, we help you prepare for your journey abroad.
                                     </p>
                                 </div>
                             </div>

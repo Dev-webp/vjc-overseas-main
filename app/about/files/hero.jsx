@@ -6,27 +6,27 @@ import { containerVariants, titleVariants, desVariants  } from "../../animation"
 import Nav from "@/app/components/Nav";
 import Form from "@/app/components/Form";
 
-const fadeInVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 0.8,
-        ease: "easeOut",
-      },
-    },
-    bgFade: {
-      hidden: { opacity: 0 },
-      visible: {
-        opacity: 1,
-        transition: {
-          duration: 1.2, // Adjust the duration for smoothness
-          ease: "easeInOut",
-        },
-      },
-    },
-  };
+// const fadeInVariants = {
+//     hidden: { opacity: 0, y: 20 },
+//     visible: {
+//       opacity: 1,
+//       y: 0,
+//       transition: {
+//         duration: 0.8,
+//         ease: "easeOut",
+//       },
+//     },
+//     bgFade: {
+//       hidden: { opacity: 0 },
+//       visible: {
+//         opacity: 1,
+//         transition: {
+//           duration: 1.2,
+//           ease: "easeInOut",
+//         },
+//       },
+//     },
+//   };
   
 const CompOne = () => {
   return (

@@ -1,6 +1,6 @@
 "use client"
 import Link from 'next/link';
-import React, { useState } from 'react';
+import React from 'react';
 import { motion } from "framer-motion";
 import { containerVariants, desVariants } from "../animation";  // titleVariants
 import Form from "@/app/components/Form";

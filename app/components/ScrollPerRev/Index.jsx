@@ -2,8 +2,7 @@
 import { useScroll, useTransform, motion } from "framer-motion";
 import { useEffect, useRef } from "react";
 import Lenis from 'lenis';
-import './page.css'; // Import the CSS file
-import Services from "@/app/components/Services";
+import './page.css'; 
 import Swap from "../Swap";
 import Steps from "@/app/components/Steps";
 
