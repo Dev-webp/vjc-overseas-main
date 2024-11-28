@@ -67,7 +67,7 @@ const Column = ({ y }) => {
           With our assistance, over 5,000 clients have successfully achieved their dream of studying or working abroad.
         </p>
         <div className={styles.stars}>★★★★★</div> {/* Add star ratings */}
-        <p className={styles.name}>- Nandhini</p>
+        <p className={styles.name}>- Roopak Mittal</p>
       </div>
 
       <div className={styles.gridItem}>
@@ -75,7 +75,7 @@ const Column = ({ y }) => {
           Thanks to VJC Overseas, I secured my student visa within weeks. The process was seamless, and their guidance was invaluable.
         </p>
         <div className={styles.stars}>★★★★☆</div> {/* Add star ratings */}
-        <p className={styles.name}>- Abbas ahmed</p>
+        <p className={styles.name}>- Naresh</p>
       </div>
 
       <div className={styles.gridItem}>
@@ -83,15 +83,22 @@ const Column = ({ y }) => {
           From consultation to visa approval, VJC Overseas made my family&apos;s immigration journey stress-free. Highly recommended.
         </p>
         <div className={styles.stars}>★★★★★</div> {/* Add star ratings */}
-        <p className={styles.name}>- Sridhar</p>
+        <p className={styles.name}>- Thalari Anil Kumar</p>
       </div>
 
       <div className={styles.gridItem}>
         <p className={styles.text}>
-          Our team has helped over 3,000 professionals relocate globally with the right work permits and immigration support.
+        Working with this team made my international relocation effortless. Their thorough knowledge of work permits and immigration processes gave me the confidence.
         </p>
         <div className={styles.stars}>★★★★☆</div> {/* Add star ratings */}
-        <p className={styles.name}>- Varshini</p>
+        <p className={styles.name}>- Sulesh</p>
+      </div>
+      <div className={styles.gridItem}>
+        <p className={styles.text}>
+        Thanks to their expert guidance, I was able to secure the right work permit and relocate smoothly, all while receiving excellent immigration support throughout the process.
+        </p>
+        <div className={styles.stars}>★★★★☆</div> {/* Add star ratings */}
+        <p className={styles.name}>- Banusree</p>
       </div>
     </motion.div>
   );

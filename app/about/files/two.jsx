@@ -81,7 +81,7 @@ const features = [
  
 const Features = () => {
 return (
-    <section className="py-8 relative">
+    <section className="py-12 relative">
         {/* Background image using Next.js Image */}
       <div className="absolute inset-0 -z-10">
         <Image

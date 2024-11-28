@@ -1,18 +1,120 @@
-"use client"
-import React, { useState } from 'react';
-import Image from 'next/image';
-import Link from "next/link";
+import React from "react";
+import Link from "next/link"; // Assuming you're using Next.js for routing
 
 const Navbar = () => {
-    const [navIsOpened, setNavIsOpened] = useState(false);
+  const menuItems = [
+    { name: "Home", path: "/" },
+    { name: "Assessment", path: "/about" },
+    { name: "Study Abroad", path: "/study-abroad" },
+    { name: "Work Abroad", path: "/work-abroad" },
+    { name: "Investor Visas", path: "/investor-visas" },
+    { name: "Visit Visas", path: "/visit-visas" },
+    { name: "Services", path: "/services" },
+    { name: "Coaching/Training", path: "/coaching-training" },
+    { name: "Countries Visas", path: "/countries-visas" },
+  ];
 
-    const toggleNavbar = () => {
-        setNavIsOpened(prevState => !prevState);
-    };
+  return (
+    <header>
+    {/* White background section with logo, contact information, and marquee */}
+    <div className="bg-white py-0 px-4 shadow-md z-50 fixed top-0 w-full">
+      <div className="flex justify-between items-center max-w-7xl mx-auto">
+        {/* Logo */}
+        <div className="flex items-center space-x-0">
+          <Link href="/" className="text-lg font-bold">
+            <img src="/logo-1.webp" alt="Logo" className="h-14" /> {/* First logo */}
+          </Link>
+          <Link href="/" className="text-lg font-bold">
+            <img src="/logo-2.webp" alt="Logo" className="h-14" /> {/* Second logo */}
+          </Link>
+        </div>
 
-    return (
-        <header className="sticky left-0 top-0 w-full flex items-center h-16 border-b border-b-gray-100 dark:border-b-gray-900 z-40 bg-white dark:bg-gray-950 bg-opacity-80 backdrop-filter backdrop-blur-xl">
-            <nav className="relative mx-auto lg:max-w-7xl w-full px-5 sm:px-10 md:px-12 lg:px-5 flex gap-x-5 justify-between items-center">
+        <div className="flex items-center ml-4">
+            <img src="/promote.gif" alt="News" className="h-6 w-6" /> {/* News Icon */}
+          </div>
+        {/* Marquee Section placed between Logo and Location */}
+        <div className="marquee-container flex-1 mx-4">
+          <p className="whitespace-nowrap animate-marquee uppercase text-sm text-gray-800">
+            Your Study and Work Abroad Opportunities Await! Explore the world with us. Learn more about visa programs and opportunities today!
+          </p>
+        </div>
+  
+        {/* Contact Info and Locations */}
+        <div className="flex items-center space-x-8">
+          {/* Location Info */}
+          <div className="flex items-center space-x-6 text-sm text-black uppercase font-semibold italic">
+            <div className="flex items-center animate-pulse text-orange-500">
+              <img src="/loc.png" alt="Bangalore" className="mr-1 w-5 h-5" />
+              <p>Bangalore</p>
+            </div>
+            <div className="flex items-center animate-pulse text-orange-500">
+              <img src="/loc.png" alt="Hyderabad" className="mr-1 w-5 h-5" />
+              <p>Hyderabad</p>
+            </div>
+            <div className="flex items-center animate-pulse text-orange-500">
+              <img src="/loc.png" alt="USA" className="mr-1 w-5 h-5" />
+              <p>USA</p>
+            </div>
+          </div>
+  
+        {/* Phone Number with Icon */}
+<div>
+  <a
+    href="tel:+919160449000"
+    className="flex items-center text-white py-1 px-4 rounded-lg text-sm font-bold uppercase"
+  >
+    {/* Phone Icon */}
+    <img src="/phone.gif" alt="Phone" className="h-6 w-6 mr-1" />
+    {/* Phone Number */}
+    <span className="text-orange-500">+91 9160449000</span>
+  </a>
+</div>
+
+        </div>
+      </div>
+    </div>
+  
+    {/* Orange background section with navigation items */}
+    <div className="bg-orange-500 fixed top-12 w-full z-50">
+      <nav className="flex justify-center items-center py-2">
+        {menuItems.map((item, index) => (
+          <React.Fragment key={item.name}>
+            <Link
+              href={item.path}
+              className="text-white text-sm lg:text-sm font-semibold px-4 hover:bg-white hover:bg-opacity-20 uppercase"
+            >
+              {item.name}
+            </Link>
+            {index < menuItems.length - 1 && (
+              <span className="text-white hidden lg:inline-block">|</span>
+            )}
+          </React.Fragment>
+        ))}
+      </nav>
+    </div>
+  
+    {/* Add margin to ensure content below is not hidden */}
+    <div className="mt-0"></div> {/* Adjust the margin if necessary */}
+  </header>
+  
+  
+  );
+};
+
+export default Navbar;
+
+
+
+
+
+
+
+
+{/* <header className="sticky left-0 top-0 w-full flex items-center h-16 border-b border-b-gray-100 dark:border-b-gray-900 z-40 bg-white dark:bg-gray-950 bg-opacity-80 backdrop-filter backdrop-blur-xl">
+            
+            </header> */}
+
+{/* <nav className="relative mx-auto lg:max-w-7xl w-full px-5 sm:px-10 md:px-12 lg:px-5 flex gap-x-5 justify-between items-center">
                 <div className="flex items-center min-w-max">
                     <Link href="#" className="text-xl font-semibold flex items-center gap-x-2">
                         <span className="flex">
@@ -41,7 +143,7 @@ const Navbar = () => {
                             <Link href="/" className="relative py-2.5 duration-300 ease-linear hover:text-orange-500 after:absolute after:w-full after:left-0 after:bottom-0 after:h-px after:rounded-md after:origin-left after:ease-linear after:duration-300 after:scale-x-0 hover:after:scale-100 after:bg-orange-500">Home</Link>
                         </li>
                         <li>
-                            <Link href="/aboutus" className="relative py-2.5 duration-300 ease-linear hover:text-orange-500 after:absolute after:w-full after:left-0 after:bottom-0 after:h-px after:rounded-md after:origin-left after:ease-linear after:duration-300 after:scale-x-0 hover:after:scale-100 after:bg-orange-500">About</Link>
+                            <Link href="/about" className="relative py-2.5 duration-300 ease-linear hover:text-orange-500 after:absolute after:w-full after:left-0 after:bottom-0 after:h-px after:rounded-md after:origin-left after:ease-linear after:duration-300 after:scale-x-0 hover:after:scale-100 after:bg-orange-500">About</Link>
                         </li>
                         <li>
                             <Link href="/" className="relative py-2.5 duration-300 ease-linear hover:text-orange-500 after:absolute after:w-full after:left-0 after:bottom-0 after:h-px after:rounded-md after:origin-left after:ease-linear after:duration-300 after:scale-x-0 hover:after:scale-100 after:bg-orange-500">Migrate</Link>
@@ -74,9 +176,10 @@ const Navbar = () => {
                         <span aria-hidden={true} className={`mt-2 flex h-0.5 w-6 rounded bg-gray-800 dark:bg-gray-300 transition duration-300 ${navIsOpened ? "-rotate-45 -translate-y-[.324rem]" : ""}`} />
                     </button>
                 </div>
-            </nav>
-        </header>
-    );
-}
+            </nav> */}
 
-export default Navbar;
+    //         const [navIsOpened, setNavIsOpened] = useState(false);
+
+    // const toggleNavbar = () => {
+    //     setNavIsOpened(prevState => !prevState);
+    // };

@@ -5,6 +5,7 @@ import Lenis from 'lenis';
 import './page.css'; // Import the CSS file
 import Services from "@/app/components/Services";
 import Swap from "../Swap";
+import Steps from "@/app/components/Steps";
 
 export default function Home() {
   const container = useRef();
@@ -51,8 +52,8 @@ const Section1 = ({ scrollYProgress }) => {
         </div>
         <p>Transition</p>
       </div> */}
-      
-      <Services/>
+      <Steps/>
+      {/* <Services/> */}
     </motion.div>
   );
 }

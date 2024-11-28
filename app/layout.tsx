@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
-// import FloatingWhatsApp from "@/app/components/FloatingWhatsapp";
+import FloatingWhatsApp from "@/app/components/FloatingWhatsapp";
+import Nav from "@/app/components/Nav";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -43,13 +44,18 @@ export default function RootLayout({
             `,
           }}
         /> */}
+        <link
+          href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+          rel="stylesheet"
+        />
       </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        style={{ fontFamily: '"PT Serif", serif' }}
       >
+        <Nav/>
         {children}
         {/* WhatsApp Floating Icon */}
-        {/* <FloatingWhatsApp /> */}
+        <FloatingWhatsApp />
       </body>
     </html>
   );

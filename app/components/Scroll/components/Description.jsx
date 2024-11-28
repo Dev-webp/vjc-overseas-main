@@ -40,90 +40,91 @@ export default function Description() {
                 </motion.p>
             </div>
 
-            {/* Boxes with Hover Effects */}
             <div className="relative flex justify-center gap-8 mt-12 mx-auto lg:max-w-[80%]">
-                {/* Box 1 - Australia */}
-                <div className="relative w-60 h-64 bg-white rounded-lg shadow-lg overflow-hidden group hover:translate-y-[-10px] transition-all">
-                    {/* Flag Container */}
-                    <div className="absolute top-4 left-4 p-2 bg-orange-100 rounded-lg group-hover:bg-orange-500 group-hover:text-white transition-all">
-                        <Flag code="AU" className="text-4xl group-hover:text-black" />
-                    </div>
+  {/* Box 1 - Australia */}
+  <div className="relative w-60 h-96 bg-cover bg-center group hover:translate-y-[-10px] transition-all" style={{ backgroundImage: "url('/uk.png')" }}>
+    {/* Content Over the Image */}
+    {/* <div className="absolute top-4 left-4 p-2 bg-orange-100 rounded-lg group-hover:bg-orange-500 group-hover:text-white transition-all">
+     
+    </div> */}
 
-                    {/* Box Content */}
-                    <div className="px-6 py-4 flex flex-col justify-between h-full text-center">
-                        <h3 className="text-2xl font-bold text-black text-center mt-16">Australia</h3>
-                        <p className="text-base text-gray-600 text-center">Know your visa probability and cost to study in Australia</p>
+    {/* Box Content */}
+    <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 px-6 py-4 flex flex-col justify-between text-center">
+      <h3 className="text-2xl font-bold text-black uppercase">Australia</h3>
+      <p className="text-sm text-black">Know your visa probability and cost to study in Australia</p>
 
-                        {/* Small button */}
-                        <button className="mt-4 px-4 py-2 text-sm font-semibold text-white bg-orange-500 rounded-md hover:bg-orange-400 transition duration-200">
-                            Calculate Now
-                        </button>
-                    </div>
+      {/* Small button */}
+      <button className="mt-6 mb-4 px-6 py-2 text-sm font-semibold text-white bg-orange-500 rounded-md hover:bg-orange-400 transition duration-200 uppercase whitespace-nowrap">
+  Calculate Now
+</button>
 
-                    {/* Bottom Line on Hover */}
-                    <div className="absolute bottom-0 left-0 w-full h-1 bg-orange-500 scale-x-0 group-hover:scale-x-100 transition-all"></div>
-                </div>
+    </div>
 
-                {/* Box 2 - Germany */}
-                <div className="relative w-60 h-64 bg-white rounded-lg shadow-lg overflow-hidden group hover:translate-y-[-10px] transition-all">
-                    {/* Flag Container */}
-                    <div className="absolute top-4 left-4 p-2 bg-orange-100 rounded-lg group-hover:bg-orange-500 group-hover:text-white transition-all">
-                        <Flag code="DE" className="text-4xl group-hover:text-white" />
-                    </div>
+    {/* Bottom Line on Hover */}
+    <div className="absolute bottom-0 left-0 w-full h-1 bg-orange-500 scale-x-0 group-hover:scale-x-100 transition-all"></div>
+  </div>
 
-                    {/* Box Content */}
-                    <div className="px-6 py-4 flex flex-col justify-between h-full text-center">
-                        <h3 className="text-2xl font-bold text-black text-center mt-16">Germany</h3>
-                        <p className="text-sm text-gray-600 text-center ">Check your needs and expense for studying in Germany.</p>
-                        <button className="mt-4 px-4 py-2 text-sm font-semibold text-white bg-orange-500 rounded-md hover:bg-orange-400 transition duration-200">
-                            Calculate Now
-                        </button>
-                    </div>
+  {/* Box 2 - Germany */}
+  <div className="relative w-60 h-64 bg-cover bg-center rounded-lg shadow-lg overflow-hidden group hover:translate-y-[-10px] transition-all" style={{ backgroundImage: "url('/path-to-your-image-2.jpg')" }}>
+    {/* Content Over the Image */}
+    <div className="absolute top-4 left-4 p-2 bg-orange-100 rounded-lg group-hover:bg-orange-500 group-hover:text-white transition-all">
+      <Flag code="DE" className="text-4xl group-hover:text-white" />
+    </div>
 
-                    {/* Bottom Line on Hover */}
-                    <div className="absolute bottom-0 left-0 w-full h-1 bg-orange-500 scale-x-0 group-hover:scale-x-100 transition-all"></div>
-                </div>
+    {/* Box Content */}
+    <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 px-6 py-4 flex flex-col justify-between text-center bg-black bg-opacity-50 rounded-lg">
+      <h3 className="text-2xl font-bold text-white">Germany</h3>
+      <p className="text-sm text-white">Check your needs and expense for studying in Germany.</p>
+      <button className="mt-4 px-4 py-2 text-sm font-semibold text-white bg-orange-500 rounded-md hover:bg-orange-400 transition duration-200">
+        Calculate Now
+      </button>
+    </div>
 
-                {/* Box 3 - Canada */}
-                <div className="relative w-60 h-64 bg-white rounded-lg shadow-lg overflow-hidden group hover:translate-y-[-10px] transition-all">
-                    {/* Flag Container */}
-                    <div className="absolute top-4 left-4 p-2 bg-orange-100 rounded-lg group-hover:bg-orange-500 group-hover:text-white transition-all">
-                        <Flag code="CA" className="text-4xl group-hover:text-white" />
-                    </div>
+    {/* Bottom Line on Hover */}
+    <div className="absolute bottom-0 left-0 w-full h-1 bg-orange-500 scale-x-0 group-hover:scale-x-100 transition-all"></div>
+  </div>
 
-                    {/* Box Content */}
-                    <div className="px-6 py-4 flex flex-col justify-between h-full text-center">
-                        <h3 className="text-2xl font-bold text-black text-center mt-16">Canada</h3>
-                        <p className="text-sm text-gray-600 text-center">Check your possibilities and planning of expenses to study in Canada</p>
-                        <button className="mt-4 px-4 py-2 text-sm font-semibold text-white bg-orange-500 rounded-md hover:bg-orange-400 transition duration-200">
-                            Calculate Now
-                        </button>
-                    </div>
+  {/* Box 3 - Canada */}
+  <div className="relative w-60 h-64 bg-cover bg-center rounded-lg shadow-lg overflow-hidden group hover:translate-y-[-10px] transition-all" style={{ backgroundImage: "url('/path-to-your-image-3.jpg')" }}>
+    {/* Content Over the Image */}
+    <div className="absolute top-4 left-4 p-2 bg-orange-100 rounded-lg group-hover:bg-orange-500 group-hover:text-white transition-all">
+      <Flag code="CA" className="text-4xl group-hover:text-white" />
+    </div>
 
-                    {/* Bottom Line on Hover */}
-                    <div className="absolute bottom-0 left-0 w-full h-1 bg-orange-500 scale-x-0 group-hover:scale-x-100 transition-all"></div>
-                </div>
+    {/* Box Content */}
+    <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 px-6 py-4 flex flex-col justify-between text-center bg-black bg-opacity-50 rounded-lg">
+      <h3 className="text-2xl font-bold text-white">Canada</h3>
+      <p className="text-sm text-white">Check your possibilities and planning of expenses to study in Canada</p>
+      <button className="mt-4 px-4 py-2 text-sm font-semibold text-white bg-orange-500 rounded-md hover:bg-orange-400 transition duration-200">
+        Calculate Now
+      </button>
+    </div>
 
-                {/* Box 4 - UK */}
-                <div className="relative w-60 h-64 bg-white rounded-lg shadow-lg overflow-hidden group hover:translate-y-[-10px] transition-all">
-                    {/* Flag Container */}
-                    <div className="absolute top-4 left-4 p-2 bg-orange-100 rounded-lg group-hover:bg-orange-500 group-hover:text-white transition-all">
-                        <Flag code="GB" className="text-4xl group-hover:text-white" />
-                    </div>
+    {/* Bottom Line on Hover */}
+    <div className="absolute bottom-0 left-0 w-full h-1 bg-orange-500 scale-x-0 group-hover:scale-x-100 transition-all"></div>
+  </div>
 
-                    {/* Box Content */}
-                    <div className="px-6 py-4 flex flex-col justify-between h-full text-center">
-                        <h3 className="text-2xl font-bold text-black text-center mt-16">UK</h3>
-                        <p className="text-sm text-gray-600 text-center">Know your chances and estimated expenses to study in UK.</p>
-                        <button className="mt-4 px-4 py-2 text-sm font-semibold text-white bg-orange-500 rounded-md hover:bg-orange-400 transition duration-200">
-                            Calculate Now
-                        </button>
-                    </div>
+  {/* Box 4 - UK */}
+  <div className="relative w-60 h-64 bg-cover bg-center rounded-lg shadow-lg overflow-hidden group hover:translate-y-[-10px] transition-all" style={{ backgroundImage: "url('/path-to-your-image-4.jpg')" }}>
+    {/* Content Over the Image */}
+    <div className="absolute top-4 left-4 p-2 bg-orange-100 rounded-lg group-hover:bg-orange-500 group-hover:text-white transition-all">
+      <Flag code="GB" className="text-4xl group-hover:text-white" />
+    </div>
 
-                    {/* Bottom Line on Hover */}
-                    <div className="absolute bottom-0 left-0 w-full h-1 bg-orange-500 scale-x-0 group-hover:scale-x-100 transition-all"></div>
-                </div>
-            </div>
+    {/* Box Content */}
+    <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 px-6 py-4 flex flex-col justify-between text-center bg-black bg-opacity-50 rounded-lg">
+      <h3 className="text-2xl font-bold text-white">UK</h3>
+      <p className="text-sm text-white">Know your chances and estimated expenses to study in UK.</p>
+      <button className="mt-4 px-4 py-2 text-sm font-semibold text-white bg-orange-500 rounded-md hover:bg-orange-400 transition duration-200">
+        Calculate Now
+      </button>
+    </div>
+
+    {/* Bottom Line on Hover */}
+    <div className="absolute bottom-0 left-0 w-full h-1 bg-orange-500 scale-x-0 group-hover:scale-x-100 transition-all"></div>
+  </div>
+</div>
+
 
             {/* Decorative Elements */}
             <motion.div
