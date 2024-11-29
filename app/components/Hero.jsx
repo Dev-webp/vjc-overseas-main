@@ -20,7 +20,7 @@ export default function HeroSection() {
       <motion.div
         className="absolute top-0 left-0 w-full h-full bg-cover bg-center z-0"
         style={{
-          backgroundImage: 'url(/banner-10.webp)',
+          backgroundImage: 'url(/airplane.png)',
         }}
         animate={{
           y: ['0%', '5%'],  
@@ -42,18 +42,18 @@ export default function HeroSection() {
       {/* Left Section (Text) */}
       <motion.div
         variants={containerVariants(0.4)}
-        className="flex flex-col space-y-8 sm:space-y-10 lg:items-center text-center lg:text-left max-w-2xl md:max-w-3xl mx-auto mb-0 lg:mb-0 relative z-10 ml-10 mt-20"
+        className="flex flex-col space-y-8 lg:space-y-6 lg:items-center text-center lg:text-left max-w-2xl md:max-w-3xl mx-auto mb-0 lg:mb-0 relative z-10 ml-10 mt-20"
       >
         <img
             src="/1.gif" // Change to your image path
             alt="Work in Germany"
             className="w-[70rem] h-auto mt-0" // Adjust margin to align with curved text
           />
-          {/* <img
-            src="/award-vjc.png" // Change to your image path
+          <img
+            src="/award.png" // Change to your image path
             alt="Work in Germany"
-            className="w-full h-auto mt-4" // Adjust margin to align with curved text
-          /> */}
+            className="w-[26rem] h-[7rem]" // Adjust margin to align with curved text
+          />
         {/* <motion.h1
           variants={titleVariants}
           className="font-semibold uppercase leading-tight text-center text-teal-950 text-4xl sm:text-5xl lg:text-[3.50rem]"

@@ -1,6 +1,6 @@
 import React, { useRef } from 'react';
 import Image from 'next/image';
-import Background from '../../../../public/banner-2.png';
+import Background from '../../../../public/bg-2.png';
 import { useScroll, useTransform, motion } from 'framer-motion';
 
 export default function Hero() {

@@ -4,7 +4,8 @@ import { useEffect, useRef } from "react";
 import Lenis from 'lenis';
 import './page.css'; // Import the CSS file
 import About from "@/app/components/About";
-import Features from "../Features";
+// import Features from "../Features";
+import ServicesDec from "@/app/seperate/ServicesDec";
 
 export default function Home() {
   const container = useRef();
@@ -44,8 +45,8 @@ const Section1 = ({ scrollYProgress }) => {
       transformOrigin, // Apply transform origin to center the scaling
     }} 
     >
-      
-      <Features/>
+      <ServicesDec/>
+      {/* <Features/> */}
     </motion.div>
   );
 }

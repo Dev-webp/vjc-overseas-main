@@ -1,5 +1,6 @@
 import React from "react";
-import Link from "next/link"; // Assuming you're using Next.js for routing
+import Link from "next/link"; 
+import { FaEnvelope } from 'react-icons/fa';
 
 const Navbar = () => {
   const menuItems = [
@@ -39,38 +40,47 @@ const Navbar = () => {
           </p>
         </div>
   
-        {/* Contact Info and Locations */}
-        <div className="flex items-center space-x-8">
-          {/* Location Info */}
-          <div className="flex items-center space-x-6 text-sm text-black uppercase font-semibold italic">
-            <div className="flex items-center animate-pulse text-orange-500">
-              <img src="/loc.png" alt="Bangalore" className="mr-1 w-5 h-5" />
-              <p>Bangalore</p>
-            </div>
-            <div className="flex items-center animate-pulse text-orange-500">
-              <img src="/loc.png" alt="Hyderabad" className="mr-1 w-5 h-5" />
-              <p>Hyderabad</p>
-            </div>
-            <div className="flex items-center animate-pulse text-orange-500">
-              <img src="/loc.png" alt="USA" className="mr-1 w-5 h-5" />
-              <p>USA</p>
-            </div>
-          </div>
-  
-        {/* Phone Number with Icon */}
-<div>
-  <a
-    href="tel:+919160449000"
-    className="flex items-center text-white py-1 px-4 rounded-lg text-sm font-bold uppercase"
-  >
-    {/* Phone Icon */}
-    <img src="/phone.gif" alt="Phone" className="h-6 w-6 mr-1" />
-    {/* Phone Number */}
-    <span className="text-orange-500">+91 9160449000</span>
+        <div className="flex items-center space-x-4">
+  {/* Location Info */}
+  <div className="flex items-center space-x-2 text-sm text-black uppercase font-semibold italic">
+    <div className="flex items-center animate-pulse text-orange-500">
+      <img src="/loc.png" alt="Bangalore" className="mr-1 w-5 h-5" />
+      <p>Bangalore</p>
+    </div>
+    <div className="flex items-center animate-pulse text-orange-500">
+      <img src="/loc.png" alt="Hyderabad" className="mr-1 w-5 h-5" />
+      <p>Hyderabad</p>
+    </div>
+    <div className="flex items-center animate-pulse text-orange-500">
+      <img src="/loc.png" alt="USA" className="mr-1 w-5 h-5" />
+      <p>USA</p>
+    </div>
+  </div>
+
+  {/* Mail Address with Icon */}
+  <div className="flex items-center space-x-2 text-sm text-black uppercase font-semibold italic">
+  <div className="flex items-center animate-pulse text-orange-500">
+  <a href="mailto:info@vjcoverseas.com" className="flex items-center">
+    <FaEnvelope className="mr-1 w-5 h-5 text-orange-500" />
+    <p>info@vjcoverseas.com</p>
   </a>
 </div>
 
-        </div>
+  </div>
+
+  {/* Phone Number with Icon */}
+  <div>
+    <a
+      href="tel:+919160449000"
+      className="flex items-center text-white py-1 px-0 rounded-lg text-sm font-bold uppercase"
+    >
+      {/* Phone Icon */}
+      <img src="/phone.gif" alt="Phone" className="h-6 w-6 mr-1" />
+      {/* Phone Number */}
+      <span className="text-orange-500">+91 9160449000</span>
+    </a>
+  </div>
+</div>
       </div>
     </div>
   

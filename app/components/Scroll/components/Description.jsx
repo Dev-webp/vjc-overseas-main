@@ -1,8 +1,17 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import Flag from 'react-world-flags'; // Import the Flag component
 
 export default function Description() {
+    const [activeBox, setActiveBox] = useState(null);
+
+    const handleHover = (index) => {
+        setActiveBox(index);
+    };
+
+    const handleMouseLeave = () => {
+        setActiveBox(null);
+    };
+
     return (
         <div className="relative flex flex-col justify-center items-center py-24 md:py-32 lg:py-14 bg-gradient-to-br from-orange-500 to-red-600 text-white overflow-hidden">
             <div className="absolute inset-0 opacity-30">
@@ -40,90 +49,112 @@ export default function Description() {
                 </motion.p>
             </div>
 
-            <div className="relative flex justify-center gap-8 mt-12 mx-auto lg:max-w-[80%]">
-  {/* Box 1 - Australia */}
-  <div className="relative w-60 h-96 bg-cover bg-center group hover:translate-y-[-10px] transition-all" style={{ backgroundImage: "url('/uk.png')" }}>
-    {/* Content Over the Image */}
-    {/* <div className="absolute top-4 left-4 p-2 bg-orange-100 rounded-lg group-hover:bg-orange-500 group-hover:text-white transition-all">
-     
-    </div> */}
+            <div className="relative flex justify-center gap-8 mt-0 mx-auto lg:max-w-[80%]">
+                {/* Box 1 - UK */}
+                <div
+                    className="relative bg-cover bg-center group hover:translate-y-[-10px] transition-all"
+                    style={{
+                        backgroundImage: "url('/uk.png')",
+                        width: "250px",
+                        height: "500px",
+                    }}
+                    onMouseEnter={() => handleHover(1)}
+                    onMouseLeave={handleMouseLeave}
+                >
+                    <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 px-6 py-4 flex flex-col justify-between text-center mb-[7.20rem]">
+                        <h3 className="text-2xl font-bold text-black uppercase ">UK</h3>
+                        <button className="px-6 py-2 text-md font-semibold text-white uppercase whitespace-nowrap ml-6 mb-1">
+                            Calculate Now
+                        </button>
+                        <p className="text-sm text-black max-w-44">Know your chances and estimated expenses to study in UK.</p>
+                    </div>
+                </div>
 
-    {/* Box Content */}
-    <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 px-6 py-4 flex flex-col justify-between text-center">
-      <h3 className="text-2xl font-bold text-black uppercase">Australia</h3>
-      <p className="text-sm text-black">Know your visa probability and cost to study in Australia</p>
+                {/* Box 2 - Germany */}
+                <div
+                    className="relative bg-cover bg-center group hover:translate-y-[-10px] transition-all"
+                    style={{
+                        backgroundImage: "url('/germany.png')",
+                        width: "250px",
+                        height: "500px",
+                    }}
+                    onMouseEnter={() => handleHover(2)}
+                    onMouseLeave={handleMouseLeave}
+                >
+                    <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 px-6 py-4 flex flex-col justify-between text-center mb-28">
+                        <h3 className="text-2xl font-bold text-black uppercase mb-0">Germany</h3>
+                        <button className="px-6 py-2 text-md font-semibold text-white uppercase whitespace-nowrap ml-6 mb-2">
+                            Calculate Now
+                        </button>
+                        <p className="text-sm text-black max-w-72 mr-6">Check your needs and <br />expense for studying in <br /> Germany.</p>
+                    </div>
+                </div>
 
-      {/* Small button */}
-      <button className="mt-6 mb-4 px-6 py-2 text-sm font-semibold text-white bg-orange-500 rounded-md hover:bg-orange-400 transition duration-200 uppercase whitespace-nowrap">
-  Calculate Now
-</button>
+                {/* Box 3 - Canada */}
+                <div
+                    className="relative bg-cover bg-center group hover:translate-y-[-10px] transition-all"
+                    style={{
+                        backgroundImage: "url('/canada.png')",
+                        width: "250px",
+                        height: "500px",
+                    }}
+                    onMouseEnter={() => handleHover(3)}
+                    onMouseLeave={handleMouseLeave}
+                >
+                    <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 px-6 py-4 flex flex-col justify-between text-center mb-28">
+                        <h3 className="text-2xl font-bold text-black uppercase mb-0">Canada</h3>
+                        <button className="px-6 py-2 text-md font-semibold text-white uppercase whitespace-nowrap ml-6 mb-2">
+                            Calculate Now
+                        </button>
+                        <p className="text-sm text-black max-w-44 ml-1">Check your possibilities and planning of expenses to study in Canada.</p>
+                    </div>
+                </div>
 
-    </div>
+                {/* Box 4 - Australia */}
+                <div
+                    className="relative bg-cover bg-center group hover:translate-y-[-10px] transition-all"
+                    style={{
+                        backgroundImage: "url('/australia.png')",
+                        width: "250px",
+                        height: "500px",
+                    }}
+                    onMouseEnter={() => handleHover(4)}
+                    onMouseLeave={handleMouseLeave}
+                >
+                    <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 px-6 py-4 flex flex-col justify-between text-center mb-[6.80rem]">
+                        <h3 className="text-2xl font-bold text-black uppercase mb-0">Australia</h3>
+                        <button className="px-6 py-2 text-md font-semibold text-white uppercase whitespace-nowrap ml-6 mb-3">
+                            Calculate Now
+                        </button>
+                        <p className="text-sm text-black max-w-64 mr-8">Know your visa probability<br /> and cost to study in<br /> Australia</p>
+                    </div>
+                </div>
+            </div>
 
-    {/* Bottom Line on Hover */}
-    <div className="absolute bottom-0 left-0 w-full h-1 bg-orange-500 scale-x-0 group-hover:scale-x-100 transition-all"></div>
-  </div>
-
-  {/* Box 2 - Germany */}
-  <div className="relative w-60 h-64 bg-cover bg-center rounded-lg shadow-lg overflow-hidden group hover:translate-y-[-10px] transition-all" style={{ backgroundImage: "url('/path-to-your-image-2.jpg')" }}>
-    {/* Content Over the Image */}
-    <div className="absolute top-4 left-4 p-2 bg-orange-100 rounded-lg group-hover:bg-orange-500 group-hover:text-white transition-all">
-      <Flag code="DE" className="text-4xl group-hover:text-white" />
-    </div>
-
-    {/* Box Content */}
-    <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 px-6 py-4 flex flex-col justify-between text-center bg-black bg-opacity-50 rounded-lg">
-      <h3 className="text-2xl font-bold text-white">Germany</h3>
-      <p className="text-sm text-white">Check your needs and expense for studying in Germany.</p>
-      <button className="mt-4 px-4 py-2 text-sm font-semibold text-white bg-orange-500 rounded-md hover:bg-orange-400 transition duration-200">
-        Calculate Now
-      </button>
-    </div>
-
-    {/* Bottom Line on Hover */}
-    <div className="absolute bottom-0 left-0 w-full h-1 bg-orange-500 scale-x-0 group-hover:scale-x-100 transition-all"></div>
-  </div>
-
-  {/* Box 3 - Canada */}
-  <div className="relative w-60 h-64 bg-cover bg-center rounded-lg shadow-lg overflow-hidden group hover:translate-y-[-10px] transition-all" style={{ backgroundImage: "url('/path-to-your-image-3.jpg')" }}>
-    {/* Content Over the Image */}
-    <div className="absolute top-4 left-4 p-2 bg-orange-100 rounded-lg group-hover:bg-orange-500 group-hover:text-white transition-all">
-      <Flag code="CA" className="text-4xl group-hover:text-white" />
-    </div>
-
-    {/* Box Content */}
-    <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 px-6 py-4 flex flex-col justify-between text-center bg-black bg-opacity-50 rounded-lg">
-      <h3 className="text-2xl font-bold text-white">Canada</h3>
-      <p className="text-sm text-white">Check your possibilities and planning of expenses to study in Canada</p>
-      <button className="mt-4 px-4 py-2 text-sm font-semibold text-white bg-orange-500 rounded-md hover:bg-orange-400 transition duration-200">
-        Calculate Now
-      </button>
-    </div>
-
-    {/* Bottom Line on Hover */}
-    <div className="absolute bottom-0 left-0 w-full h-1 bg-orange-500 scale-x-0 group-hover:scale-x-100 transition-all"></div>
-  </div>
-
-  {/* Box 4 - UK */}
-  <div className="relative w-60 h-64 bg-cover bg-center rounded-lg shadow-lg overflow-hidden group hover:translate-y-[-10px] transition-all" style={{ backgroundImage: "url('/path-to-your-image-4.jpg')" }}>
-    {/* Content Over the Image */}
-    <div className="absolute top-4 left-4 p-2 bg-orange-100 rounded-lg group-hover:bg-orange-500 group-hover:text-white transition-all">
-      <Flag code="GB" className="text-4xl group-hover:text-white" />
-    </div>
-
-    {/* Box Content */}
-    <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 px-6 py-4 flex flex-col justify-between text-center bg-black bg-opacity-50 rounded-lg">
-      <h3 className="text-2xl font-bold text-white">UK</h3>
-      <p className="text-sm text-white">Know your chances and estimated expenses to study in UK.</p>
-      <button className="mt-4 px-4 py-2 text-sm font-semibold text-white bg-orange-500 rounded-md hover:bg-orange-400 transition duration-200">
-        Calculate Now
-      </button>
-    </div>
-
-    {/* Bottom Line on Hover */}
-    <div className="absolute bottom-0 left-0 w-full h-1 bg-orange-500 scale-x-0 group-hover:scale-x-100 transition-all"></div>
-  </div>
+{/* Line and Animated Round */}
+<div className="absolute bottom-14   left-1/2 w-[70rem] h-2 bg-gray-300 transform -translate-x-1/2">
+   
+    {activeBox && (
+        <motion.div
+            className="absolute flex justify-center items-center"
+            style={{
+                width: '42px',
+                height: '42px',
+                left: `${(activeBox - 1) * 270 + 115}px`, 
+            }}
+            animate={{ scale: [1, 1.5, 1] }}
+            transition={{ duration: 0.4, ease: "easeInOut" }}
+        >
+{/*             
+            <img
+                src="/favicon.png"  
+                alt="Logo"
+                className="w-full h-full object-contain"
+            /> */}
+        </motion.div>
+    )}
 </div>
+
 
 
             {/* Decorative Elements */}

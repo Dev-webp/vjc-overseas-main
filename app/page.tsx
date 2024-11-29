@@ -28,15 +28,13 @@ export default function Home() {
       {/* Critical Content */}
       <Hero />
       {/* <Motion/> */}
-      {/* Lazy Load Non-Critical Content */}
       <Suspense fallback={<LoadingIndicator />}>
         <ScrollPer  />
-        <div className="h-[230rem] tablet:h-[105rem] lg:h-[36rem]"></div>
+        <div className="h-[230rem] tablet:h-[105rem] lg:h-[6rem]"></div>
         <Scroll />
         <ScrollPerRev />
         <div className="h-[108rem] tablet:h-[38rem] lg:h-6"></div>
         <CTA />
-        {/* <Price /> */}
         <Blog />
         <Parallex />
         
