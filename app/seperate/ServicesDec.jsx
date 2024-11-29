@@ -1,7 +1,7 @@
 "use client";
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FaPassport, FaUniversity, FaRegHandshake, FaMapMarkerAlt, FaChalkboardTeacher, FaMoneyCheckAlt, FaFileAlt, FaAirbnb, FaRegStar } from 'react-icons/fa';
+import { FaPassport, FaUniversity, FaRegHandshake, FaMapMarkerAlt, FaChalkboardTeacher, FaMoneyCheckAlt, FaFileAlt, FaAirbnb} from 'react-icons/fa';
 
 const ServicesDec = () => {const boxData = [
   { 
