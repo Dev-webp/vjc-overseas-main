@@ -4,7 +4,7 @@ import { useEffect, useRef } from "react";
 import Lenis from 'lenis';
 import './page.css'; 
 import Swap from "../Swap";
-import Steps from "@/app/components/Steps";
+import ScrollChangeImage from "@/app/seperate/ScrollTriggeer";
 
 export default function Home() {
   const container = useRef();
@@ -51,8 +51,9 @@ const Section1 = ({ scrollYProgress }) => {
         </div>
         <p>Transition</p>
       </div> */}
-      <Steps/>
+      {/* <Steps/> */}
       {/* <Services/> */}
+      <ScrollChangeImage/>
     </motion.div>
   );
 }

@@ -132,7 +132,12 @@ export default function Description() {
             </div>
 
 {/* Line and Animated Round */}
-<div className="absolute bottom-14   left-1/2 w-[70rem] h-2 bg-gray-300 transform -translate-x-1/2">
+<div className="absolute -bottom-4 ml-[11.50rem] transform -translate-x-1/2">
+  <img
+    src="/ba.png" 
+    alt="Decorative Line"
+    className="w-[70rem] h-40 object-contain" 
+  />
    
     {activeBox && (
         <motion.div
@@ -145,12 +150,12 @@ export default function Description() {
             animate={{ scale: [1, 1.5, 1] }}
             transition={{ duration: 0.4, ease: "easeInOut" }}
         >
-{/*             
+            
             <img
                 src="/favicon.png"  
                 alt="Logo"
                 className="w-full h-full object-contain"
-            /> */}
+            />
         </motion.div>
     )}
 </div>
