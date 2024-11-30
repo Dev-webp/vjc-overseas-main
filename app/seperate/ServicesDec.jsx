@@ -148,8 +148,8 @@ const ServicesDec = () => {
           <FaPassport className="w-16 h-16 text-orange-500 group-hover:text-white" />
           <div className="w-0.5 h-12 bg-orange-400 group-hover:bg-white mr-1 ml-2" />
           <div className="flex flex-col justify-between text-center">
-            <a href="/">
-            <p className="text-base font-semibold uppercase hover:underline">{boxData[0].title}</p></a>
+           
+            <p className="text-base font-semibold uppercase hover:underline">{boxData[0].title}</p>
             <p className="text-sm text-gray-600">{boxData[0].content}</p>
             <motion.span
               className="absolute bottom-2 right-2 text-xl font-extrabold hover:text-white cursor-pointer"

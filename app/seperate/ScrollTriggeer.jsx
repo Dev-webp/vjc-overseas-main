@@ -14,7 +14,7 @@ const ScrollChangeImage = () => {
 
   const [activeImage, setActiveImage] = useState(points[0].image);
   const [progress, setProgress] = useState(0); // For status bar progress
-  const [nextComponentVisible, setNextComponentVisible] = useState(false); // Track when to show next component
+ // Track when to show next component
   const contentRefs = useRef([]);
 
   const handleScroll = () => {
@@ -85,7 +85,7 @@ const ScrollChangeImage = () => {
       {/* Center - Status Bar */}
       {/* Status Bar Background */}
       {/* Progress Indicator */}
-      {/* <div className="w-2 flex items-center relative h-screen">
+      <div className="w-2 flex items-center relative h-screen">
         
         <div className="absolute left-1/2 transform -translate-x-1/2 w-2 h-full bg-gray-300 rounded-full"></div>
 
@@ -101,7 +101,7 @@ const ScrollChangeImage = () => {
           animate={{ height: `${progress}%` }}
           transition={{ duration: 0.2 }}
         />
-      </div> */}
+      </div>
 
       {/* Right Side - Scrollable Content */}
       <div
