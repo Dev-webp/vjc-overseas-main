@@ -20,7 +20,6 @@ const ScrollChangeImage = () => {
   const handleScroll = () => {
     const totalPoints = points.length;
     let newProgress = 0;
-    let lastIndex = -1;
 
     contentRefs.current.forEach((ref, index) => {
       if (ref) {
@@ -29,13 +28,11 @@ const ScrollChangeImage = () => {
         if (top < window.innerHeight / 2 && bottom > window.innerHeight / 2) {
           setActiveImage(points[index].image);
           newProgress = ((index + 1) / totalPoints) * 100; // Calculate progress percentage
-          lastIndex = index;
         }
       }
     });
 
     setProgress(newProgress);
-
   };
 
   // Smooth scroll effect
@@ -49,7 +46,8 @@ const ScrollChangeImage = () => {
   }, []);
 
   return (
-    <div className="flex h-screen bg-cover bg-center relative overflow-y-scroll" 
+    <div
+      className="flex h-screen bg-cover bg-center relative overflow-y-scroll"
       onScroll={handleScroll} // Enable scrolling in the entire component
       style={{
         backgroundImage: `url('/comp-1.webp')`, // Path to the background image
@@ -84,14 +82,12 @@ const ScrollChangeImage = () => {
       {/* Status Bar Background */}
       {/* Progress Indicator */}
       <div className="w-2 flex items-center relative h-screen">
-        
         <div className="absolute left-1/2 transform -translate-x-1/2 w-2 h-full bg-gray-300 rounded-full"></div>
 
-        
         <motion.div
           className="absolute left-1/2 transform -translate-x-1/2 w-2 bg-orange-500 rounded-full"
           style={{
-            height: `${progress}%`, 
+            height: `${progress}%`,
             top: "auto",
             bottom: 0,
           }}
@@ -102,9 +98,7 @@ const ScrollChangeImage = () => {
       </div>
 
       {/* Right Side - Scrollable Content */}
-      <div
-        className="flex-1 px-10 py-4 ml-[43%] scrollbar-hide" // Hide the scrollbar
-      >
+      <div className="flex-1 px-10 py-4 ml-[43%] scrollbar-hide">
         {points.map((point, index) => (
           <div
             key={point.id}
