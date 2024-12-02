@@ -37,7 +37,7 @@ export default function Parallex() {
     <div className="section-heading">
     <h1
       className="text-[2.75rem] font-semibold uppercase text-transparent bg-clip-text bg-gradient-to-tr from-orange-500 to-orange-600 
-        md:text-4xl xl:text-5xl leading-tight text-center mt-10 mb-4"
+        md:text-4xl xl:text-5xl leading-tight text-center mt-6 mb-6"
     >
       What Our Customers Say
     </h1>

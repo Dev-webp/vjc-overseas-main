@@ -1,19 +1,18 @@
 "use client";
 
 import React, { useEffect, Suspense } from "react";
-import dynamic from "next/dynamic"; 
+import dynamic from "next/dynamic";
 import Hero from "@/app/components/Hero";
 import Footer from "@/app/components/Footer";
+import Desc from "@/app/components/Scroll/components/Description";
+import NewSteps from "@/app/components/NewSteps";
+import ServicesDec from "./seperate/ServicesDec";
 
 // Dynamic Imports
-const ScrollPer = dynamic(() => import('@/app/components/ScrollPer/index'));
-const Parallex = dynamic(() => import('@/app/components/Parallex/parallex'));
 const Scroll = dynamic(() => import('@/app/components/Scroll/index'));
-const ScrollPerRev = dynamic(() => import('@/app/components/ScrollPerRev/Index'));
 const CTA = dynamic(() => import('@/app/components/CTA'));
 const FAQ = dynamic(() => import('@/app/components/FAQ'));
-// const Price = dynamic(() => import('@/app/components/Price'));
-const Blog = dynamic(() => import('@/app/components/Blog'));
+const Parallex = dynamic(() => import('@/app/components/Parallex/parallex'));
 
 // Utility function for scroll-to-top
 const scrollToTop = () => window.scrollTo({ top: 0, behavior: "smooth" });
@@ -26,34 +25,24 @@ export default function Home() {
   return (
     <>
       {/* Critical Content */}
-      {/* <Motion/> */}
       <Hero />
       <Suspense fallback={<LoadingIndicator />}>
-        <ScrollPer  />
-        <div className="h-[230rem] tablet:h-[105rem] lg:h-[6rem]"></div>
+        <Desc />
+        <ServicesDec />
         <Scroll />
-        <ScrollPerRev />
-        <div className="h-[108rem] tablet:h-[38rem] lg:h-6"></div>
+        <NewSteps />
         <CTA />
-        {/* <Steps/> */}
-        <Blog />
         <Parallex />
-        
         <FAQ />
       </Suspense>
       <Footer />
-      
     </>
   );
 }
 
-// Components
+// Loading indicator component
 const LoadingIndicator = () => (
   <div className="flex justify-center items-center h-screen bg-gray-100">
     <div className="w-16 h-16 border-4 border-orange-500 border-t-transparent rounded-full animate-spin"></div>
   </div>
 );
-
-
-
-

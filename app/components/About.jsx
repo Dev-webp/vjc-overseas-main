@@ -51,7 +51,7 @@ const ContentSection = () => {
         {/* Image Section */}
         <motion.div variants={imageVariants} className="flex md:flex-1 justify-center">
           <Image
-            src="/vjc-1.webp"
+            src="/vjc-1.jpg"
             alt="Visa consultation services"
             width={1000}
             height={1000}

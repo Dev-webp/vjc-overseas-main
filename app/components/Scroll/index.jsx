@@ -2,8 +2,8 @@
 import { useEffect } from 'react';
 import Lenis from 'lenis'
 import Intro from './components/Intro';
-import Description from './components/Description';
 import Section from './components/Section';
+import About from "@/app/components/About";
 export default function Home() {
 
   useEffect( () => {
@@ -20,7 +20,8 @@ export default function Home() {
   return (
     <main>
       <Intro />
-      <Description />
+      {/* <Description /> */}
+      <About/>
       <Section />
       <div className='h-10'></div>
     </main>

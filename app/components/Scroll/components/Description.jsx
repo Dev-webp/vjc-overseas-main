@@ -1,19 +1,42 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
+import React, { useEffect } from 'react';
+import { motion, useAnimation } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
 
 export default function Description() {
-    const [activeBox, setActiveBox] = useState(null);
+    const controls = useAnimation(); // Controls animation
+    const { ref, inView } = useInView({
+        triggerOnce: false, // Animation triggers every time it's in view
+        threshold: 0.3, // Starts animation when 30% of the component is in view
+    });
 
-    const handleHover = (index) => {
-        setActiveBox(index);
+    useEffect(() => {
+        if (inView) {
+            controls.start('visible'); // Start animation when in view
+        } else {
+            controls.start('hidden'); // Reset animation when out of view
+        }
+    }, [inView, controls]); // Re-run whenever inView changes
+
+    const containerVariants = {
+        hidden: { opacity: 0 },
+        visible: {
+            opacity: 1,
+            transition: {
+                staggerChildren: 0.2, // Delay between each box's animation
+            },
+        },
     };
 
-    const handleMouseLeave = () => {
-        setActiveBox(null);
+    const boxVariants = {
+        hidden: { opacity: 0, y: 50 },
+        visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
     };
 
     return (
-        <div className="relative flex flex-col justify-center items-center py-24 md:py-32 lg:py-14 bg-gradient-to-br from-orange-500 to-red-600 text-white overflow-hidden">
+        <div
+            ref={ref} // Attach the ref to detect visibility
+            className="relative flex flex-col justify-center items-center py-24 md:py-32 lg:py-14 bg-gradient-to-br from-orange-500 to-red-600 text-white overflow-hidden"
+        >
             <div className="absolute inset-0 opacity-30">
                 <svg
                     className="w-full h-full"
@@ -27,39 +50,42 @@ export default function Description() {
                     />
                 </svg>
             </div>
-            {/* Content */}
             <div className="relative text-center mb-6">
                 <motion.h1
                     className="text-[6vw] lg:text-[4vw] font-bold uppercase leading-tight"
-                    initial={{ opacity: 0, y: 50 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8, ease: "easeInOut" }}
+                    initial="hidden"
+                    animate={controls}
+                    variants={boxVariants}
                 >
                     Turn Dreams Into Destinations
                 </motion.h1>
 
                 <motion.p
                     className="mt-6 text-lg md:text-xl font-medium max-w-[80%] mx-auto"
-                    initial={{ opacity: 0, y: 50 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 1, delay: 0.2, ease: "easeInOut" }}
+                    initial="hidden"
+                    animate={controls}
+                    variants={boxVariants}
                 >
                     Empowering your journey with trusted visa and immigration solutions
                     for a brighter future.
                 </motion.p>
             </div>
 
-            <div className="relative flex justify-center gap-8 mt-0 mx-auto lg:max-w-[80%]">
+            <motion.div
+                className="relative flex justify-center gap-8 mt-0 mx-auto lg:max-w-[95%]"
+                initial="hidden"
+                animate={controls}
+                variants={containerVariants}
+            >
                 {/* Box 1 - UK */}
-                <div
+                <motion.div
                     className="relative bg-cover bg-center group hover:translate-y-[-10px] transition-all"
                     style={{
                         backgroundImage: "url('/uk.png')",
-                        width: "250px",
-                        height: "500px",
+                        width: '250px',
+                        height: '500px',
                     }}
-                    onMouseEnter={() => handleHover(1)}
-                    onMouseLeave={handleMouseLeave}
+                    variants={boxVariants}
                 >
                     <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 px-6 py-4 flex flex-col justify-between text-center mb-[7.20rem]">
                         <h3 className="text-2xl font-bold text-black uppercase ">UK</h3>
@@ -68,18 +94,17 @@ export default function Description() {
                         </button>
                         <p className="text-sm text-black max-w-44">Know your chances and estimated expenses to study in UK.</p>
                     </div>
-                </div>
+                </motion.div>
 
                 {/* Box 2 - Germany */}
-                <div
+                <motion.div
                     className="relative bg-cover bg-center group hover:translate-y-[-10px] transition-all"
                     style={{
                         backgroundImage: "url('/germany.png')",
-                        width: "250px",
-                        height: "500px",
+                        width: '250px',
+                        height: '500px',
                     }}
-                    onMouseEnter={() => handleHover(2)}
-                    onMouseLeave={handleMouseLeave}
+                    variants={boxVariants}
                 >
                     <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 px-6 py-4 flex flex-col justify-between text-center mb-28">
                         <h3 className="text-2xl font-bold text-black uppercase mb-0">Germany</h3>
@@ -88,18 +113,17 @@ export default function Description() {
                         </button>
                         <p className="text-sm text-black max-w-72 mr-6">Check your needs and <br />expense for studying in <br /> Germany.</p>
                     </div>
-                </div>
+                </motion.div>
 
                 {/* Box 3 - Canada */}
-                <div
+                <motion.div
                     className="relative bg-cover bg-center group hover:translate-y-[-10px] transition-all"
                     style={{
                         backgroundImage: "url('/canada.png')",
-                        width: "250px",
-                        height: "500px",
+                        width: '250px',
+                        height: '500px',
                     }}
-                    onMouseEnter={() => handleHover(3)}
-                    onMouseLeave={handleMouseLeave}
+                    variants={boxVariants}
                 >
                     <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 px-6 py-4 flex flex-col justify-between text-center mb-28">
                         <h3 className="text-2xl font-bold text-black uppercase mb-0">Canada</h3>
@@ -108,18 +132,17 @@ export default function Description() {
                         </button>
                         <p className="text-sm text-black max-w-44 ml-1">Check your possibilities and planning of expenses to study in Canada.</p>
                     </div>
-                </div>
+                </motion.div>
 
                 {/* Box 4 - Australia */}
-                <div
+                <motion.div
                     className="relative bg-cover bg-center group hover:translate-y-[-10px] transition-all"
                     style={{
                         backgroundImage: "url('/australia.png')",
-                        width: "250px",
-                        height: "500px",
+                        width: '250px',
+                        height: '500px',
                     }}
-                    onMouseEnter={() => handleHover(4)}
-                    onMouseLeave={handleMouseLeave}
+                    variants={boxVariants}
                 >
                     <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 px-6 py-4 flex flex-col justify-between text-center mb-[6.80rem]">
                         <h3 className="text-2xl font-bold text-black uppercase mb-0">Australia</h3>
@@ -128,51 +151,27 @@ export default function Description() {
                         </button>
                         <p className="text-sm text-black max-w-64 mr-8">Know your visa probability<br /> and cost to study in<br /> Australia</p>
                     </div>
-                </div>
-            </div>
+                </motion.div>
 
-{/* Line and Animated Round */}
-<div className="absolute -bottom-4 ml-[11.50rem] transform -translate-x-1/2">
-  <img
-    src="/ba.png" 
-    alt="Decorative Line"
-    className="w-[70rem] h-40 object-contain" 
-  />
-   
-    {activeBox && (
-        <motion.div
-            className="absolute flex justify-center items-center"
-            style={{
-                width: '42px',
-                height: '42px',
-                left: `${(activeBox - 1) * 270 + 115}px`, 
-            }}
-            animate={{ scale: [1, 1.5, 1] }}
-            transition={{ duration: 0.4, ease: "easeInOut" }}
-        >
-            
-            <img
-                src="/favicon.png"  
-                alt="Logo"
-                className="w-full h-full object-contain"
-            />
-        </motion.div>
-    )}
-</div>
-
-
-
-            {/* Decorative Elements */}
-            <motion.div
-                className="absolute -top-10 -left-10 w-40 h-40 bg-white rounded-full opacity-20"
-                animate={{ y: [0, 30, 0], x: [0, 10, 0] }}
-                transition={{ repeat: Infinity, duration: 5, ease: "easeInOut" }}
-            />
-            <motion.div
-                className="absolute -bottom-10 -right-10 w-64 h-64 bg-orange-300 rounded-full opacity-20"
-                animate={{ y: [0, -30, 0], x: [0, -10, 0] }}
-                transition={{ repeat: Infinity, duration: 6, ease: "easeInOut" }}
-            />
+                {/* Box 3 - Canada */}
+                <motion.div
+                    className="relative bg-cover bg-center group hover:translate-y-[-10px] transition-all"
+                    style={{
+                        backgroundImage: "url('/canada.png')",
+                        width: '250px',
+                        height: '500px',
+                    }}
+                    variants={boxVariants}
+                >
+                    <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 px-6 py-4 flex flex-col justify-between text-center mb-28">
+                        <h3 className="text-2xl font-bold text-black uppercase mb-0">Canada</h3>
+                        <button className="px-6 py-2 text-md font-semibold text-white uppercase whitespace-nowrap ml-6 mb-2">
+                            Calculate Now
+                        </button>
+                        <p className="text-sm text-black max-w-44 ml-1">Check your possibilities and planning of expenses to study in Canada.</p>
+                    </div>
+                </motion.div>
+            </motion.div>
         </div>
     );
 }

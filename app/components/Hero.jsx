@@ -49,11 +49,11 @@ export default function HeroSection() {
             alt="Work in Germany"
             className="w-[70rem] h-auto mt-0" // Adjust margin to align with curved text
           />
-          <img
+          {/* <img
             src="/award.png" // Change to your image path
             alt="Work in Germany"
             className="w-[26rem] h-[7rem]" // Adjust margin to align with curved text
-          />
+          /> */}
         {/* <motion.h1
           variants={titleVariants}
           className="font-semibold uppercase leading-tight text-center text-teal-950 text-4xl sm:text-5xl lg:text-[3.50rem]"
@@ -94,7 +94,7 @@ export default function HeroSection() {
         variants={containerVariants(0.8)}
         initial="offscreen"
         animate="onscreen"
-        className="flex aspect-square lg:aspect-auto w-[40rem] h-[20rem] tablet:h-[30rem] lg:h-[40rem] relative mt-44 tablet:mt-0 md:mt-6 lg:mt-0 z-10 ml-0 md:ml-0 lg:ml-0 tablet:ml-20"
+        className="flex aspect-square lg:aspect-auto w-[40rem] h-[20rem] tablet:h-[30rem] lg:h-[40rem] relative mt-44 tablet:mt-0 md:mt-0 lg:mt-0 z-10 ml-0 md:ml-0 lg:ml-0 tablet:ml-20"
       >
 
         <div className='mt-28 ml-24'>

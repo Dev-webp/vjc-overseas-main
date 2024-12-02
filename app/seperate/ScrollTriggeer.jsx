@@ -2,6 +2,7 @@
 
 import { useState, useRef, useEffect } from "react";
 import { motion } from "framer-motion";
+
 const ScrollChangeImage = () => {
   const points = [
     { id: 1, title: "1. Counselling & Consultation", description: "Let our consultation process guide you through your best choice of visa.", image: "/slide-1.jpg" },
@@ -14,7 +15,7 @@ const ScrollChangeImage = () => {
 
   const [activeImage, setActiveImage] = useState(points[0].image);
   const [progress, setProgress] = useState(0); // For status bar progress
- // Track when to show next component
+  const [nextComponentVisible, setNextComponentVisible] = useState(false); // State to control visibility of the next component
   const contentRefs = useRef([]);
 
   const handleScroll = () => {
@@ -25,6 +26,7 @@ const ScrollChangeImage = () => {
     contentRefs.current.forEach((ref, index) => {
       if (ref) {
         const { top, bottom } = ref.getBoundingClientRect();
+        // Check if the current section is in view
         if (top < window.innerHeight / 2 && bottom > window.innerHeight / 2) {
           setActiveImage(points[index].image);
           newProgress = ((index + 1) / totalPoints) * 100; // Calculate progress percentage
@@ -52,8 +54,9 @@ const ScrollChangeImage = () => {
   }, []);
 
   return (
-    <div className="flex h-screen bg-cover bg-center relative" 
-    style={{
+    <div className="flex h-screen bg-cover bg-center relative overflow-y-scroll" 
+      onScroll={handleScroll} // Enable scrolling in the entire component
+      style={{
         backgroundImage: `url('/comp-1.webp')`, // Path to the background image
       }}
     >
@@ -105,8 +108,7 @@ const ScrollChangeImage = () => {
 
       {/* Right Side - Scrollable Content */}
       <div
-        className="flex-1 overflow-y-scroll px-10 py-4 ml-[43%] scrollbar-hide" // Hide the scrollbar
-        onScroll={handleScroll}
+        className="flex-1 px-10 py-4 ml-[43%] scrollbar-hide" // Hide the scrollbar
       >
         {points.map((point, index) => (
           <div

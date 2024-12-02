@@ -1,27 +1,27 @@
 "use client";
 import { motion } from 'framer-motion';
 import { useState, useEffect, useRef } from 'react';
-import { FaTimes} from 'react-icons/fa';
+import { FaTimes } from 'react-icons/fa';
 import { MdOutlineKeyboardDoubleArrowRight, MdOutlineKeyboardDoubleArrowLeft } from "react-icons/md";
 
-// Updated list with 16 countries
+// Updated list with 15 countries (removed duplicate Spain)
 const countries = [
-  { name: 'Uk', image: '/uk1.png', description: 'The UK is one of the most sought-after destinations for international students and skilled professionals.' },
-  { name: 'Usa', image: '/usa1.png', description: 'The USA is famous for its world-class education system and career opportunities.' },
+  { name: 'Uk', image: '/c1.png', description: 'The UK is one of the most sought-after destinations for international students and skilled professionals.' },
+  { name: 'Usa', image: '/c2.png', description: 'The USA is famous for its world-class education system and career opportunities.' },
   { name: 'Canada', image: '/slide-3.jpg', description: 'Canada is known for its beautiful landscapes and outdoor activities.' },
-  { name: 'Australia', image: '/AUSTRALIA1.png', description: 'Australia is famous for its wildlife, beaches, and cultural diversity.' },
-  { name: 'Germany', image: '/German Parliament.png', description: 'Germany boasts a strong economy, rich history, and modern infrastructure.' },
-  { name: 'France', image: '/FRANCE.png', description: 'France is known for its art, cuisine, and historical landmarks.' },
-  { name: 'Italy', image: '/ITALY1.png', description: 'Italy is famous for its art, architecture, and cuisine.' },
-  { name: 'Spain', image: '/slide-1.jpg', description: 'Spain is known for its vibrant culture, food, and festivals.' },
-  { name: 'Netherlands', image: '/Toronto.png', description: 'The Netherlands is famous for its windmills, tulips, and canals.' },
-  { name: 'UAE', image: '/UAE.png', description: 'Japan offers a unique blend of ancient traditions and modern technology.' },
-  { name: 'Switzerland', image: '/switzerland.png', description: 'South Korea is known for its technology, culture, and K-pop.' },
-  { name: 'Spain', image: '/SPAIN.png', description: 'Sweden is famous for its design, technology, and sustainability.' },
-  { name: 'South Africa', image: '/SOUTH AFRICA.png', description: 'Norway offers stunning landscapes, fjords, and a rich cultural history.' },
-  { name: 'Singapore', image: '/SINGAPORE.png', description: 'Switzerland is known for its Alps, chocolates, and financial services.' },
-  { name: 'New Zealand', image: '/new zealand.png', description: 'Finland is famous for its beautiful nature, lakes, and high education standards.' },
-  { name: 'Malaysia', image: '/malaysia.png', description: 'Portugal offers beautiful beaches, rich history, and amazing food.' },
+  { name: 'Australia', image: '/c4.png', description: 'Australia is famous for its wildlife, beaches, and cultural diversity.' },
+  { name: 'Germany', image: '/c5.png', description: 'Germany boasts a strong economy, rich history, and modern infrastructure.' },
+  { name: 'France', image: '/c6.png', description: 'France is known for its art, cuisine, and historical landmarks.' },
+  { name: 'Italy', image: '/c7.png', description: 'Italy is famous for its art, architecture, and cuisine.' },
+  { name: 'Spain', image: '/c13.png', description: 'Spain is known for its vibrant culture, food, and festivals.' },
+  { name: 'Netherlands', image: '/c15.png', description: 'The Netherlands is famous for its windmills, tulips, and canals.' },
+  { name: 'UAE', image: '/c16.png', description: 'Japan offers a unique blend of ancient traditions and modern technology.' },
+  { name: 'Switzerland', image: '/c9.png', description: 'South Korea is known for its technology, culture, and K-pop.' },
+  { name: 'Sweden', image: '/c13.png', description: 'Sweden is famous for its design, technology, and sustainability.' },
+  { name: 'South Africa', image: '/c12.png', description: 'Norway offers stunning landscapes, fjords, and a rich cultural history.' },
+  { name: 'Singapore', image: '/c11.png', description: 'Switzerland is known for its Alps, chocolates, and financial services.' },
+  { name: 'New Zealand', image: '/c10.png', description: 'Finland is famous for its beautiful nature, lakes, and high education standards.' },
+  { name: 'Malaysia', image: '/c8.png', description: 'Portugal offers beautiful beaches, rich history, and amazing food.' },
 ];
 
 const CountrySlider = () => {
@@ -31,7 +31,7 @@ const CountrySlider = () => {
 
   // Handle image click (expand to full screen as background)
   const handleClick = (index) => {
-    const fullIndex = scrollPosition * 4 + index; // Calculate the actual index from the full list of countries
+    const fullIndex = scrollPosition * 5 + index; // Calculate the actual index from the full list of countries
     setExpandedIndex(fullIndex === expandedIndex ? null : fullIndex); // Toggle expansion
   };
 
@@ -60,7 +60,7 @@ const CountrySlider = () => {
 
   const scrollRight = () => {
     if (sliderRef.current) {
-      setScrollPosition((prev) => Math.min(prev + 1, countries.length / 4 - 1)); // Scroll right, 1 step at a time
+      setScrollPosition((prev) => Math.min(prev + 1, Math.floor(countries.length / 5) - 1)); // Scroll right, 1 step at a time
     }
   };
 
@@ -94,7 +94,7 @@ const CountrySlider = () => {
         >
           {/* Cancel icon to close the expanded image */}
           <motion.button
-            className="absolute top-4 right-9 bg-neutral-200 text-neutral-400 p-2 rounded-full z-50"
+            className="absolute top-10 right-9 bg-neutral-200 text-neutral-400 p-2 rounded-full z-50"
             onClick={handleCancel}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -144,53 +144,57 @@ const CountrySlider = () => {
         whileHover={{ scale: 1.1 }} // Scale button slightly on hover
         transition={{ duration: 0.3 }}
       >
-        <MdOutlineKeyboardDoubleArrowRight  size={24} />
+        <MdOutlineKeyboardDoubleArrowRight size={24} />
       </motion.button>
-{/* Images grid (hidden behind the expanded image when clicked) */}
-<motion.div
-  ref={sliderRef} // Reference for mouse wheel scroll
-  className="flex w-full h-screen overflow-x-scroll snap-x snap-mandatory gap-6 rounded-lg"
-  initial={{ opacity: 0 }}
-  animate={{ opacity: 1 }}
-  style={{ scrollBehavior: 'smooth' }} // Smooth scroll behavior
->
-  {countries.slice(scrollPosition * 4, (scrollPosition + 1) * 4).map((country, index) => (
-    <motion.div
-      className="relative w-[25%] h-[33rem] mt-6 bg-cover bg-center flex items-center justify-center rounded-xl snap-center overflow-hidden" // Add `overflow-hidden` here
-      style={{
-        backgroundImage: `url(${country.image})`,
-        cursor: 'pointer',
-      }}
-      key={index}
-      onClick={() => handleClick(index)}
-      whileHover={{ scale: 1.05 }} // Slight scale effect on hover for better UI
-    >
-      {/* Overlay on hover */}
+
+      {/* Images grid (hidden behind the expanded image when clicked) */}
       <motion.div
-        className="absolute inset-0 bg-orange-500 opacity-50 z-10 transition-opacity duration-300" // This creates a fixed orange overlay
-        initial={{ opacity: 0 }}
-        whileHover={{ opacity: 0.5 }} // Make overlay visible on hover
-        transition={{ duration: 0.3 }}
-      />
-      
-      <motion.h2
-        className="absolute bottom-6 left-6 text-4xl font-bold text-white z-20 uppercase"
+        ref={sliderRef} // Reference for mouse wheel scroll
+        className="flex w-full h-screen overflow-x-scroll snap-x snap-mandatory gap-6 rounded-lg"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
-        transition={{ duration: 0.6 }}
+        style={{ scrollBehavior: 'smooth' }} // Smooth scroll behavior
       >
-        {country.name}
-      </motion.h2>
+        {countries.slice(scrollPosition * 5, (scrollPosition + 1) * 5).map((country, index) => (
+          <motion.div
+            className="relative w-[20%] h-[33rem] mt-6 bg-cover bg-center flex items-center justify-center rounded-xl snap-center overflow-hidden"
+            style={{
+              backgroundImage: `url(${country.image})`,
+              cursor: 'pointer',
+            }}
+            key={index}
+            onClick={() => handleClick(index)}
+            whileHover={{ scale: 1.05 }} // Slight scale effect on hover for better UI
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }} // Fade-in effect for images
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.5, ease: 'easeInOut' }}
+          >
+            {/* Overlay on hover */}
+            <motion.div
+              className="absolute inset-0 bg-orange-500 opacity-50 z-10 transition-opacity duration-300"
+              initial={{ opacity: 0 }}
+              whileHover={{ opacity: 0.5 }} // Make overlay visible on hover
+              transition={{ duration: 0.3 }}
+            />
+            
+            <motion.h2
+              className="absolute bottom-6 left-6 text-4xl font-bold text-white z-20 uppercase"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.6 }}
+            >
+              {country.name}
+            </motion.h2>
 
-      {/* Subtle gradient black opacity at the top and bottom of the slider images */}
-      <div className="absolute top-0 left-0 w-full h-1/4 bg-gradient-to-b from-black via-transparent to-transparent"></div>
-      <div className="absolute -bottom-4 left-0 w-full h-1/4 bg-gradient-to-t from-black via-gray-800 to-transparent"></div>
-    </motion.div>
-  ))}
-</motion.div>
-
-
+            {/* Subtle gradient black opacity at the top and bottom of the slider images */}
+            <div className="absolute top-0 left-0 w-full h-1/4 bg-gradient-to-b from-black via-transparent to-transparent"></div>
+            <div className="absolute -bottom-4 left-0 w-full h-1/4 bg-gradient-to-t from-black via-gray-800 to-transparent"></div>
+          </motion.div>
+        ))}
+      </motion.div>
     </div>
   );
 };

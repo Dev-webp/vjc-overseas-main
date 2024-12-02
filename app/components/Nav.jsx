@@ -31,7 +31,7 @@ const Navbar = () => {
         </div>
 
         <div className="flex items-center ml-4">
-            <img src="/promote.gif" alt="News" className="h-6 w-6" /> {/* News Icon */}
+            <img src="/promote.gif" alt="News" className="h-8 w-8" /> {/* News Icon */}
           </div>
         {/* Marquee Section placed between Logo and Location */}
         <div className="marquee-container flex-1 mx-4">
@@ -43,15 +43,15 @@ const Navbar = () => {
         <div className="flex items-center space-x-4">
   {/* Location Info */}
   <div className="flex items-center space-x-2 text-sm text-black uppercase font-semibold italic">
-    <div className="flex items-center animate-pulse text-orange-500">
+    <div className="flex items-center animate-pulse text-blue-600">
       <img src="/loc.png" alt="Bangalore" className="mr-1 w-5 h-5" />
       <p>Bangalore</p>
     </div>
-    <div className="flex items-center animate-pulse text-orange-500">
+    <div className="flex items-center animate-pulse text-blue-600">
       <img src="/loc.png" alt="Hyderabad" className="mr-1 w-5 h-5" />
       <p>Hyderabad</p>
     </div>
-    <div className="flex items-center animate-pulse text-orange-500">
+    <div className="flex items-center animate-pulse text-blue-600">
       <img src="/loc.png" alt="USA" className="mr-1 w-5 h-5" />
       <p>USA</p>
     </div>
@@ -59,7 +59,7 @@ const Navbar = () => {
 
   {/* Mail Address with Icon */}
   <div className="flex items-center space-x-2 text-sm text-black uppercase font-semibold italic">
-  <div className="flex items-center animate-pulse text-orange-500">
+  <div className="flex items-center animate-pulse text-blue-600">
   <a href="mailto:info@vjcoverseas.com" className="flex items-center">
     <FaEnvelope className="mr-1 w-5 h-5 text-orange-500" />
     <p>info@vjcoverseas.com</p>
@@ -77,7 +77,7 @@ const Navbar = () => {
       {/* Phone Icon */}
       <img src="/phone.gif" alt="Phone" className="h-6 w-6 mr-1" />
       {/* Phone Number */}
-      <span className="text-orange-500">+91 9160449000</span>
+      <span className="text-blue-600">+91 9160449000</span>
     </a>
   </div>
 </div>
