@@ -6,7 +6,7 @@ import './page.css'; // Import the CSS file
 import About from "@/app/components/About";
 import Desc from "@/app/components/Scroll/components/Description";
 // import Features from "../Features";
-import ServicesDec from "@/app/seperate/ServicesDec";
+// import ServicesDec from "@/app/seperate/ServicesDec";
 
 export default function Home() {
   const container = useRef();

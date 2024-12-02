@@ -15,7 +15,6 @@ const ScrollChangeImage = () => {
 
   const [activeImage, setActiveImage] = useState(points[0].image);
   const [progress, setProgress] = useState(0); // For status bar progress
-  const [nextComponentVisible, setNextComponentVisible] = useState(false); // State to control visibility of the next component
   const contentRefs = useRef([]);
 
   const handleScroll = () => {
@@ -37,10 +36,6 @@ const ScrollChangeImage = () => {
 
     setProgress(newProgress);
 
-    // Check if all points have been scrolled through
-    if (lastIndex === totalPoints - 1) {
-      setNextComponentVisible(true); // Trigger next component after last point
-    }
   };
 
   // Smooth scroll effect
