@@ -60,7 +60,7 @@ const CompOne = () => {
   variants={containerVariants(0.4)}
 >
   {/* Overlay Effect */}
-  <div className="absolute top-0 left-0 w-full h-full bg-black opacity-50 z-10"></div> {/* Adjusted z-index */}
+  <div className="absolute top-0 left-0 w-full h-full bg-black opacity-80 z-10"></div> {/* Adjusted z-index */}
 </motion.div>
 
       {/* Left Section (Text) */}
@@ -70,7 +70,7 @@ const CompOne = () => {
       >
         <motion.h1
           variants={titleVariants}
-          className="font-semibold uppercase leading-tight text-center text-teal-950 text-4xl sm:text-5xl lg:text-[3.50rem]"
+          className="font-semibold uppercase leading-tight text-center text-teal-950 text-4xl sm:text-5xl lg:text-[3.50rem] mt-20"
         >
           <span className="text-transparent bg-clip-text bg-gradient-to-tr from-gray-100 to-orange-600">
               Empowering Your Global Journey with Expertise 

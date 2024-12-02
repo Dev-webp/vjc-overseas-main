@@ -14,7 +14,6 @@ const page = () => {
     <Two/>
     <CTA/>
     <Four/>
-    {/* <Scroll/> */}
     <Price/>
     <Three/>
     

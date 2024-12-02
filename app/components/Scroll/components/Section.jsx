@@ -2,7 +2,7 @@ import Image from 'next/image';
 import Background from '../../../../public/bg-2.png';
 import { useScroll, useTransform, motion } from 'framer-motion';
 import { useRef } from 'react';
-import CountrySlider from '@/app/seperate/Countries';
+import CountrySlider from '@/app/components/Countries';
 
 export default function Section() {
     const container = useRef();

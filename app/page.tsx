@@ -6,7 +6,7 @@ import Hero from "@/app/components/Hero";
 import Footer from "@/app/components/Footer";
 import Desc from "@/app/components/Scroll/components/Description";
 import NewSteps from "@/app/components/NewSteps";
-import ServicesDec from "./seperate/ServicesDec";
+import ServicesDec from "@/app/components/ServicesDec";
 
 // Dynamic Imports
 const Scroll = dynamic(() => import('@/app/components/Scroll/index'));
