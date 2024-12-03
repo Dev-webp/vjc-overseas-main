@@ -76,7 +76,7 @@
 
 @media (max-width: 768px) {
   .gallery {
-    height: 175vh;
+    height: 120vh;
     background: url('/rose-petals.webp') no-repeat center top / cover;
     position: relative;
     display: flex;
@@ -136,7 +136,7 @@
   .column:nth-of-type(2),
   .column:nth-of-type(3),
   .column:nth-of-type(4) {
-    top: 0%; /* Reset top positioning for vertical stacking */
+    bottom: 10%; /* Reset top positioning for vertical stacking */
   }
 }
 

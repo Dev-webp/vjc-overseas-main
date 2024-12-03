@@ -31,6 +31,7 @@ export default function Section() {
                     <div className="absolute inset-0 bg-black opacity-80"></div>
                 </motion.div>
             </div>
+            
             <CountrySlider/>
         </div>
     );

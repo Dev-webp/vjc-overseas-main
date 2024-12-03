@@ -2,7 +2,7 @@
 "use client"
 import React, { useState } from "react";
 import Link from "next/link"; 
-import { FaEnvelope, FaBars } from 'react-icons/fa';
+import { FaEnvelope, FaBars, FaTimes } from 'react-icons/fa';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false); // State to toggle the menu
@@ -22,7 +22,7 @@ const Navbar = () => {
   return (
     <header>
       {/* White background section with logo, contact information, and marquee */}
-      <div className="bg-white py-0 px-4 shadow-md z-50 fixed top-0 w-full">
+      <div className="bg-white py-0 px-2 shadow-md z-50 fixed top-0 w-screen">
         <div className="flex justify-between items-center max-w-7xl mx-auto">
           {/* Logo (Always visible) */}
           <div className="flex items-center space-x-0">
@@ -47,7 +47,7 @@ const Navbar = () => {
           </div>
 
           {/* Contact Information (Hidden on md and sm devices) */}
-          <div className="hidden md:flex items-center space-x-4">
+          <div className=" hidden md:flex items-center space-x-2">
             <div className="flex items-center space-x-2 text-sm text-black uppercase font-semibold italic">
               <div className="flex items-center animate-pulse text-blue-600">
                 <img src="/loc.png" alt="Bangalore" className="mr-1 w-5 h-5" />
@@ -64,7 +64,7 @@ const Navbar = () => {
             </div>
 
             {/* Mail Address with Icon */}
-            <div className="flex items-center space-x-2 text-sm text-black uppercase font-semibold italic">
+            <div className="flex items-center space-x-2 text-xs lg:text-sm text-black uppercase font-semibold italic">
               <div className="flex items-center animate-pulse text-blue-600">
                 <a href="mailto:info@vjcoverseas.com" className="flex items-center">
                   <FaEnvelope className="mr-1 w-5 h-5 text-orange-500" />
@@ -77,7 +77,7 @@ const Navbar = () => {
             <div>
               <a
                 href="tel:+919160449000"
-                className="flex items-center text-white py-1 px-0 rounded-lg text-sm font-bold uppercase"
+                className="flex items-center text-white py-1 px-0 rounded-lg text-xs lg:text-sm whitespace-nowrap font-bold uppercase"
               >
                 <img src="/phone.gif" alt="Phone" className="h-6 w-6 mr-1" />
                 <span className="text-blue-600">+91 9160449000</span>
@@ -88,36 +88,40 @@ const Navbar = () => {
       </div>
 
       {/* Orange background section with hamburger menu for small screens */}
-      <div className="bg-orange-500 fixed top-12 w-full z-50">
-        <nav className="flex justify-between items-center py-2">
-          {/* Hamburger Icon for small screens (aligned to the right) */}
-          <div className="md:hidden flex items-center px-4 ml-auto">
-            <button
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="text-white text-xl"
-            >
-              <FaBars />
-            </button>
-          </div>
+<div className="bg-orange-500 fixed top-12 w-screen z-50">
+  <nav className="flex justify-between items-center py-2">
+    {/* Hamburger/Close Icon for small screens */}
+    <div className="md:hidden flex items-center px-4 ml-auto">
+      <button
+        onClick={() => setIsMenuOpen(!isMenuOpen)}
+        className="text-white text-xl"
+      >
+        {isMenuOpen ? <FaTimes /> : <FaBars />}
+      </button>
+    </div>
 
-          {/* Navigation links (visible on md and above, or when menu is open on smaller screens) */}
-          <div className={`flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-1 whitespace-nowrap md:flex mr-36 ${isMenuOpen ? 'block' : 'hidden'} transition-all ease-in-out duration-300`}>
-            {menuItems.map((item, index) => (
-              <React.Fragment key={item.name}>
-                <Link
-                  href={item.path}
-                  className="text-white text-sm lg:text-sm font-semibold px-4 hover:bg-white hover:bg-opacity-20 uppercase"
-                >
-                  {item.name}
-                </Link>
-                {index < menuItems.length - 1 && (
-                  <span className="text-white hidden lg:inline-block">|</span>
-                )}
-              </React.Fragment>
-            ))}
-          </div>
-        </nav>
-      </div>
+    {/* Navigation links */}
+    <div
+      className={`flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-1 whitespace-nowrap md:flex mr-24 
+      ${isMenuOpen ? 'block' : 'hidden'} transition-all ease-in-out duration-300`}
+    >
+      {menuItems.map((item, index) => (
+        <React.Fragment key={item.name}>
+          <Link
+            href={item.path}
+            className="text-white text-sm lg:text-sm font-semibold px-4 hover:bg-white hover:bg-opacity-20 uppercase"
+          >
+            {item.name}
+          </Link>
+          {index < menuItems.length - 1 && (
+            <span className="text-white hidden lg:inline-block">|</span>
+          )}
+        </React.Fragment>
+      ))}
+    </div>
+  </nav>
+</div>
+
 
       {/* Add margin to ensure content below is not hidden */}
       <div className="mt-0"></div> {/* Adjust the margin if necessary */}

@@ -79,7 +79,7 @@ const CountrySlider = () => {
   }, []);
 
   return (
-    <div className="relative w-screen h-screen overflow-hidden">
+    <div className="relative w-screen h-screen overflow-hidden ">
       {/* Background image animation for expanded image */}
       {expandedIndex !== null && (
         <motion.div
@@ -150,7 +150,7 @@ const CountrySlider = () => {
       {/* Images grid (hidden behind the expanded image when clicked) */}
       <motion.div
         ref={sliderRef} // Reference for mouse wheel scroll
-        className="flex w-full h-screen overflow-x-scroll snap-x snap-mandatory gap-6 rounded-lg"
+        className="flex w-full h-screen overflow-x-scroll snap-x snap-mandatory gap-6 rounded-lg mt-10"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
@@ -180,14 +180,19 @@ const CountrySlider = () => {
             />
             
             <motion.h2
-              className="absolute bottom-6 left-6 text-4xl font-bold text-white z-20 uppercase writing-mode:vertical-rl"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              transition={{ duration: 0.6 }}
-            >
-              {country.name}
-            </motion.h2>
+  className="absolute bottom-6 left-6 text-4xl font-bold text-white z-20 uppercase"
+  initial={{ opacity: 0 }}
+  animate={{ opacity: 1 }}
+  exit={{ opacity: 0 }}
+  transition={{ duration: 0.6 }}
+  style={{
+    writingMode: 'vertical-rl',  // Vertical writing mode
+    transform: 'rotate(180deg)', // Rotate text to make it more readable (optional)
+  }}
+>
+  {country.name}
+</motion.h2>
+
 
             {/* Subtle gradient black opacity at the top and bottom of the slider images */}
             <div className="absolute top-0 left-0 w-full h-1/4 bg-gradient-to-b from-black via-transparent to-transparent"></div>

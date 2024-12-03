@@ -44,7 +44,7 @@ const CompOne = () => {
       <motion.div
   className="absolute top-0 left-0 w-full h-full bg-cover bg-center z-0"
   style={{
-    backgroundImage: 'url(/5.webp)',
+    backgroundImage: 'url(/banner.webp)',
   }}
   animate={{
     y: ['0%', '5%'],  
