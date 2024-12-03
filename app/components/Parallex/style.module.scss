@@ -92,8 +92,8 @@
   .column {
     position: relative;
     height: auto; /* Let the height adjust automatically */
-    width: 100%; /* Full width of the gallery */
-    min-width: 350px; /* Ensures column doesn't shrink too much */
+    width: 50%; /* Full width of the gallery */
+    max-width: 150px; /* Ensures column doesn't shrink too much */
     display: flex;
     flex-direction: column; /* Stack the items vertically */
     gap: 2vw;
@@ -103,7 +103,7 @@
   }
 
   .gridItem {
-    height: 150px; /* Adjust height as needed */
+    height: 100px; /* Adjust height as needed */
     background-color: rgb(255, 255, 255);
     border-radius: 1vw;
     border: 1px solid; /* Black border */
@@ -136,7 +136,7 @@
   .column:nth-of-type(2),
   .column:nth-of-type(3),
   .column:nth-of-type(4) {
-    top: auto; /* Reset top positioning for vertical stacking */
+    top: 0%; /* Reset top positioning for vertical stacking */
   }
 }
 

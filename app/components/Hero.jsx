@@ -42,12 +42,12 @@ export default function HeroSection() {
       {/* Left Section (Text) */}
       <motion.div
         variants={containerVariants(0.4)}
-        className="flex flex-col space-y-8 lg:space-y-6 lg:items-center text-center lg:text-left max-w-2xl md:max-w-3xl mx-auto mb-0 lg:mb-0 relative z-10 ml-10 mt-20"
+        className="flex flex-col space-y-8 lg:space-y-6 lg:items-center text-center lg:text-left max-w-2xl md:max-w-3xl mx-auto mb-0 lg:mb-0 relative z-10 ml-0 lg:ml-10 mt-20"
       >
         <img
             src="/1.gif" // Change to your image path
             alt="Work in Germany"
-            className="w-[70rem] h-auto mt-0" // Adjust margin to align with curved text
+            className="w-[28rem] lg:w-[70rem] h-auto mt-0" // Adjust margin to align with curved text
           />
           {/* <img
             src="/award.png" // Change to your image path
@@ -65,7 +65,7 @@ export default function HeroSection() {
          
         <motion.p
           variants={desVariants}
-          className="flex text-gray-200 tracking-tight text-center md:font-medium max-w-xl mx-auto lg:max-w-none"
+          className="flex text-gray-200 tracking-tight text-center text-xs lg:text-base md:font-medium max-w-xs mx-auto lg:max-w-none"
         >
           Being India&apos;s Most Trusted Brand (2022 & 2024) and the Global Icon Award (2023), we do not just walk on the success trails; we make them. Your international aspirations are guided and managed at VJC Overseas with our track record and absolute commitment.
         </motion.p>
@@ -76,13 +76,13 @@ export default function HeroSection() {
         >
           <Link
             href="#"
-            className="px-6 items-center h-12 rounded-lg bg-orange-600 text-white duration-300 ease-linear flex justify-center w-full sm:w-auto transform hover:scale-105 transition-transform"
+            className="px-6 items-center h-12 rounded-lg bg-orange-600 text-white duration-300 ease-linear flex justify-center w-[15rem] lg:w-full transform hover:scale-105 transition-transform"
           >
             Get started
           </Link>
           <Link
             href="#"
-            className="px-6 items-center h-12 rounded-lg text-orange-700 border border-gray-100 bg-gray-100 duration-300 ease-linear flex justify-center w-full sm:w-auto transform hover:scale-105 transition-transform"
+            className="px-6 items-center h-12 rounded-lg text-orange-700 border border-gray-100 bg-gray-100 duration-300 ease-linear flex justify-center w-[15rem] lg:w-full transform hover:scale-105 transition-transform"
           >
             Book a call
           </Link>
@@ -94,10 +94,10 @@ export default function HeroSection() {
         variants={containerVariants(0.8)}
         initial="offscreen"
         animate="onscreen"
-        className="flex aspect-square lg:aspect-auto w-[40rem] h-[20rem] tablet:h-[30rem] lg:h-[40rem] relative mt-44 tablet:mt-0 md:mt-0 lg:mt-0 z-10 ml-0 md:ml-0 lg:ml-0 tablet:ml-20"
+        className="flex aspect-square lg:aspect-auto w-[40rem] h-[20rem] tablet:h-[30rem] lg:h-[40rem] relative mt-4 tablet:mt-0 md:mt-0 lg:mt-0 z-10 ml-0 md:ml-0 lg:ml-0 tablet:ml-20"
       >
 
-        <div className='mt-28 ml-24'>
+        <div className='mt-0 lg:mt-24 ml-0 lg:ml-24'>
         <Form/>
         </div>
 

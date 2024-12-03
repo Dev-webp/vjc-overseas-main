@@ -97,9 +97,9 @@ const ServicesDec = () => {
 
   return (
     <motion.div
-  className="flex items-center justify-center w-screen h-screen relative bg-cover bg-center bg-no-repeat"
+  className="flex items-center justify-center w-auto lg:w-[98.70vw] h-screen relative bg-cover bg-center bg-no-repeat"
   style={{
-    backgroundImage: `url('/comp-21.webp')`, // Replace with your actual image path
+    backgroundImage: `url('/comp-21.webp')`, 
   }}
   initial="hidden"
   animate="visible"
@@ -120,20 +120,20 @@ const ServicesDec = () => {
     alt="Services"
     className={`object-cover rounded-full ${
       currentImage === "/ser.png" 
-        ? "w-[30rem] h-[30rem]" // Default image dimensions
-        : "w-[40rem] h-[40rem] mb-8" // Changing image dimensions
+        ? "w-[30rem] h-[30rem] mb-80 md:mb-0 lg:mb-0" // Default image dimensions
+        : "w-[40rem] h-[40rem] mb-80 md:mb-8 lg:mb-8" // Changing image dimensions
     }`}
     initial={{ opacity: 0, scale: 1.05 }} // Start slightly scaled up for smoother transition
     animate={{ opacity: 1, scale: 1 }}
     exit={{ opacity: 0, scale: 1.05 }} // Ensure image fades out when changed
-    transition={{ duration: 0.5, ease: "easeInOut" }}
+    transition={{ duration: 0.1, ease: "easeInOut" }}
     whileHover={{ scale: 1.1 }}
   />
 
   {/* Overlay Content (Visible only on default image) */}
   {currentImage === "/ser.png" && ( // Check if it's the default image
     <motion.div
-      className="absolute inset-0 flex flex-col items-center justify-center text-black mt-52 ml-6"
+      className="absolute inset-0 flex flex-col items-center justify-center text-black mt-0 lg:mt-52 ml-6 mb-28 md:mb-0 lg:mb-0"
       whileHover={{ y: -10 }}
       transition={{ duration: 0.3, ease: "easeInOut" }}
     >
@@ -306,7 +306,7 @@ const ServicesDec = () => {
 
 {/* Box 7 (Bottom Center) */}
 <motion.div
-  className="absolute w-72 h-28 cursor-pointer bg-white border border-gray-300 shadow-lg flex items-center justify-between p-4 rounded-lg bottom-10 transform -translate-y-1/2 left-[31rem] -translate-x-1/2 transition-transform duration-300 ease-in-out hover:scale-105 hover:shadow-xl hover:border-black hover:bg-orange-400 group"
+  className="absolute w-72 h-28 cursor-pointer bg-white border border-gray-300 shadow-lg flex items-center justify-between p-4 rounded-lg bottom-10 transform -translate-y-1/2 left-[4rem] lg:left-[31rem] -translate-x-1/2 transition-transform duration-300 ease-in-out hover:scale-105 hover:shadow-xl hover:border-black hover:bg-orange-400 group"
   initial="hidden"
   animate="visible"
   variants={fadeInVariants}

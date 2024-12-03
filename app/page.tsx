@@ -18,9 +18,9 @@ const Parallex = dynamic(() => import('@/app/components/Parallex/parallex'));
 const scrollToTop = () => window.scrollTo({ top: 0, behavior: "smooth" });
 
 export default function Home() {
-  useEffect(() => {
-    scrollToTop(); 
-  }, []);
+  // useEffect(() => {
+  //   scrollToTop(); 
+  // }, []);
 
   return (
     <>

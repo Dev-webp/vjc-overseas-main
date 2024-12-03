@@ -35,7 +35,7 @@ export default function Description() {
     return (
         <div
             ref={ref} // Attach the ref to detect visibility
-            className="relative flex flex-col justify-center items-center py-24 md:py-32 lg:py-14 bg-gradient-to-br from-orange-500 to-red-600 text-white overflow-hidden"
+            className="relative flex flex-col justify-center items-center mt-60 md:mt-0 lg:mt-0 py-8 md:py-32 lg:py-14 bg-gradient-to-br from-orange-500 to-red-600 text-white overflow-hidden"
         >
             <div className="absolute inset-0 opacity-30">
                 <svg
@@ -72,7 +72,7 @@ export default function Description() {
             </div>
 
             <motion.div
-                className="relative flex justify-center gap-8 mt-0 mx-auto lg:max-w-[95%]"
+                className="relative grid grid-cols-2 gap-8 sm:grid-cols-2 lg:grid-cols-5 mt-0 mx-auto lg:max-w-[95%]" // Updated to grid-cols-5 for large screens
                 initial="hidden"
                 animate={controls}
                 variants={containerVariants}
@@ -153,9 +153,9 @@ export default function Description() {
                     </div>
                 </motion.div>
 
-                {/* Box 3 - Canada */}
+                {/* Box 5 - Canada */}
                 <motion.div
-                    className="relative bg-cover bg-center group hover:translate-y-[-10px] transition-all"
+                    className="relative bg-cover bg-center group hover:translate-y-[-10px] transition-all ml-32 md:ml-0 lg:ml-0"
                     style={{
                         backgroundImage: "url('/canada.png')",
                         width: '250px',

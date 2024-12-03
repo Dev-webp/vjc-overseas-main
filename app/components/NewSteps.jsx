@@ -98,10 +98,10 @@ const VisaProcessSteps = () => {
         
         <div className="relative flex items-center justify-center">
           {/* Black Vertical Line */}
-          <div className="w-[3px] bg-black h-[100rem] absolute"></div>
+          <div className="w-[3px] bg-black h-[69rem] lg:h-[100rem] absolute"></div>
           
           {/* Icons positioned above the vertical line */}
-          <div className="flex flex-col items-center -space-y-40">
+          <div className="flex flex-col items-center -space-y-24 lg:-space-y-40">
             {steps.map((step, index) => {
               const isLeftSide = index % 2 === 0; // Steps 1, 3, 5, 7 on the left
 
@@ -123,7 +123,7 @@ const VisaProcessSteps = () => {
                     <p className="text-gray-600 max-w-60 mb-14">{step.description}</p>
                     
                     {/* Horizontal line below the description */}
-                    <div className="w-full mt-2 border-b-2 border-gray-400"></div>
+                    <div className="w-full mt-0 lg:mt-2 mb-4 border-b-2 border-gray-400"></div>
                   </div>
 
                   {/* Icon Section */}

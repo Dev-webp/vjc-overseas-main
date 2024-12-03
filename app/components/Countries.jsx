@@ -180,7 +180,7 @@ const CountrySlider = () => {
             />
             
             <motion.h2
-              className="absolute bottom-6 left-6 text-4xl font-bold text-white z-20 uppercase"
+              className="absolute bottom-6 left-6 text-4xl font-bold text-white z-20 uppercase writing-mode:vertical-rl"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
