@@ -101,7 +101,7 @@ const VisaProcessSteps = () => {
           <div className="w-[3px] bg-black h-[69rem] lg:h-[100rem] absolute"></div>
           
           {/* Icons positioned above the vertical line */}
-          <div className="flex flex-col items-center -space-y-24 lg:-space-y-40">
+          <div className="flex flex-col items-center -space-y-32 lg:-space-y-40">
             {steps.map((step, index) => {
               const isLeftSide = index % 2 === 0; // Steps 1, 3, 5, 7 on the left
 
@@ -140,7 +140,7 @@ const VisaProcessSteps = () => {
 
                   {/* Image Section */}
                   <div className={`w-1/2 ${isLeftSide ? '' : 'order-last'}`}>
-                    <img src={step.image} alt={step.title} className="w-auto h-full rounded-lg mb-10" />
+                    <img src={step.image} alt={step.title} className="w-auto h-[8rem] lg:h-full rounded-lg mb-0 lg:mb-10 mt-10" />
                   </div>
                 </div>
               );

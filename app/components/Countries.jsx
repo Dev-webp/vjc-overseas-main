@@ -8,7 +8,7 @@ import { MdOutlineKeyboardDoubleArrowRight, MdOutlineKeyboardDoubleArrowLeft } f
 const countries = [
   { name: 'Uk', image: '/c1.png', description: 'The UK is one of the most sought-after destinations for international students and skilled professionals.' },
   { name: 'Usa', image: '/c2.png', description: 'The USA is famous for its world-class education system and career opportunities.' },
-  { name: 'Canada', image: '/slide-3.jpg', description: 'Canada is known for its beautiful landscapes and outdoor activities.' },
+  { name: 'Canada', image: '/c3.jpg', description: 'Canada is known for its beautiful landscapes and outdoor activities.' },
   { name: 'Australia', image: '/c4.png', description: 'Australia is famous for its wildlife, beaches, and cultural diversity.' },
   { name: 'Germany', image: '/c5.png', description: 'Germany boasts a strong economy, rich history, and modern infrastructure.' },
   { name: 'France', image: '/c6.png', description: 'France is known for its art, cuisine, and historical landmarks.' },

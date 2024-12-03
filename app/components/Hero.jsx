@@ -44,18 +44,19 @@ export default function HeroSection() {
         variants={containerVariants(0.4)}
         className="flex flex-col space-y-8 lg:space-y-6 lg:items-center text-center lg:text-left max-w-2xl md:max-w-3xl mx-auto mb-0 lg:mb-0 relative z-10 ml-0 lg:ml-10 mt-20"
       >
-        <img
+        {/* <img
             src="/1.gif" // Change to your image path
             alt="Work in Germany"
             className="w-[28rem] lg:w-[70rem] h-auto mt-0" // Adjust margin to align with curved text
-          />
+          /> */}
   
 
-          {/* <img
+          <img
             src="/award.png" // Change to your image path
             alt="Work in Germany"
-            className="w-[26rem] h-[7rem]" // Adjust margin to align with curved text
-          /> */}
+            className="w-[27rem] h-[7rem]" // Adjust margin to align with curved text
+          />
+
         {/* <motion.h1
           variants={titleVariants}
           className="font-semibold uppercase leading-tight text-center text-teal-950 text-4xl sm:text-5xl lg:text-[3.50rem]"
@@ -74,7 +75,7 @@ export default function HeroSection() {
         {/* <Text/> */}
         <motion.div
           variants={containerVariants(0.6)}
-          className="flex flex-col sm:flex-row items-center justify-center lg:justify-center gap-4 w-full"
+          className="hidden sm:flex flex-col sm:flex-row items-center justify-center lg:justify-center gap-4 w-full"
         >
           <Link
             href="#"
@@ -96,7 +97,7 @@ export default function HeroSection() {
         variants={containerVariants(0.8)}
         initial="offscreen"
         animate="onscreen"
-        className="flex aspect-square lg:aspect-auto w-auto h-[20rem] md:h-[40rem] lg:h-[40rem] relative mt-4 tablet:mt-0 md:mt-0 lg:mt-0 z-10 ml-0 md:ml-0 lg:ml-0 tablet:ml-20"
+        className="flex aspect-square lg:aspect-auto w-auto h-[20rem] md:h-[40rem] lg:h-[40rem] relative mt-0 tablet:mt-0 md:mt-0 lg:mt-0 z-10 ml-0 md:ml-0 lg:ml-0 tablet:ml-20"
       >
 
         <div className='mt-0 lg:mt-24 ml-6 lg:ml-24'>

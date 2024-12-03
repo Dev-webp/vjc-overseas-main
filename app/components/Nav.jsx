@@ -77,7 +77,7 @@ const Navbar = () => {
             <div>
               <a
                 href="tel:+919160449000"
-                className="flex items-center text-white py-1 px-0 rounded-lg text-xs lg:text-sm whitespace-nowrap font-bold uppercase"
+                className="flex items-center text-white py-1 px-0 rounded-lg text-xs lg:text-sm whitespace-nowrap font-bold uppercase mr-3"
               >
                 <img src="/phone.gif" alt="Phone" className="h-6 w-6 mr-1" />
                 <span className="text-blue-600">+91 9160449000</span>
@@ -101,15 +101,15 @@ const Navbar = () => {
     </div>
 
     {/* Social Media Icons */}
-    <div className="flex lg:hidden items-center space-x-4 text-white ml-6">
-      <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="text-xl">
-        <FaFacebook />
+    <div className="flex lg:hidden items-center space-x-4  ml-6">
+      <a href="https://www.facebook.com/VJCOVERSEAS/" target="_blank" rel="noopener noreferrer" className="text-xl">
+        <FaFacebook className="text-white hover:text-black"/>
       </a>
-      <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="text-xl">
-        <FaTwitter />
+      <a href="https://x.com/VJCOVERSEAS?t=aRM7qjBL9saJzNwyDzuCCg&s=09" target="_blank" rel="noopener noreferrer" className="text-xl">
+        <FaTwitter className="text-white hover:text-black" />
       </a>
-      <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="text-xl">
-        <FaInstagram />
+      <a href="https://www.instagram.com/vjcoverseas_/" target="_blank" rel="noopener noreferrer" className="text-xl">
+        <FaInstagram className="text-white hover:text-black" />
       </a>
     </div>
 
@@ -122,10 +122,10 @@ const Navbar = () => {
         {isMenuOpen ? <FaTimes /> : <FaBars />}
       </button>
     </div>
-
+    
     {/* Navigation links */}
     <div
-      className={`flex flex-col md:flex-row items-center space-y-8 md:space-y-0 md:space-x-1 whitespace-nowrap md:flex mr-[6.50rem] 
+      className={`flex flex-col md:flex-row items-center space-y-8 md:space-y-0 md:space-x-1 whitespace-nowrap md:flex 
       ${isMenuOpen ? 'block' : 'hidden'} transition-all ease-in-out duration-300`}
     >
       {menuItems.map((item, index) => (

@@ -147,37 +147,38 @@ const ServicesDec = () => {
 
 
       {/* Boxes for Small Devices */}
-      <div className="absolute w-full flex flex-col items-center justify-start top-[18%] lg:hidden mt-16">
-        {boxData.map((box, index) => (
-          <motion.div
-            key={index}
-            className="w-72 mb-4 cursor-pointer bg-white border border-gray-300 shadow-lg flex items-center justify-between p-4 rounded-lg transition-transform duration-300 ease-in-out hover:scale-105 hover:shadow-xl hover:border-black hover:bg-orange-400 group"
-            initial="hidden"
-            animate="visible"
-            variants={fadeInVariants}
-            transition={{ delay: 0.3 + index * 0.2 }} // Stagger delays
-            onClick={() => handleBoxClick(box.image)}
-          >
-            {box.icon}
-            <div className="w-0.5 h-12 bg-orange-400 group-hover:bg-white mr-1 ml-2" />
-            <div className="flex flex-col justify-between text-center">
-              <Link href="/investor-visas" passHref>
-                <p className="text-base font-semibold uppercase hover:underline cursor-pointer">
-                  {box.title}
-                </p>
-              </Link>
-              <p className="text-sm text-gray-600">{box.content}</p>
-              <motion.span
-                className="absolute bottom-2 right-2 text-xl font-extrabold hover:text-white cursor-pointer"
-                whileHover={{ rotate: -10 }}
-                transition={{ duration: 0.2 }}
-              >
-                →
-              </motion.span>
-            </div>
-          </motion.div>
-        ))}
+<div className="absolute w-full flex flex-col items-center justify-start top-[18%] lg:hidden mt-16">
+  {boxData.map((box, index) => (
+    <motion.div
+      key={index}
+      className="w-72 mb-4 cursor-pointer bg-white border border-gray-300 shadow-lg flex items-center justify-between p-4 rounded-lg transition-transform duration-300 ease-in-out hover:scale-105 hover:shadow-xl hover:border-black hover:bg-orange-400 group"
+      initial="hidden"
+      animate="visible"
+      variants={fadeInVariants}
+      transition={{ delay: 0.3 + index * 0.2 }} // Stagger delays
+      onClick={() => handleBoxClick(box.image)} // Update image when clicked
+    >
+      {box.icon}
+      <div className="w-0.5 h-12 bg-orange-400 group-hover:bg-white mr-1 ml-2" />
+      <div className="flex flex-col justify-between text-center">
+        <Link href="/investor-visas" passHref>
+          <p className="text-base font-semibold uppercase hover:underline cursor-pointer">
+            {box.title}
+          </p>
+        </Link>
+        <p className="text-sm text-gray-600">{box.content}</p>
+        <motion.span
+          className="absolute bottom-2 right-2 text-xl font-extrabold hover:text-white cursor-pointer"
+          whileHover={{ rotate: -10 }}
+          transition={{ duration: 0.2 }}
+        >
+          →
+        </motion.span>
       </div>
+    </motion.div>
+  ))}
+</div>
+
 
 
 
