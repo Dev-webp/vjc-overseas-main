@@ -2,7 +2,7 @@
 "use client"
 import React, { useState } from "react";
 import Link from "next/link"; 
-import { FaEnvelope, FaBars, FaTimes } from 'react-icons/fa';
+import { FaEnvelope, FaBars, FaTimes, FaFacebook, FaTwitter, FaInstagram } from 'react-icons/fa';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false); // State to toggle the menu
@@ -47,8 +47,8 @@ const Navbar = () => {
           </div>
 
           {/* Contact Information (Hidden on md and sm devices) */}
-          <div className=" hidden md:flex items-center space-x-2">
-            <div className="flex items-center space-x-2 text-sm text-black uppercase font-semibold italic">
+          <div className=" flex items-center space-x-2">
+            <div className="hidden md:flex items-center space-x-2 text-sm text-black uppercase font-semibold italic">
               <div className="flex items-center animate-pulse text-blue-600">
                 <img src="/loc.png" alt="Bangalore" className="mr-1 w-5 h-5" />
                 <p>Bangalore</p>
@@ -64,7 +64,7 @@ const Navbar = () => {
             </div>
 
             {/* Mail Address with Icon */}
-            <div className="flex items-center space-x-2 text-xs lg:text-sm text-black uppercase font-semibold italic">
+            <div className="hidden md:flex items-center space-x-2 text-xs lg:text-sm text-black uppercase font-semibold italic">
               <div className="flex items-center animate-pulse text-blue-600">
                 <a href="mailto:info@vjcoverseas.com" className="flex items-center">
                   <FaEnvelope className="mr-1 w-5 h-5 text-orange-500" />
@@ -88,8 +88,31 @@ const Navbar = () => {
       </div>
 
       {/* Orange background section with hamburger menu for small screens */}
-<div className="bg-orange-500 fixed top-12 w-screen z-50">
+      <div className="bg-orange-500 fixed top-12 w-screen z-50">
   <nav className="flex justify-between items-center py-2">
+    {/* Mail Address */}
+    <div className="flex lg:hidden items-center space-x-2 text-xs lg:text-sm text-black uppercase font-semibold italic">
+      <div className="flex items-center animate-pulse text-black">
+        <a href="mailto:info@vjcoverseas.com" className="flex items-center">
+          <FaEnvelope className="mr-1 w-5 h-5 text-orange-500" />
+          <p>info@vjcoverseas.com</p>
+        </a>
+      </div>
+    </div>
+
+    {/* Social Media Icons */}
+    <div className="flex lg:hidden items-center space-x-4 text-white ml-6">
+      <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="text-xl">
+        <FaFacebook />
+      </a>
+      <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="text-xl">
+        <FaTwitter />
+      </a>
+      <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="text-xl">
+        <FaInstagram />
+      </a>
+    </div>
+
     {/* Hamburger/Close Icon for small screens */}
     <div className="md:hidden flex items-center px-4 ml-auto">
       <button
@@ -102,7 +125,7 @@ const Navbar = () => {
 
     {/* Navigation links */}
     <div
-      className={`flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-1 whitespace-nowrap md:flex mr-24 
+      className={`flex flex-col md:flex-row items-center space-y-8 md:space-y-0 md:space-x-1 whitespace-nowrap md:flex mr-[6.50rem] 
       ${isMenuOpen ? 'block' : 'hidden'} transition-all ease-in-out duration-300`}
     >
       {menuItems.map((item, index) => (
@@ -121,6 +144,7 @@ const Navbar = () => {
     </div>
   </nav>
 </div>
+
 
 
       {/* Add margin to ensure content below is not hidden */}

@@ -151,7 +151,7 @@ const ServicesDec = () => {
         {boxData.map((box, index) => (
           <motion.div
             key={index}
-            className="w-full sm:w-72 mb-4 cursor-pointer bg-white border border-gray-300 shadow-lg flex items-center justify-between p-4 rounded-lg transition-transform duration-300 ease-in-out hover:scale-105 hover:shadow-xl hover:border-black hover:bg-orange-400 group"
+            className="w-72 mb-4 cursor-pointer bg-white border border-gray-300 shadow-lg flex items-center justify-between p-4 rounded-lg transition-transform duration-300 ease-in-out hover:scale-105 hover:shadow-xl hover:border-black hover:bg-orange-400 group"
             initial="hidden"
             animate="visible"
             variants={fadeInVariants}
