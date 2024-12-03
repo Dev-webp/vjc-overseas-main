@@ -97,7 +97,7 @@ const ServicesDec = () => {
 
   return (
     <motion.div
-  className="flex items-center justify-center w-auto lg:w-[98.70vw] h-screen relative bg-cover bg-center bg-no-repeat"
+  className="flex items-center justify-center w-auto lg:w-[98.70vw] h-[80rem] lg:h-screen  relative bg-cover bg-center bg-no-repeat"
   style={{
     backgroundImage: `url('/comp-21.webp')`, 
   }}
@@ -120,8 +120,8 @@ const ServicesDec = () => {
     alt="Services"
     className={`object-cover rounded-full ${
       currentImage === "/ser.png" 
-        ? "w-[30rem] h-[30rem] mb-[27rem] md:mb-0 lg:mb-0" // Default image dimensions
-        : "w-[40rem] h-[40rem] mb-[27rem] md:mb-8 lg:mb-8" // Changing image dimensions
+        ? "w-[30rem] h-[30rem] mb-[65rem] md:mb-0 lg:mb-0" // Default image dimensions
+        : "w-[40rem] h-[40rem] mb-[65rem] md:mb-8 lg:mb-8" // Changing image dimensions
     }`}
     initial={{ opacity: 0, scale: 1.05 }} // Start slightly scaled up for smoother transition
     animate={{ opacity: 1, scale: 1 }}
@@ -133,7 +133,7 @@ const ServicesDec = () => {
   {/* Overlay Content (Visible only on default image) */}
   {currentImage === "/ser.png" && ( // Check if it's the default image
     <motion.div
-      className="absolute inset-0 flex flex-col items-center justify-center text-black mt-0 lg:mt-52 ml-6 mb-52 md:mb-0 lg:mb-0"
+      className="absolute inset-0 flex flex-col items-center justify-center text-black mt-0 lg:mt-52 ml-6 mb-[51rem] md:mb-0 lg:mb-0"
       whileHover={{ y: -10 }}
       transition={{ duration: 0.3, ease: "easeInOut" }}
     >
@@ -146,12 +146,46 @@ const ServicesDec = () => {
 </motion.div>
 
 
+      {/* Boxes for Small Devices */}
+      <div className="absolute w-full flex flex-col items-center justify-start top-[18%] lg:hidden mt-16">
+        {boxData.map((box, index) => (
+          <motion.div
+            key={index}
+            className="w-full sm:w-72 mb-4 cursor-pointer bg-white border border-gray-300 shadow-lg flex items-center justify-between p-4 rounded-lg transition-transform duration-300 ease-in-out hover:scale-105 hover:shadow-xl hover:border-black hover:bg-orange-400 group"
+            initial="hidden"
+            animate="visible"
+            variants={fadeInVariants}
+            transition={{ delay: 0.3 + index * 0.2 }} // Stagger delays
+            onClick={() => handleBoxClick(box.image)}
+          >
+            {box.icon}
+            <div className="w-0.5 h-12 bg-orange-400 group-hover:bg-white mr-1 ml-2" />
+            <div className="flex flex-col justify-between text-center">
+              <Link href="/investor-visas" passHref>
+                <p className="text-base font-semibold uppercase hover:underline cursor-pointer">
+                  {box.title}
+                </p>
+              </Link>
+              <p className="text-sm text-gray-600">{box.content}</p>
+              <motion.span
+                className="absolute bottom-2 right-2 text-xl font-extrabold hover:text-white cursor-pointer"
+                whileHover={{ rotate: -10 }}
+                transition={{ duration: 0.2 }}
+              >
+                →
+              </motion.span>
+            </div>
+          </motion.div>
+        ))}
+      </div>
+
+
 
       {/* Boxes - Circular Layout */}
       <div className="absolute w-full h-full flex justify-center items-center">
         {/* Box 1 (Top Left) */}
         <motion.div
-  className="absolute w-72 h-28 cursor-pointer bg-white border border-gray-300 shadow-lg flex items-center justify-between p-4 rounded-lg top-80 lg:top-16 left-10 lg:left-20 transition-transform duration-300 ease-in-out hover:scale-105 hover:shadow-xl hover:border-black hover:bg-orange-400 group"
+  className="absolute w-72 h-28 cursor-pointer bg-white border border-gray-300 shadow-lg hidden sm:flex items-center justify-between p-4 rounded-lg top-16 left-20 transition-transform duration-300 ease-in-out hover:scale-105 hover:shadow-xl hover:border-black hover:bg-orange-400 group"
   initial="hidden"
   animate="visible"
   variants={fadeInVariants}
@@ -180,7 +214,7 @@ const ServicesDec = () => {
 
         {/* Box 2 (Top Center) */}
         <motion.div
-          className="absolute w-72 h-28 cursor-pointer bg-white border border-gray-300 shadow-lg flex items-center justify-between p-4 rounded-lg top-[28rem] lg:top-8 left-10 lg:left-0 transition-transform duration-300 ease-in-out hover:scale-105 hover:shadow-xl hover:border-black hover:bg-orange-400 group"
+          className="absolute w-72 h-28 cursor-pointer bg-white border border-gray-300 shadow-lg hidden sm:flex items-center justify-between p-4 rounded-lg top-8 transition-transform duration-300 ease-in-out hover:scale-105 hover:shadow-xl hover:border-black hover:bg-orange-400 group"
           initial="hidden"
           animate="visible"
           variants={fadeInVariants}
@@ -205,7 +239,7 @@ const ServicesDec = () => {
         </motion.div>
         {/* Box 3 (Top Right) */}
 <motion.div
-  className="absolute w-72 h-28 cursor-pointer bg-white border border-gray-300 shadow-lg flex items-center justify-between p-4 rounded-lg top-[36rem] lg:top-16 right-8 lg:right-20 transition-transform duration-300 ease-in-out hover:scale-105 hover:shadow-xl hover:border-black hover:bg-orange-400 group"
+  className="absolute w-72 h-28 cursor-pointer bg-white border border-gray-300 shadow-lg hidden sm:flex items-center justify-between p-4 rounded-lg top-16 right-20 transition-transform duration-300 ease-in-out hover:scale-105 hover:shadow-xl hover:border-black hover:bg-orange-400 group"
   initial="hidden"
   animate="visible"
   variants={fadeInVariants}

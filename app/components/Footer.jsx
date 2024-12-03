@@ -83,7 +83,7 @@ const Footer = () => {
             {/* Google Map */}
             <div className="mt-4">
                 <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.7547877659777!2d78.44687711507425!3d17.438545988039776!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb91e9d0c75cd3%3A0x77c7f23e8a49a2d6!2sSanjeeva%20Reddy%20Nagar%2C%20Hyderabad%2C%20Telangana%20500038!5e0!3m2!1sen!2sin!4v1609591824253!5m2!1sen!2sin"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d30450.879492387034!2d78.43919859884804!3d17.44247831865735!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb917617299bc1%3A0xaeab178c8f988087!2sSundari%20Reddy%20Bhavan!5e0!3m2!1sen!2sin!4v1733222407168!5m2!1sen!2sin" 
                     width="100%"
                     height="200"
                     frameBorder="0"

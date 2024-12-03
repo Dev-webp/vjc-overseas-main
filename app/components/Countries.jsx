@@ -130,7 +130,7 @@ const CountrySlider = () => {
 
       {/* Slider navigation buttons */}
       <motion.button
-        className="absolute top-1/2 left-0 z-20 transform -translate-y-1/2 bg-neutral-200 text-neutral-400 p-2 rounded-full"
+        className="absolute top-[40rem] lg:top-1/2  left-0 z-20 transform -translate-y-1/2 bg-neutral-200 text-neutral-400 p-2 rounded-full"
         onClick={scrollLeft}
         whileHover={{ scale: 1.1 }} // Scale button slightly on hover
         transition={{ duration: 0.3 }}
@@ -139,7 +139,7 @@ const CountrySlider = () => {
       </motion.button>
 
       <motion.button
-        className="absolute top-1/2 right-0 z-20 transform -translate-y-1/2 bg-neutral-200 text-neutral-400 p-2 rounded-full"
+        className="absolute top-[40rem] lg:top-1/2  right-0 z-20 transform -translate-y-1/2 bg-neutral-200 text-neutral-400 p-2 rounded-full"
         onClick={scrollRight}
         whileHover={{ scale: 1.1 }} // Scale button slightly on hover
         transition={{ duration: 0.3 }}
@@ -180,7 +180,7 @@ const CountrySlider = () => {
             />
             
             <motion.h2
-  className="absolute bottom-6 left-6 text-4xl font-bold text-white z-20 uppercase"
+  className="absolute bottom-6 left-4 text-4xl font-bold text-white z-20 uppercase"
   initial={{ opacity: 0 }}
   animate={{ opacity: 1 }}
   exit={{ opacity: 0 }}

@@ -49,6 +49,8 @@ export default function HeroSection() {
             alt="Work in Germany"
             className="w-[28rem] lg:w-[70rem] h-auto mt-0" // Adjust margin to align with curved text
           />
+  
+
           {/* <img
             src="/award.png" // Change to your image path
             alt="Work in Germany"
@@ -97,7 +99,7 @@ export default function HeroSection() {
         className="flex aspect-square lg:aspect-auto w-auto h-[20rem] tablet:h-[30rem] lg:h-[40rem] relative mt-4 tablet:mt-0 md:mt-0 lg:mt-0 z-10 ml-0 md:ml-0 lg:ml-0 tablet:ml-20"
       >
 
-        <div className='mt-0 lg:mt-24 ml-3 lg:ml-24'>
+        <div className='mt-0 lg:mt-24 ml-6 lg:ml-24'>
         <Form/>
         </div>
 

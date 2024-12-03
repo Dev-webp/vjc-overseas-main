@@ -26,8 +26,9 @@ export default function Description() {
                     for a brighter future.
                 </p>
             </div>
+            
 
-            <div className="relative grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8 mt-0 mx-auto lg:max-w-[95%]">
+            <div className="relative grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-0 lg:gap-8 mt-0 mx-auto lg:max-w-[95%]">
                 {/* Box 1 - UK */}
                 <div
                     className="relative bg-cover bg-center group hover:translate-y-[-10px] transition-all"
