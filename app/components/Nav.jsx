@@ -87,47 +87,12 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* Orange background section with hamburger menu for small screens */}
-      <div className="bg-orange-500 fixed top-12 w-screen z-50">
+{/* Orange background section for large screens */}
+<div className="bg-orange-500 fixed top-12 w-screen z-50">
   <nav className="flex justify-between items-center py-2">
-    {/* Mail Address */}
-    <div className="flex lg:hidden items-center space-x-2 text-xs lg:text-sm text-black uppercase font-semibold italic">
-      <div className="flex items-center animate-pulse text-black">
-        <a href="mailto:info@vjcoverseas.com" className="flex items-center">
-          <FaEnvelope className="mr-1 w-5 h-5 text-orange-500" />
-          <p>info@vjcoverseas.com</p>
-        </a>
-      </div>
-    </div>
-
-    {/* Social Media Icons */}
-    <div className="flex lg:hidden items-center space-x-4  ml-6">
-      <a href="https://www.facebook.com/VJCOVERSEAS/" target="_blank" rel="noopener noreferrer" className="text-xl">
-        <FaFacebook className="text-white hover:text-black"/>
-      </a>
-      <a href="https://x.com/VJCOVERSEAS?t=aRM7qjBL9saJzNwyDzuCCg&s=09" target="_blank" rel="noopener noreferrer" className="text-xl">
-        <FaTwitter className="text-white hover:text-black" />
-      </a>
-      <a href="https://www.instagram.com/vjcoverseas_/" target="_blank" rel="noopener noreferrer" className="text-xl">
-        <FaInstagram className="text-white hover:text-black" />
-      </a>
-    </div>
-
-    {/* Hamburger/Close Icon for small screens */}
-    <div className="md:hidden flex items-center px-4 ml-auto">
-      <button
-        onClick={() => setIsMenuOpen(!isMenuOpen)}
-        className="text-white text-xl"
-      >
-        {isMenuOpen ? <FaTimes /> : <FaBars />}
-      </button>
-    </div>
     
-    {/* Navigation links */}
-    <div
-      className={`flex flex-col md:flex-row items-center space-y-8 md:space-y-0 md:space-x-1 whitespace-nowrap md:flex 
-      ${isMenuOpen ? 'block' : 'hidden'} transition-all ease-in-out duration-300`}
-    >
+    {/* Navigation links for large screens */}
+    <div className="flex flex-row space-x-1 whitespace-nowrap">
       {menuItems.map((item, index) => (
         <React.Fragment key={item.name}>
           <Link
@@ -144,6 +109,67 @@ const Navbar = () => {
     </div>
   </nav>
 </div>
+
+{/* Small devices */}
+<div className="bg-orange-500 fixed top-12 w-screen z-50 md:hidden">
+  <nav className="flex justify-between items-center py-2">
+    {/* Mail Address */}
+    <div className="flex items-center space-x-2 text-xs lg:text-sm text-black uppercase font-semibold italic">
+      <div className="flex items-center animate-pulse text-black">
+        <a href="mailto:info@vjcoverseas.com" className="flex items-center">
+          <FaEnvelope className="mr-1 w-5 h-5 text-orange-500" />
+          <p>info@vjcoverseas.com</p>
+        </a>
+      </div>
+    </div>
+
+    {/* Social Media Icons */}
+    <div className="flex items-center space-x-4 ml-6">
+      <a href="https://www.facebook.com/VJCOVERSEAS/" target="_blank" rel="noopener noreferrer" className="text-xl">
+        <FaFacebook className="text-white hover:text-black"/>
+      </a>
+      <a href="https://x.com/VJCOVERSEAS?t=aRM7qjBL9saJzNwyDzuCCg&s=09" target="_blank" rel="noopener noreferrer" className="text-xl">
+        <FaTwitter className="text-white hover:text-black" />
+      </a>
+      <a href="https://www.instagram.com/vjcoverseas_/" target="_blank" rel="noopener noreferrer" className="text-xl">
+        <FaInstagram className="text-white hover:text-black" />
+      </a>
+    </div>
+
+    {/* Hamburger/Close Icon for small screens */}
+    <div className="flex items-center px-4 ml-4">
+      <button
+        onClick={() => setIsMenuOpen(!isMenuOpen)}
+        className="text-white text-xl"
+      >
+        {isMenuOpen ? <FaTimes /> : <FaBars />}
+      </button>
+    </div>
+
+    {/* Navigation links for small screens */}
+    <div
+      className={`absolute top-9 left-0 w-full h-screen items-center bg-orange-500 flex flex-col space-y-4 ${isMenuOpen ? 'block' : 'hidden'} transition-all ease-in-out duration-300`}
+    >
+      {menuItems.map((item, index) => (
+        <React.Fragment key={item.name}>
+          <Link
+            href={item.path}
+            className="text-white text-sm font-semibold px-4 mt-2 hover:bg-white hover:bg-opacity-20 uppercase"
+            onClick={() => setIsMenuOpen(false)} 
+          >
+            {item.name}
+          </Link>
+          {index < menuItems.length - 1 && (
+            <div className="w-40 h-px bg-white mx-2" />
+          )}
+        </React.Fragment>
+      ))}
+    </div>
+  </nav>
+</div>
+
+
+
 
 
 

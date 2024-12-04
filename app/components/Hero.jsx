@@ -44,11 +44,11 @@ export default function HeroSection() {
         variants={containerVariants(0.4)}
         className="flex flex-col space-y-8 lg:space-y-6 lg:items-center text-center lg:text-left max-w-2xl md:max-w-3xl mx-auto mb-0 lg:mb-0 relative z-10 ml-0 lg:ml-10 mt-20"
       >
-        {/* <img
+        <img
             src="/1.gif" // Change to your image path
             alt="Work in Germany"
             className="w-[28rem] lg:w-[70rem] h-auto mt-0" // Adjust margin to align with curved text
-          /> */}
+          />
   
 
           <img
