@@ -97,7 +97,7 @@ const ServicesDec = () => {
 
   return (
     <motion.div
-  className="flex items-center justify-center w-auto lg:w-[98.70vw] h-[80rem] lg:h-screen  relative bg-cover bg-center bg-no-repeat"
+  className="flex items-center justify-center w-auto lg:w-[98.70vw] h-[85rem] lg:h-screen  relative bg-cover bg-center bg-no-repeat"
   style={{
     backgroundImage: `url('/comp-21.webp')`, 
   }}
@@ -120,7 +120,7 @@ const ServicesDec = () => {
     alt="Services"
     className={`object-cover rounded-full ${
       currentImage === "/ser.png" 
-        ? "w-[30rem] h-[30rem] mb-[65rem] md:mb-0 lg:mb-0" // Default image dimensions
+        ? "w-[30rem] h-[30rem] mb-[69rem] md:mb-0 lg:mb-0" // Default image dimensions
         : "w-[40rem] h-[40rem] mb-[65rem] md:mb-8 lg:mb-8" // Changing image dimensions
     }`}
     initial={{ opacity: 0, scale: 1.05 }} // Start slightly scaled up for smoother transition
@@ -133,7 +133,7 @@ const ServicesDec = () => {
   {/* Overlay Content (Visible only on default image) */}
   {currentImage === "/ser.png" && ( // Check if it's the default image
     <motion.div
-      className="absolute inset-0 flex flex-col items-center justify-center text-black mt-0 lg:mt-52 ml-6 mb-[51rem] md:mb-0 lg:mb-0"
+      className="absolute inset-0 flex flex-col items-center justify-center text-black mt-0 lg:mt-52 ml-6 mb-[55rem] md:mb-0 lg:mb-0"
       whileHover={{ y: -10 }}
       transition={{ duration: 0.3, ease: "easeInOut" }}
     >
@@ -167,13 +167,13 @@ const ServicesDec = () => {
           </p>
         </Link>
         <p className="text-sm text-gray-600">{box.content}</p>
-        <motion.span
-          className="absolute bottom-2 right-2 text-xl font-extrabold hover:text-white cursor-pointer"
-          whileHover={{ rotate: -10 }}
-          transition={{ duration: 0.2 }}
-        >
-          →
-        </motion.span>
+          {/* <motion.span
+            className="absolute bottom-2 right-2 text-xl font-extrabold hover:text-white cursor-pointer"
+            whileHover={{ rotate: -10 }}
+            transition={{ duration: 0.2 }}
+          >
+            →
+          </motion.span> */}
       </div>
     </motion.div>
   ))}

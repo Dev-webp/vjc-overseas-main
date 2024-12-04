@@ -45,7 +45,7 @@ const ContentSection = () => {
       <div
         className="max-w-[85rem] mx-auto px-5 sm:px-8 tablet:px-8 md:px-12 lg:px-10 flex flex-col md:flex-row gap-12 py-10 rounded-2xl bg-gradient-to-bl from-orange-50 to-orange-50"
         style={{
-          backgroundImage: 'url(/comp-1.webp)',  // Replace with your background image
+          backgroundImage: 'url(/comp-22.webp)',  
         }}
       >
         {/* Image Section */}

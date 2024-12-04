@@ -88,17 +88,17 @@ const VisaProcessSteps = () => {
   }, [steps]);
 
   return (
-    <section className="py-4 px-4 bg-cover bg-center" style={{ backgroundImage: "url('/comp-1.webp')" }}>
-      <div className="max-w-7xl mx-auto text-center">
+    <section className="py-4 px-4 bg-cover" style={{ backgroundImage: "url('/comp-1.webp')" }}>
+      <div className="mx-auto text-center">
         <h1 className="text-[2.75rem] font-semibold uppercase text-transparent bg-clip-text bg-gradient-to-tr from-orange-500 to-orange-600 
         md:text-4xl xl:text-5xl leading-tight text-center">
           Easy Visa Process
         </h1>
-        <p className="text-lg text-gray-600 mt-2">Follow these steps for a smooth visa application process.</p>
+        <p className="text-lg text-gray-600">Follow these steps for a smooth visa application process.</p>
         
         <div className="relative flex items-center justify-center">
           {/* Black Vertical Line */}
-          <div className="w-[3px] bg-black h-[60rem] lg:h-[105rem] absolute"></div>
+          <div className="w-[3px] bg-black h-[60rem] lg:h-[86rem] absolute"></div>
           
           {/* Icons positioned above the vertical line */}
           <div className="flex flex-col items-center -space-y-32 lg:-space-y-40">
@@ -119,8 +119,8 @@ const VisaProcessSteps = () => {
                 >
                   {/* Content Section */}
                   <div className={`flex flex-col items-center ${isLeftSide ? 'mr-auto w-1/2' : 'ml-auto w-1/2'}`}>
-                    <h3 className="text-xl font-semibold text-gray-800 mt-14">{step.title}</h3>
-                    <p className="text-gray-600 max-w-60 mb-14">{step.description}</p>
+                    <h3 className="text-xl font-semibold text-gray-800 mt-16 md:mt-0 lg:mt-0">{step.title}</h3>
+                    <p className="text-gray-600 max-w-60 mb-10">{step.description}</p>
                     
                     {/* Horizontal line below the description */}
                     <div className="w-full mt-0 lg:mt-2 mb-4 border-b-2 border-gray-400"></div>
@@ -140,7 +140,7 @@ const VisaProcessSteps = () => {
 
                   {/* Image Section */}
                   <div className={`w-1/2 ${isLeftSide ? '' : 'order-last'}`}>
-                    <img src={step.image} alt={step.title} className="w-auto h-[8rem] lg:h-full rounded-lg mb-0 lg:mb-10 mt-10" />
+                    <img src={step.image} alt={step.title} className="w-auto h-[8rem] lg:h-full rounded-lg mb-0 lg:mb-4 mt-10 md:mt-0 lg:mt-0" />
                   </div>
                 </div>
               );

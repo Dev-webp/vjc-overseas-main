@@ -29,43 +29,7 @@ export default function Description() {
             
 
             <div className="relative grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-0 lg:gap-8 mt-0 mx-auto lg:max-w-[95%]">
-                {/* Box 1 - UK */}
-                <div
-                    className="relative bg-cover bg-center group hover:translate-y-[-10px] transition-all"
-                    style={{
-                        backgroundImage: "url('/uk.png')",
-                        width: '250px',
-                        height: '500px',
-                    }}
-                >
-                    <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 px-6 py-4 flex flex-col justify-between text-center mb-[7.20rem]">
-                        <h3 className="text-2xl font-bold text-black uppercase ">UK</h3>
-                        <button className="px-6 py-2 text-md font-semibold text-white uppercase whitespace-nowrap ml-6 mb-1">
-                            Calculate Now
-                        </button>
-                        <p className="text-sm text-black max-w-44">Know your chances and estimated expenses to study in UK.</p>
-                    </div>
-                </div>
-
-                {/* Box 2 - Germany */}
-                <div
-                    className="relative bg-cover bg-center group hover:translate-y-[-10px] transition-all"
-                    style={{
-                        backgroundImage: "url('/germany.png')",
-                        width: '250px',
-                        height: '500px',
-                    }}
-                >
-                    <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 px-6 py-4 flex flex-col justify-between text-center mb-28">
-                        <h3 className="text-2xl font-bold text-black uppercase mb-0">Germany</h3>
-                        <button className="px-6 py-2 text-md font-semibold text-white uppercase whitespace-nowrap ml-6 mb-2">
-                            Calculate Now
-                        </button>
-                        <p className="text-sm text-black max-w-72 mr-6">Check your needs and <br />expense for studying in <br /> Germany.</p>
-                    </div>
-                </div>
-
-                {/* Box 3 - Canada */}
+                {/* Box 1 - Canada */}
                 <div
                     className="relative bg-cover bg-center group hover:translate-y-[-10px] transition-all"
                     style={{
@@ -83,7 +47,7 @@ export default function Description() {
                     </div>
                 </div>
 
-                {/* Box 4 - Australia */}
+                {/* Box 2 - Australia */}
                 <div
                     className="relative bg-cover bg-center group hover:translate-y-[-10px] transition-all"
                     style={{
@@ -101,7 +65,7 @@ export default function Description() {
                     </div>
                 </div>
 
-                {/* Box 5 - Canada */}
+                {/* Box 3 - Usa */}
                 <div
                     className="relative bg-cover bg-center group hover:translate-y-[-10px] transition-all"
                     style={{
@@ -111,13 +75,51 @@ export default function Description() {
                     }}
                 >
                     <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 px-6 py-4 flex flex-col justify-between text-center mb-28">
-                        <h3 className="text-2xl font-bold text-black uppercase mb-0">Canada</h3>
+                        <h3 className="text-2xl font-bold text-black uppercase mb-0">USA</h3>
                         <button className="px-6 py-2 text-md font-semibold text-white uppercase whitespace-nowrap ml-6 mb-2">
                             Calculate Now
                         </button>
-                        <p className="text-sm text-black max-w-44 ml-1">Check your possibilities and planning of expenses to study in Canada.</p>
+                        <p className="text-sm text-black max-w-44 ml-1">Check your possibilities and planning of expenses to move on to USA.</p>
                     </div>
                 </div>
+
+
+                {/* Box 4 - Germany */}
+                <div
+                    className="relative bg-cover bg-center group hover:translate-y-[-10px] transition-all"
+                    style={{
+                        backgroundImage: "url('/germany.png')",
+                        width: '250px',
+                        height: '500px',
+                    }}
+                >
+                    <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 px-6 py-4 flex flex-col justify-between text-center mb-28">
+                        <h3 className="text-2xl font-bold text-black uppercase mb-0">Germany</h3>
+                        <button className="px-6 py-2 text-md font-semibold text-white uppercase whitespace-nowrap ml-6 mb-2">
+                            Calculate Now
+                        </button>
+                        <p className="text-sm text-black max-w-72 mr-6">Check your needs and <br />expense for studying in <br /> Germany.</p>
+                    </div>
+                </div>
+
+                {/* Box 5 - UK */}
+                <div
+                    className="relative bg-cover bg-center group hover:translate-y-[-10px] transition-all"
+                    style={{
+                        backgroundImage: "url('/uk.png')",
+                        width: '250px',
+                        height: '500px',
+                    }}
+                >
+                    <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 px-6 py-4 flex flex-col justify-between text-center mb-[7.20rem]">
+                        <h3 className="text-2xl font-bold text-black uppercase ">UK</h3>
+                        <button className="px-6 py-2 text-md font-semibold text-white uppercase whitespace-nowrap ml-6 mb-1">
+                            Calculate Now
+                        </button>
+                        <p className="text-sm text-black max-w-44">Know your chances and estimated expenses to study in UK.</p>
+                    </div>
+                </div>
+ 
             </div>
         </div>
     );

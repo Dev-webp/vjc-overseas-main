@@ -11,6 +11,7 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        'custom-blue': '#006eb9',
       },
       animation: {
         "wobble-rotate-zoom": "wobble 4s ease-in-out infinite, rotateZoom 6s linear infinite, swing 5s ease-in-out infinite",

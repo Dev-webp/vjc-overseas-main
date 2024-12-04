@@ -13,7 +13,7 @@ export default function Hero() {
     const y = useTransform(scrollYProgress, [0, 1], ["0vh", "150vh"]);
 
     return (
-        <div className="relative h-screen overflow-hidden" ref={container}>
+        <div className="relative h-screen overflow-hidden bg-gray-700" ref={container}>
             {/* Background Image with Parallax Effect */}
             <motion.div style={{ y }} className="absolute inset-0">
                 <Image src={Background} fill alt="background" style={{ objectFit: "cover" }} />

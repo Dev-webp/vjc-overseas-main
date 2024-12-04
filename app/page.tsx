@@ -11,7 +11,7 @@ import ServicesDec from "@/app/components/ServicesDec";
 // Dynamic Imports
 const Scroll = dynamic(() => import('@/app/components/Scroll/index'));
 const CTA = dynamic(() => import('@/app/components/CTA'));
-const FAQ = dynamic(() => import('@/app/components/FAQ'));
+// const FAQ = dynamic(() => import('@/app/components/FAQ'));
 const Parallex = dynamic(() => import('@/app/components/Parallex/parallex'));
 
 // Utility function for scroll-to-top
@@ -33,7 +33,7 @@ export default function Home() {
         <NewSteps />
         <CTA />
         <Parallex />
-        <FAQ />
+        {/* <FAQ /> */}
       </Suspense>
       <Footer />
     </>

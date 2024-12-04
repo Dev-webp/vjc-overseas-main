@@ -10,10 +10,12 @@ const Navbar = () => {
   const menuItems = [
     { name: "Home", path: "/" },
     { name: "Assessment", path: "/about" },
+    { name: "Migrate", path: "/migrate" },
     { name: "Study Abroad", path: "/study-abroad" },
     { name: "Work Abroad", path: "/work-abroad" },
-    { name: "Investor Visas", path: "/investor-visas" },
+    { name: "Job Seeker", path: "/job" },
     { name: "Visit Visas", path: "/visit-visas" },
+    { name: "Investor Visas", path: "/investor-visas" },
     { name: "Services", path: "/services" },
     { name: "Coaching/Training", path: "/coaching-training" },
     { name: "Countries Visas", path: "/countries-visas" },
@@ -49,15 +51,15 @@ const Navbar = () => {
           {/* Contact Information (Hidden on md and sm devices) */}
           <div className=" flex items-center space-x-2">
             <div className="hidden md:flex items-center space-x-2 text-sm text-black uppercase font-semibold italic">
-              <div className="flex items-center animate-pulse text-blue-600">
+              <div className="flex items-center animate-pulse text-custom-blue">
                 <img src="/loc.png" alt="Bangalore" className="mr-1 w-5 h-5" />
                 <p>Bangalore</p>
               </div>
-              <div className="flex items-center animate-pulse text-blue-600">
+              <div className="flex items-center animate-pulse text-custom-blue">
                 <img src="/loc.png" alt="Hyderabad" className="mr-1 w-5 h-5" />
                 <p>Hyderabad</p>
               </div>
-              <div className="flex items-center animate-pulse text-blue-600">
+              <div className="flex items-center animate-pulse text-custom-blue">
                 <img src="/loc.png" alt="USA" className="mr-1 w-5 h-5" />
                 <p>USA</p>
               </div>
@@ -65,7 +67,7 @@ const Navbar = () => {
 
             {/* Mail Address with Icon */}
             <div className="hidden md:flex items-center space-x-2 text-xs lg:text-sm text-black uppercase font-semibold italic">
-              <div className="flex items-center animate-pulse text-blue-600">
+              <div className="flex items-center animate-pulse text-custom-blue">
                 <a href="mailto:info@vjcoverseas.com" className="flex items-center">
                   <FaEnvelope className="mr-1 w-5 h-5 text-orange-500" />
                   <p>info@vjcoverseas.com</p>
@@ -80,7 +82,7 @@ const Navbar = () => {
                 className="flex items-center text-white py-1 px-0 rounded-lg text-xs lg:text-sm whitespace-nowrap font-bold uppercase mr-3"
               >
                 <img src="/phone.gif" alt="Phone" className="h-6 w-6 mr-1" />
-                <span className="text-blue-600">+91 9160449000</span>
+                <span className="text-custom-blue">+91 9160449000</span>
               </a>
             </div>
           </div>
@@ -89,15 +91,15 @@ const Navbar = () => {
 
 {/* Orange background section for large screens */}
 <div className="bg-orange-500 fixed top-12 w-screen z-50">
-  <nav className="flex justify-between items-center py-2">
+  <nav className="flex justify-between items-center py-1.5">
     
     {/* Navigation links for large screens */}
-    <div className="flex flex-row space-x-1 whitespace-nowrap">
+    <div className="flex flex-row -space-x-2 whitespace-nowrap">
       {menuItems.map((item, index) => (
         <React.Fragment key={item.name}>
           <Link
             href={item.path}
-            className="text-white text-sm lg:text-sm font-semibold px-4 hover:bg-white hover:bg-opacity-20 uppercase"
+            className="text-white text-sm lg:text-sm font-semibold px-4 hover:bg-white hover:bg-opacity-20 uppercase mt-1"
           >
             {item.name}
           </Link>

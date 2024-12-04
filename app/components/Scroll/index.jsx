@@ -20,7 +20,6 @@ export default function Home() {
   return (
     <main>
       <Intro />
-      {/* <Description /> */}
       <About/>
       <Section />
       <div className='h-10'></div>
