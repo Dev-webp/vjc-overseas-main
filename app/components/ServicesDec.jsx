@@ -120,8 +120,8 @@ const ServicesDec = () => {
           alt="Services"
           className={`object-cover rounded-full ${
             currentImage === "/ser.png"
-              ? "w-[30rem] h-[30rem] mb-[69rem] md:mb-0 lg:mb-0" // Default image dimensions
-              : "w-[40rem] h-[40rem] mb-[65rem] md:mb-8 lg:mb-8" // Changing image dimensions
+              ? "w-[30rem] h-[30rem] mb-[0rem] md:mb-0 lg:mb-0" // Default image dimensions
+              : "w-[38rem] h-[38rem] mb-[0rem] md:mb-8 lg:mb-8" // Changing image dimensions
           }`}
           initial={{ opacity: 0, scale: 1.05 }} // Start slightly scaled up for smoother transition
           animate={{ opacity: 1, scale: 1 }}
@@ -133,7 +133,7 @@ const ServicesDec = () => {
         {/* Overlay Content (Visible only on default image) */}
         {currentImage === "/ser.png" && (
           <motion.div
-            className="absolute inset-0 flex flex-col items-center justify-center text-black mt-0 lg:mt-52 ml-6 mb-[55rem] md:mb-0 lg:mb-0"
+            className="absolute inset-0 flex flex-col items-center justify-center text-black mt-56 lg:mt-52 ml-6 mb-[0rem] md:mb-0 lg:mb-0"
             whileHover={{ y: -10 }}
             transition={{ duration: 0.3, ease: "easeInOut" }}
           >
@@ -144,8 +144,10 @@ const ServicesDec = () => {
           </motion.div>
         )}
       </motion.div>
-      <div className="absolute w-full flex flex-col items-center justify-start top-[18%] lg:hidden mt-16 z-40">
-  {boxData.map((box, index) => (
+
+{/* 0 to 4 */}
+      <div className="absolute w-full flex flex-col items-center justify-start top-[0%] lg:hidden mt-16 z-40">
+  {boxData.slice(0, 4).map((box, index) => (  // Limit to the first 4 items
     <motion.div
       key={index}
       className="w-72 mb-4 cursor-pointer bg-white border border-gray-300 shadow-lg flex items-center justify-between p-4 rounded-lg transition-transform duration-300 ease-in-out hover:scale-105 hover:shadow-xl hover:border-black hover:bg-orange-400 group"
@@ -175,6 +177,40 @@ const ServicesDec = () => {
     </motion.div>
   ))}
 </div>
+
+{/* 4 to 8 */}
+<div className="absolute w-full flex flex-col items-center justify-start top-[60%] lg:hidden z-40">
+  {boxData.slice(4, 8).map((box, index) => (  // Limit to the first 4 items
+    <motion.div
+      key={index}
+      className="w-72 mb-4 cursor-pointer bg-white border border-gray-300 shadow-lg flex items-center justify-between p-4 rounded-lg transition-transform duration-300 ease-in-out hover:scale-105 hover:shadow-xl hover:border-black hover:bg-orange-400 group"
+      initial="hidden"
+      animate="visible"
+      variants={fadeInVariants}
+      transition={{ delay: 0.3 + index * 0.2 }} // Stagger delays
+      onClick={() => handleBoxClick(box.image)} // Update image when clicked
+    >
+      <div className="text-orange-500 group-hover:text-white">{box.icon}</div>
+      
+      <div className="w-0.5 h-12 bg-orange-400 group-hover:bg-white mr-1 ml-2" />
+      <div className="flex flex-col justify-between text-center">
+        <Link href="/investor-visas" passHref>
+          <p className="text-base font-semibold uppercase hover:underline cursor-pointer">
+            {box.title}
+          </p>
+        </Link>
+        <p className="text-sm text-gray-600">{box.content}</p>
+      </div>
+      {/* Add hover effect here */}
+      <style jsx>{`
+        .group:hover {
+          background-color: #f97316; /* orange-500 */
+        }
+      `}</style>
+    </motion.div>
+  ))}
+</div>
+
 
 
 

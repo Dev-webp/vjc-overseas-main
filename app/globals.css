@@ -17,41 +17,7 @@ body {
 }
 
 
-/* Keyframes for fade-in animations */
-@keyframes fadeInFromLeft {
-  0% {
-    opacity: 0;
-    transform: translate3d(-50px, 0, 0); /* Use translate3d for hardware acceleration */
-  }
-  100% {
-    opacity: 1;
-    transform: translate3d(0, 0, 0);
-  }
-}
 
-@keyframes fadeInFromRight {
-  0% {
-    opacity: 0;
-    transform: translate3d(50px, 0, 0); /* Use translate3d for hardware acceleration */
-  }
-  100% {
-    opacity: 1;
-    transform: translate3d(0, 0, 0);
-  }
-}
-
-/* Classes to trigger the animations */
-.fade-in-left {
-  opacity: 0;
-  animation: fadeInFromLeft 1s forwards;
-  will-change: opacity, transform; /* Hint for hardware acceleration */
-}
-
-.fade-in-right {
-  opacity: 0;
-  animation: fadeInFromRight 1s forwards;
-  will-change: opacity, transform; /* Hint for hardware acceleration */
-}
 
 
 /* Hide scrollbar */
