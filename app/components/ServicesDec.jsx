@@ -43,7 +43,7 @@ const ServicesDec = () => {
     },
     {
       icon: <FaMapMarkerAlt />,
-      title: "Visit Visa",
+      title: "Visit Visa/Dependent Visa",
       content:
         "Visit and dependent visa processing across the globe in a matter of days.",
       buttonLabel: "Read More",
@@ -146,7 +146,7 @@ const ServicesDec = () => {
       </motion.div>
 
 {/* 0 to 4 */}
-      <div className="absolute w-full flex flex-col items-center justify-start top-[0%] lg:hidden mt-16 z-40">
+      <div className="absolute w-full flex flex-col items-center justify-start top-[0%] lg:hidden mt-0 z-40">
   {boxData.slice(0, 4).map((box, index) => (  // Limit to the first 4 items
     <motion.div
       key={index}

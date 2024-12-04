@@ -1,13 +1,35 @@
 "use client"
-import React from 'react';
+import React, { useState, useEffect } from "react";
+import Link from "next/link";
 import { motion } from "framer-motion";
 import { containerVariants, desVariants } from "../animation";  
 import Form from "@/app/components/Form";
+import Slider from "@/app/components/HeroSlider";
 
 export default function HeroSection() {
+  const sliderData = [
+    { text: "Apply For Canada Permanent Residency Visa", link: "/canada-permanent-residency" },
+    { text: "Apply For Canada Study Visa", link: "/canada-study-visa" },
+    { text: "Apply For Australia Permanent Residency Visa", link: "/australia-permanent-residency" },
+    { text: "Apply For Australia Study Visa", link: "/australia-study-visa" },
+    { text: "Apply For Germany Opportunity Card Visa", link: "/germany-opportunity-card" },
+    { text: "Apply For Germany Study Visa", link: "/germany-study-visa" },
+    { text: "Apply For UK Study Visa", link: "/uk-study-visa" },
+    { text: "Apply For Malta Study Visa", link: "/malta-study-visa" }
+  ];
+
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentSlide((prevSlide) => (prevSlide + 1) % sliderData.length); // Loop through the slides
+    }, 3000); // Change slide every 3 seconds
+
+    return () => clearInterval(interval); // Cleanup the interval when the component is unmounted
+  }, []);
   return (
     <>
-     <section className="py-4 lg:py-0 mt-2 md:mt-0 lg:mt-16 bg-gradient-to-bl from-white to-white">
+     <section className="py-4 lg:py-0 mt-2 md:mt-0 lg:mt-28 bg-gradient-to-bl from-white to-white">
 
       <motion.div
         variants={""}
@@ -41,7 +63,7 @@ export default function HeroSection() {
       {/* Left Section (Text) */}
       <motion.div
         variants={containerVariants(0.4)}
-        className="flex flex-col space-y-8 lg:space-y-6 lg:items-center text-center lg:text-left max-w-2xl md:max-w-3xl mx-auto mb-0 lg:mb-48 relative z-10 ml-0 lg:ml-10 mt-20"
+        className="flex flex-col space-y-8 lg:space-y-6 lg:items-center text-center lg:text-left max-w-2xl md:max-w-3xl mx-auto mb-0 lg:mb-0 relative z-10 ml-0 lg:ml-10 mt-0"
       >
         <img
             src="/1.gif" 
@@ -64,6 +86,27 @@ export default function HeroSection() {
           Being India&apos;s Most Trusted Brand (2022 & 2024) and the Global Icon Award (2023), we do not just walk on the success trails; we make them. Your international aspirations are guided and managed at VJC Overseas with our track record and absolute commitment.
         </motion.p>
        
+       
+      {/* Slider Section */}
+      {/* <div className="mt-0 text-center">
+      <div className="relative bg-gradient-to-r from-orange-500 to-red-500 text-white py-3 px-6 rounded-xl shadow-lg overflow-hidden w-[28rem] h-[6rem] mx-auto">
+
+        <h2 className="text-lg font-bold mb-2 relative z-10 uppercase">Explore Our Visa Services</h2>
+
+        <div className="relative z-10 flex justify-center items-center">
+          <Link
+            href={sliderData[currentSlide].link}
+            className="text-sm font-semibold tracking-wide italic bg-white text-gray-800 px-8 py-2 rounded-lg shadow-md hover:bg-orange-100 hover:scale-105 transition-transform duration-300 text-center w-[24rem] truncate"
+          >
+            {sliderData[currentSlide].text}
+          </Link>
+        </div>
+      </div>
+    </div> */}
+
+<Slider/>
+
+
       </motion.div>
 
       {/* Right Section (Image and Form) */}
@@ -71,7 +114,7 @@ export default function HeroSection() {
         variants={containerVariants(0.8)}
         initial="offscreen"
         animate="onscreen"
-        className="z-40 mt-0 lg:mt-8"
+        className="z-40"
       >
 <div className="flex justify-center items-center">
   <Form />
