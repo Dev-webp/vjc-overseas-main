@@ -148,14 +148,15 @@ const ServicesDec = () => {
   {boxData.map((box, index) => (
     <motion.div
       key={index}
-      className="w-72 mb-4 cursor-pointer bg-white border border-gray-300 shadow-lg flex items-center justify-between p-4 rounded-lg transition-transform duration-300 ease-in-out hover:scale-105 hover:shadow-xl hover:border-black group"
+      className="w-72 mb-4 cursor-pointer bg-white border border-gray-300 shadow-lg flex items-center justify-between p-4 rounded-lg transition-transform duration-300 ease-in-out hover:scale-105 hover:shadow-xl hover:border-black hover:bg-orange-400 group"
       initial="hidden"
       animate="visible"
       variants={fadeInVariants}
       transition={{ delay: 0.3 + index * 0.2 }} // Stagger delays
       onClick={() => handleBoxClick(box.image)} // Update image when clicked
     >
-      {box.icon}
+      <div className="text-orange-500 group-hover:text-white">{box.icon}</div>
+      
       <div className="w-0.5 h-12 bg-orange-400 group-hover:bg-white mr-1 ml-2" />
       <div className="flex flex-col justify-between text-center">
         <Link href="/investor-visas" passHref>
