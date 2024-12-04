@@ -1,24 +1,13 @@
 "use client"
 import React, { useState, useEffect } from "react";
-import Link from "next/link";
+// import Link from "next/link";
 import { motion } from "framer-motion";
 import { containerVariants, desVariants } from "../animation";  
 import Form from "@/app/components/Form";
 import Slider from "@/app/components/HeroSlider";
 
 export default function HeroSection() {
-  const sliderData = [
-    { text: "Apply For Canada Permanent Residency Visa", link: "/canada-permanent-residency" },
-    { text: "Apply For Canada Study Visa", link: "/canada-study-visa" },
-    { text: "Apply For Australia Permanent Residency Visa", link: "/australia-permanent-residency" },
-    { text: "Apply For Australia Study Visa", link: "/australia-study-visa" },
-    { text: "Apply For Germany Opportunity Card Visa", link: "/germany-opportunity-card" },
-    { text: "Apply For Germany Study Visa", link: "/germany-study-visa" },
-    { text: "Apply For UK Study Visa", link: "/uk-study-visa" },
-    { text: "Apply For Malta Study Visa", link: "/malta-study-visa" }
-  ];
 
-  const [currentSlide, setCurrentSlide] = useState(0);
 
   useEffect(() => {
     const interval = setInterval(() => {

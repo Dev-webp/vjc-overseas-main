@@ -55,7 +55,7 @@ export default function RootLayout({
         <Nav/>
         {children}
         {/* WhatsApp Floating Icon */}
-        {/* <FloatingWhatsApp /> */}
+        <FloatingWhatsApp />
       </body>
     </html>
   );
