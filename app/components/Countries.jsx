@@ -106,7 +106,7 @@ const CountrySlider = () => {
 
           {/* Content box that slides in from the right */}
           <motion.div
-            className="absolute top-0 right-0 w-[33rem] h-full bg-white p-6 flex flex-col justify-center"
+            className="absolute top-0 right-0 w-screen lg:w-[33rem] h-full bg-white p-6 flex flex-col justify-center"
             initial={{ x: '100%', opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
             exit={{ x: '100%', opacity: 0 }}  // Slide out when closing

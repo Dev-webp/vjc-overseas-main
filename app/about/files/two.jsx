@@ -5,7 +5,7 @@ const FeatureItem = ({ id, title, description, advantages, icon, image }) => {
         <div className={`flex flex-col md:items-center gap-10 lg:gap-14 ${id % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"}`}>
             <div className="md:w-[48%] xl:w-[45%] md:py-6 xl:py-4 space-y-8">
                 <div className="space-y-6">
-                    <span className="p-2 rounded-md bg-purple-100 text-orange-500 flex w-max">
+                    <span className="p-2 rounded-md bg-gray-100 text-orange-500 flex w-max">
                         {icon}
                     </span>
                     <h2 className="text-2xl font-semibold text-gray-900 uppercase">

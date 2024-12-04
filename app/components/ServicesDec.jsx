@@ -97,61 +97,58 @@ const ServicesDec = () => {
 
   return (
     <motion.div
-  className="flex items-center justify-center w-auto lg:w-[98.70vw] h-[85rem] lg:h-screen  relative bg-cover bg-center bg-no-repeat"
-  style={{
-    backgroundImage: `url('/comp-21.webp')`, 
-  }}
-  initial="hidden"
-  animate="visible"
-  variants={pageVariants}
->
-  {/* Central Button */}
-  <motion.div
-  className="relative"
-  initial={{ opacity: 0, scale: 0.8 }}
-  animate={{ opacity: 1, scale: 1 }}
-  transition={{ duration: 0.6, ease: "easeInOut" }}
-  whileHover={{ scale: 1.05, rotate: 2 }}
->
-  {/* Image with conditional width and height */}
-  <motion.img
-    key={currentImage} // Ensure the image changes trigger a re-render
-    src={currentImage} // Use the currentImage state to display the right image
-    alt="Services"
-    className={`object-cover rounded-full ${
-      currentImage === "/ser.png" 
-        ? "w-[30rem] h-[30rem] mb-[69rem] md:mb-0 lg:mb-0" // Default image dimensions
-        : "w-[40rem] h-[40rem] mb-[65rem] md:mb-8 lg:mb-8" // Changing image dimensions
-    }`}
-    initial={{ opacity: 0, scale: 1.05 }} // Start slightly scaled up for smoother transition
-    animate={{ opacity: 1, scale: 1 }}
-    exit={{ opacity: 0, scale: 1.05 }} // Ensure image fades out when changed
-    transition={{ duration: 0.1, ease: "easeInOut" }}
-    whileHover={{ scale: 1.1 }}
-  />
-
-  {/* Overlay Content (Visible only on default image) */}
-  {currentImage === "/ser.png" && ( // Check if it's the default image
-    <motion.div
-      className="absolute inset-0 flex flex-col items-center justify-center text-black mt-0 lg:mt-52 ml-6 mb-[55rem] md:mb-0 lg:mb-0"
-      whileHover={{ y: -10 }}
-      transition={{ duration: 0.3, ease: "easeInOut" }}
+      className="flex items-center justify-center w-auto lg:w-[98.70vw] h-[85rem] lg:h-screen  relative bg-cover bg-center bg-no-repeat"
+      style={{
+        backgroundImage: `url('/comp-21.webp')`,
+      }}
+      initial="hidden"
+      animate="visible"
+      variants={pageVariants}
     >
-      <h2 className="text-2xl font-bold">Our Services</h2>
-      <p className="text-center mt-2 text-sm px-4">
-        Discover a range of top-notch services designed to meet your needs.
-      </p>
-    </motion.div>
-  )}
-</motion.div>
+      {/* Central Button */}
+      <motion.div
+        className="relative"
+        initial={{ opacity: 0, scale: 0.8 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.6, ease: "easeInOut" }}
+        whileHover={{ scale: 1.05, rotate: 2 }}
+      >
+        {/* Image with conditional width and height */}
+        <motion.img
+          key={currentImage} // Ensure the image changes trigger a re-render
+          src={currentImage} // Use the currentImage state to display the right image
+          alt="Services"
+          className={`object-cover rounded-full ${
+            currentImage === "/ser.png"
+              ? "w-[30rem] h-[30rem] mb-[69rem] md:mb-0 lg:mb-0" // Default image dimensions
+              : "w-[40rem] h-[40rem] mb-[65rem] md:mb-8 lg:mb-8" // Changing image dimensions
+          }`}
+          initial={{ opacity: 0, scale: 1.05 }} // Start slightly scaled up for smoother transition
+          animate={{ opacity: 1, scale: 1 }}
+          exit={{ opacity: 0, scale: 1.05 }} // Ensure image fades out when changed
+          transition={{ duration: 0.3, ease: "easeInOut" }} // Shorter duration for smooth transition
+          whileHover={{ scale: 1.1 }}
+        />
 
-
-      {/* Boxes for Small Devices */}
-<div className="absolute w-full flex flex-col items-center justify-start top-[18%] lg:hidden mt-16">
+        {/* Overlay Content (Visible only on default image) */}
+        {currentImage === "/ser.png" && (
+          <motion.div
+            className="absolute inset-0 flex flex-col items-center justify-center text-black mt-0 lg:mt-52 ml-6 mb-[55rem] md:mb-0 lg:mb-0"
+            whileHover={{ y: -10 }}
+            transition={{ duration: 0.3, ease: "easeInOut" }}
+          >
+            <h2 className="text-2xl font-bold">Our Services</h2>
+            <p className="text-center mt-2 text-sm px-4">
+              Discover a range of top-notch services designed to meet your needs.
+            </p>
+          </motion.div>
+        )}
+      </motion.div>
+      <div className="absolute w-full flex flex-col items-center justify-start top-[18%] lg:hidden mt-16 z-40">
   {boxData.map((box, index) => (
     <motion.div
       key={index}
-      className="w-72 mb-4 cursor-pointer bg-white border border-gray-300 shadow-lg flex items-center justify-between p-4 rounded-lg transition-transform duration-300 ease-in-out hover:scale-105 hover:shadow-xl hover:border-black hover:bg-orange-400 group"
+      className="w-72 mb-4 cursor-pointer bg-white border border-gray-300 shadow-lg flex items-center justify-between p-4 rounded-lg transition-transform duration-300 ease-in-out hover:scale-105 hover:shadow-xl hover:border-black group"
       initial="hidden"
       animate="visible"
       variants={fadeInVariants}
@@ -167,17 +164,17 @@ const ServicesDec = () => {
           </p>
         </Link>
         <p className="text-sm text-gray-600">{box.content}</p>
-          {/* <motion.span
-            className="absolute bottom-2 right-2 text-xl font-extrabold hover:text-white cursor-pointer"
-            whileHover={{ rotate: -10 }}
-            transition={{ duration: 0.2 }}
-          >
-            →
-          </motion.span> */}
       </div>
+      {/* Add hover effect here */}
+      <style jsx>{`
+        .group:hover {
+          background-color: #f97316; /* orange-500 */
+        }
+      `}</style>
     </motion.div>
   ))}
 </div>
+
 
 
 
@@ -387,8 +384,6 @@ const ServicesDec = () => {
     >
       →
     </motion.span>
-
-        {/* Additional boxes (Box 3 to Box 8) can follow the same pattern */}
       </div>
     </motion.div>
     </div>

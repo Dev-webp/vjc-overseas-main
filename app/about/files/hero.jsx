@@ -67,13 +67,13 @@ const CompOne = () => {
         >
           <Link
             href="#"
-            className="px-6 items-center h-12 rounded-3xl bg-orange-600 text-white duration-300 ease-linear flex justify-center w-full sm:w-auto transform hover:scale-105 transition-transform"
+            className="px-6 items-center h-12 rounded-lg bg-orange-600 text-white duration-300 ease-linear flex justify-center w-full sm:w-auto transform hover:scale-105 transition-transform"
           >
             Get started
           </Link>
           <Link
             href="#"
-            className="px-6 items-center h-12 rounded-3xl text-orange-700 border border-gray-100 bg-gray-100 duration-300 ease-linear flex justify-center w-full sm:w-auto transform hover:scale-105 transition-transform"
+            className="px-6 items-center h-12 rounded-lg text-orange-700 border border-gray-100 bg-gray-100 duration-300 ease-linear flex justify-center w-full sm:w-auto transform hover:scale-105 transition-transform"
           >
             Book a call
           </Link>

@@ -38,7 +38,7 @@ const Navbar = () => {
 
           {/* Hidden for md and sm */}
           <div className="hidden md:flex items-center ml-4">
-            <img src="/promote.gif" alt="News" className="h-8 w-8" /> {/* News Icon */}
+            <img src="/message.gif" alt="News" className="h-8 w-8" /> {/* News Icon */}
           </div>
 
           {/* Marquee Section */}

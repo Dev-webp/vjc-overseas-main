@@ -41,11 +41,12 @@ export default function Description() {
                     <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 px-6 py-4 flex flex-col justify-between text-center mb-28">
                         <h3 className="text-2xl font-bold text-black uppercase mb-0">Canada</h3>
                         <button className="px-6 py-2 text-md font-semibold text-white uppercase whitespace-nowrap ml-6 mb-2">
-                            Calculate Now
+                            Free Assessment
                         </button>
                         <p className="text-sm text-black max-w-44 ml-1">Check your possibilities and planning of expenses to study in Canada.</p>
                     </div>
                 </div>
+                    
 
                 {/* Box 2 - Australia */}
                 <div
@@ -59,7 +60,7 @@ export default function Description() {
                     <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 px-6 py-4 flex flex-col justify-between text-center mb-[6.80rem]">
                         <h3 className="text-2xl font-bold text-black uppercase mb-0">Australia</h3>
                         <button className="px-6 py-2 text-md font-semibold text-white uppercase whitespace-nowrap ml-6 mb-3">
-                            Calculate Now
+                        Free Assessment
                         </button>
                         <p className="text-sm text-black max-w-64 mr-8">Know your visa probability<br /> and cost to study in<br /> Australia</p>
                     </div>
@@ -77,7 +78,7 @@ export default function Description() {
                     <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 px-6 py-4 flex flex-col justify-between text-center mb-28">
                         <h3 className="text-2xl font-bold text-black uppercase mb-0">USA</h3>
                         <button className="px-6 py-2 text-md font-semibold text-white uppercase whitespace-nowrap ml-6 mb-2">
-                            Calculate Now
+                        Free Assessment
                         </button>
                         <p className="text-sm text-black max-w-44 ml-1">Check your possibilities and planning of expenses to move on to USA.</p>
                     </div>
@@ -96,7 +97,7 @@ export default function Description() {
                     <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 px-6 py-4 flex flex-col justify-between text-center mb-28">
                         <h3 className="text-2xl font-bold text-black uppercase mb-0">Germany</h3>
                         <button className="px-6 py-2 text-md font-semibold text-white uppercase whitespace-nowrap ml-6 mb-2">
-                            Calculate Now
+                        Free Assessment
                         </button>
                         <p className="text-sm text-black max-w-72 mr-6">Check your needs and <br />expense for studying in <br /> Germany.</p>
                     </div>
@@ -114,7 +115,7 @@ export default function Description() {
                     <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 px-6 py-4 flex flex-col justify-between text-center mb-[7.20rem]">
                         <h3 className="text-2xl font-bold text-black uppercase ">UK</h3>
                         <button className="px-6 py-2 text-md font-semibold text-white uppercase whitespace-nowrap ml-6 mb-1">
-                            Calculate Now
+                        Free Assessment
                         </button>
                         <p className="text-sm text-black max-w-44">Know your chances and estimated expenses to study in UK.</p>
                     </div>

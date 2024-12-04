@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import AnimatedHeader from "./AnimateHeader";
 const Form = () => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
@@ -70,8 +69,8 @@ const Form = () => {
 
   return (
     <div className="bg-white p-4 py-2 rounded-lg shadow-sm max-w-md mx-auto w-full h-[35rem] md:h-[32rem] lg:h-[32rem] tablet:h-[35rem] shadow-orange-300 mb-6 lg:mb-14">
-      {/* <h2 className="text-2xl font-bold text-center uppercase text-gray-800 mt-0 lg:mt-3">Sign up & Get Free Assessment</h2> */}
-      <AnimatedHeader/>
+      <h2 className="text-2xl font-bold text-center uppercase text-gray-800 mt-0 lg:mt-3">Sign up & Get Free Assessment</h2>
+      
       <form onSubmit={handleSubmit} className="space-y-4 lg:space-y-3 mt-4 lg:mt-4">
         <div>
           <label htmlFor="name" className="sr-only">Name</label>
@@ -80,7 +79,7 @@ const Form = () => {
             id="name"
             name="name"
             placeholder="Your Name"
-            className="w-full px-4 py-1 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-orange-400 transition"
+            className="w-full px-4 py-1.5 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-orange-400 transition"
             required
             value={name}
             onChange={(e) => setName(e.target.value)}
@@ -94,7 +93,7 @@ const Form = () => {
             id="email"
             name="email"
             placeholder="Your Email"
-            className="w-full px-4 py-1 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-orange-400 transition"
+            className="w-full px-4 py-1.5 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-orange-400 transition"
             required
             value={email}
             onChange={(e) => setEmail(e.target.value)}
@@ -108,7 +107,7 @@ const Form = () => {
             id="phone"
             name="phone"
             placeholder="Phone Number"
-            className="w-full px-4 py-1 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-orange-400 transition"
+            className="w-full px-4 py-1.5 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-orange-400 transition"
             required
             pattern="\d*"
             title="Please enter a valid phone number"
@@ -126,7 +125,7 @@ const Form = () => {
             id="age"
             name="age"
             placeholder="Your Age"
-            className="w-full px-4 py-1 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-orange-400 transition"
+            className="w-full px-4 py-1.5 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-orange-400 transition"
             required
             value={age}
             onChange={(e) => setAge(e.target.value)}
@@ -139,7 +138,7 @@ const Form = () => {
   <select
     id="experience"
     name="experience"
-    className="w-full px-4 py-1 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-orange-400 transition"
+    className="w-full px-4 py-1.5 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-orange-400 transition"
     value={experience}
     onChange={(e) => setExperience(e.target.value)}
   >
@@ -158,7 +157,7 @@ const Form = () => {
   <select
     id="qualification"
     name="qualification"
-    className="w-full px-4 py-1 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-orange-400 transition"
+    className="w-full px-4 py-1.5 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-orange-400 transition"
     value={qualification}
     onChange={(e) => setQualification(e.target.value)}
   >
