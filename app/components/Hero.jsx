@@ -1,5 +1,5 @@
 "use client"
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 // import Link from "next/link";
 import { motion } from "framer-motion";
 import { containerVariants, desVariants } from "../animation";  
