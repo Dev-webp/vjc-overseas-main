@@ -17,7 +17,7 @@ export default function Hero() {
             {/* Background Image with Parallax Effect */}
             <motion.div style={{ y }} className="absolute inset-0">
                 <Image src={Background} fill alt="background" style={{ objectFit: "cover" }} />
-                <div className="absolute inset-0 bg-gradient-to-b from-black via-gray-900 to-black opacity-90"></div>
+                <div className="absolute inset-0 bg-gradient-to-b from-black via-gray-900 to-black opacity-85"></div>
             </motion.div>
 
             {/* Hero Content */}

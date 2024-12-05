@@ -16,7 +16,7 @@ export default function Section() {
     return (
         <div
             ref={container}
-            className='relative flex items-center justify-center h-[70vh] lg:h-screen overflow-hidden'
+            className='relative flex items-center justify-center h-[90vh] lg:h-screen overflow-hidden'
             style={{ clipPath: "polygon(0% 0, 100% 0%, 100% 100%, 0 100%)" }}
         >
             {/* Fixed background image with scrolling effect */}
@@ -31,7 +31,7 @@ export default function Section() {
                     <div className="absolute inset-0 bg-black opacity-80"></div>
                 </motion.div>
             </div>
-            <div className='mt-60 lg:mt-0'>
+            <div className='mt-16 lg:mt-0'>
             <CountrySlider/></div>
         </div>
     );
