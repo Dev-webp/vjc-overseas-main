@@ -52,7 +52,7 @@ export default function RootLayout({
       <body
         style={{ fontFamily: '"PT Serif", serif' }}
       >
-        {/* <Nav/> */}
+        <Nav/>
         {children}
         {/* WhatsApp Floating Icon */}
         <FloatingWhatsApp />

@@ -4,10 +4,10 @@ import React from 'react';
 // import About from "../components/About";
 // import CountrySlider from './Countries';
 // import Scroll from "@/app/components/Scroll";
-import ScrollChangeImage from './ScrollTriggeer';
+// import ScrollChangeImage from './ScrollTriggeer';
 // import ScrollPerRev from "@/app/components/ScrollPerRev/Index";
 // import Swap from "../components/Swap";
-import Steps from "@/app/components/NewSteps";
+// import Steps from "@/app/components/NewSteps";
 import SideBar from "./SideBar";
 const page = () => {
   return (
