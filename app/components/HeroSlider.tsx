@@ -4,47 +4,46 @@ import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 
 const sliderData = [
-    {
-      services: [
-        { text: "Apply For Canada Permanent Residency", link: "/canada-pr-visa" },
-        { text: "Apply For Canada Study Visa", link: "/canada-study-visa" },
-      ],
-      backgroundImage: "/canada.webp",
-      title: "Canada",
-      gradient: "bg-gradient-to-r from-red-300 to-white", // Canada color gradient
-    },
-    {
-      services: [
-        { text: "Apply For Australia Permanent Residency Visa", link: "/australia-pr-visa" },
-        { text: "Apply For Australia Study Visa", link: "/australia-study-visa" },
-      ],
-      backgroundImage: "/australia.jpg",
-      title: "Australia",
-      gradient: "bg-gradient-to-r from-green-500 to-yellow-500", // Australia color gradient
-    },
-    {
-      services: [
-        { text: "Apply For Germany Opportunity Card Visa", link: "/germany-opportunity-card-visa" },
-        { text: "Apply For Germany Study Visa", link: "/germany-study-visa" },
-      ],
-      backgroundImage: "/germany.jpg",
-      title: "Germany",
-      gradient: "bg-gradient-to-r from-white to-yellow-500", // Germany color gradient
-    },
-    {
-      services: [{ text: "Apply For UK Study Visa", link: "/uk-study-visa" }],
-      backgroundImage: "/uk-flag.png",
-      title: "United Kingdom",
-      gradient: "bg-gradient-to-r from-blue-500 to-white", // UK color gradient
-    },
-    {
-      services: [{ text: "Apply For Malta Study Visa", link: "/malta-study-visa" }],
-      backgroundImage: "/malta.png",
-      title: "Malta",
-      gradient: "bg-gradient-to-r from-red-700 to-white", // Malta color gradient
-    },
-  ];
-  
+  {
+    services: [
+      { text: "Apply For Canada Permanent Residency", link: "/canada-pr-visa" },
+      { text: "Apply For Canada Study Visa", link: "/canada-study-visa" },
+    ],
+    backgroundImage: "/canada.webp",
+    title: "Canada",
+    gradient: "bg-gradient-to-r from-red-300 to-white", // Canada color gradient
+  },
+  {
+    services: [
+      { text: "Apply For Australia Permanent Residency Visa", link: "/australia-pr-visa" },
+      { text: "Apply For Australia Study Visa", link: "/australia-study-visa" },
+    ],
+    backgroundImage: "/australia.jpg",
+    title: "Australia",
+    gradient: "bg-gradient-to-r from-green-500 to-yellow-500", // Australia color gradient
+  },
+  {
+    services: [
+      { text: "Apply For Germany Opportunity Card Visa", link: "/germany-opportunity-card-visa" },
+      { text: "Apply For Germany Study Visa", link: "/germany-study-visa" },
+    ],
+    backgroundImage: "/germany.jpg",
+    title: "Germany",
+    gradient: "bg-gradient-to-r from-white to-yellow-500", // Germany color gradient
+  },
+  {
+    services: [{ text: "Apply For UK Study Visa", link: "/uk-study-visa" }],
+    backgroundImage: "/uk-flag.png",
+    title: "United Kingdom",
+    gradient: "bg-gradient-to-r from-blue-500 to-white", // UK color gradient
+  },
+  {
+    services: [{ text: "Apply For Malta Study Visa", link: "/malta-study-visa" }],
+    backgroundImage: "/malta.png",
+    title: "Malta",
+    gradient: "bg-gradient-to-r from-red-700 to-white", // Malta color gradient
+  },
+];
 
 const Slider = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -59,8 +58,8 @@ const Slider = () => {
     }
   }, [isHovered]);
 
-  const nextSlide = () => setCurrentSlide((prev) => (prev + 1) % sliderData.length);
-  const prevSlide = () => setCurrentSlide((prev) => (prev - 1 + sliderData.length) % sliderData.length);
+  // Handle progress bar click to go to the specific slide
+  const goToSlide = (index: number) => setCurrentSlide(index);
 
   return (
     <div
@@ -96,10 +95,10 @@ const Slider = () => {
             transition={{ duration: 1 }}
           >
             <h2
-  className={`text-xl lg:text-3xl font-extrabold uppercase text-transparent bg-clip-text ${sliderData[currentSlide].gradient}`}
->
-  {sliderData[currentSlide].title}
-</h2>
+              className={`text-xl lg:text-3xl font-extrabold uppercase text-transparent bg-clip-text ${sliderData[currentSlide].gradient}`}
+            >
+              {sliderData[currentSlide].title}
+            </h2>
 
             <ul className="space-y-2">
               {sliderData[currentSlide].services.map((service, index) => (
@@ -113,37 +112,21 @@ const Slider = () => {
                 </li>
               ))}
             </ul>
-            {/* <button className="mt-4 px-4 py-2 bg-orange-500 text-white font-bold uppercase rounded-full shadow-md hover:bg-orange-600 transition">
-              Learn More
-            </button> */}
           </motion.div>
         </AnimatePresence>
       </div>
 
-      {/* Navigation Buttons */}
-      <button
-        onClick={prevSlide}
-        className="absolute left-3 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white p-2 rounded-full shadow-lg hover:bg-gray-700 transition z-10"
-      >
-        &lt;
-      </button>
-      <button
-        onClick={nextSlide}
-        className="absolute right-3 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white p-2 rounded-full shadow-lg hover:bg-gray-700 transition z-10"
-      >
-        &gt;
-      </button>
-
-      {/* Progress Indicator */}
+      {/* Progress Indicator (Clickable to navigate between slides) */}
       <div className="absolute bottom-3 left-1/2 transform -translate-x-1/2 flex space-x-1">
         {sliderData.map((_, index) => (
           <motion.span
             key={index}
-            className={`w-2.5 h-2.5 rounded-full transition ${
+            className={`w-2.5 h-2.5 rounded-full cursor-pointer transition ${
               index === currentSlide ? "bg-orange-500 scale-110" : "bg-gray-400"
             }`}
             animate={{ scale: index === currentSlide ? 1.2 : 1 }}
             transition={{ duration: 0.3 }}
+            onClick={() => goToSlide(index)}  // Navigate to specific slide when clicked
           ></motion.span>
         ))}
       </div>

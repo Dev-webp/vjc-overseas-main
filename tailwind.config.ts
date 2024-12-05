@@ -19,6 +19,8 @@ export default {
       },
       animation: {
         "wobble-rotate-zoom": "wobble 4s ease-in-out infinite, rotateZoom 6s linear infinite, swing 5s ease-in-out infinite",
+        "move-right": "moveRight 20s linear infinite",  // Add move-right animation
+        "move-left": "moveLeft 20s linear infinite",   // Add move-left animation
       },
       keyframes: {
         wobble: {
@@ -34,6 +36,14 @@ export default {
         swing: {
           "0%, 100%": { transform: "rotate(0deg)" },
           "50%": { transform: "rotate(10deg)" },
+        },
+        moveRight: {
+          "0%": { transform: "translateX(0)" },
+          "100%": { transform: "translateX(-100%)" },
+        },
+        moveLeft: {
+          "0%": { transform: "translateX(0)" },
+          "100%": { transform: "translateX(100%)" },
         },
       },
     },

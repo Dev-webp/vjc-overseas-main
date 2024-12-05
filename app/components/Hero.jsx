@@ -10,7 +10,7 @@ export default function HeroSection() {
 
   return (
     <>
-     <section className="py-4 lg:py-14 mt-20 md:mt-0 lg:mt-10 bg-gradient-to-bl from-white to-white">
+     <section className="py-4 lg:py-0 mt-20 md:mt-0 lg:mt-28 bg-gradient-to-bl from-white to-white">
 
       <motion.div
         variants={""}
@@ -62,7 +62,7 @@ export default function HeroSection() {
        
         <motion.p
           variants={desVariants}
-          className="flex text-gray-200 tracking-tight text-center text-xs lg:text-base md:font-medium max-w-xs mx-auto lg:max-w-none"
+          className="flex text-gray-200 tracking-tight text-center text-xs lg:text-base md:font-medium max-w-xs mx-auto lg:max-w-xl"
         >
           Being India&apos;s Most Trusted Brand (2022 & 2024) and the Global Icon Award (2023), we do not just walk on the success trails; we make them. Your international aspirations are guided and managed at VJC Overseas with our track record and absolute commitment.
         </motion.p>

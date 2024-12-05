@@ -12,14 +12,16 @@ const Navbar = () => {
     { name: "Assessment", path: "/about" },
     { name: "Migrate", path: "/migrate" },
     { name: "Study Abroad", path: "/study-abroad" },
+    { name: "PR Visas", path: "/permanent-residency-visas" },
     { name: "Work Abroad", path: "/work-abroad" },
-    { name: "Job Seeker", path: "/job" },
+    { name: "Job Seeker Visas", path: "/job-seeker-visas" },
     { name: "Visit Visas", path: "/visit-visas" },
     { name: "Investor Visas", path: "/investor-visas" },
-    { name: "Services", path: "/services" },
+    { name: "Schengen Visas", path: "/schengen-visas" },
+    { name: "Resume Marketing", path: "/resume-marketing" },
     { name: "Coaching/Training", path: "/coaching-training" },
-    { name: "Countries Visas", path: "/countries-visas" },
   ];
+  
 
   return (
     <header>
@@ -99,7 +101,7 @@ const Navbar = () => {
         <React.Fragment key={item.name}>
           <Link
             href={item.path}
-            className="text-white text-sm lg:text-sm font-semibold px-4 hover:bg-white hover:bg-opacity-20 uppercase mt-1"
+            className="text-white text-sm lg:text-xs font-semibold px-3.5 hover:bg-white hover:bg-opacity-20 uppercase mt-1"
           >
             {item.name}
           </Link>

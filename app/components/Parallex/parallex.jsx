@@ -64,18 +64,18 @@ const Column = ({ y }) => {
     <motion.div className={styles.column} style={{ y }}>
       <div className={styles.gridItem}>
         <p className={styles.text}>
-          With our assistance, over 5,000 clients have successfully achieved their dream of studying or working abroad.
+        As someone who was completely new to the study abroad application process, I was so grateful for the support I received from VJC Overseas.
         </p>
         <div className={styles.stars}>★★★★★</div> {/* Add star ratings */}
-        <p className={styles.name}>- Roopak Mittal</p>
+        <p className={styles.name}>- Kavya Mopuri</p>
       </div>
 
       <div className={styles.gridItem}>
         <p className={styles.text}>
-          Thanks to VJC Overseas, I secured my student visa within weeks. The process was seamless, and their guidance was invaluable.
+        The team at VJC Overseas Bangalore made my dream of studying in the UK a reality. Their guidance and support in securing my education visa were invaluable.
         </p>
         <div className={styles.stars}>★★★★☆</div> {/* Add star ratings */}
-        <p className={styles.name}>- Naresh</p>
+        <p className={styles.name}>- Monisha Vinaykumar</p>
       </div>
 
       <div className={styles.gridItem}>
@@ -88,17 +88,17 @@ const Column = ({ y }) => {
 
       <div className={styles.gridItem}>
         <p className={styles.text}>
-        Working with this team made my international relocation effortless. Their thorough knowledge of work permits and immigration processes gave me the confidence.
+        VJC Overseas Bangalore is the go-to place for anyone looking to apply for a work visa. They provided me with excellent service and ensured that my application was processed without any issues.
         </p>
         <div className={styles.stars}>★★★★☆</div> {/* Add star ratings */}
-        <p className={styles.name}>- Sulesh</p>
+        <p className={styles.name}>- nithya sri</p>
       </div>
       <div className={styles.gridItem}>
         <p className={styles.text}>
         Thanks to their expert guidance, I was able to secure the right work permit and relocate smoothly, all while receiving excellent immigration support throughout the process.
         </p>
         <div className={styles.stars}>★★★★☆</div> {/* Add star ratings */}
-        <p className={styles.name}>- Banusree</p>
+        <p className={styles.name}>- Dileep Nandavarapu</p>
       </div>
     </motion.div>
   );
