@@ -1,5 +1,5 @@
 "use client"
-import React, { useEffect } from "react";
+import React from "react";
 // import Link from "next/link";
 import { motion } from "framer-motion";
 import { containerVariants, desVariants } from "../animation";  
@@ -10,7 +10,7 @@ export default function HeroSection() {
 
   return (
     <>
-     <section className="py-4 lg:py-0 mt-2 md:mt-0 lg:mt-28 bg-gradient-to-bl from-white to-white">
+     <section className="py-4 lg:py-0 mt-20 md:mt-0 lg:mt-28 bg-gradient-to-bl from-white to-white">
 
       <motion.div
         variants={""}
@@ -49,14 +49,14 @@ export default function HeroSection() {
         <img
             src="/1.gif" 
             alt="Work in Germany"
-            className="w-[28rem] lg:w-[70rem] h-auto mt-0" 
+            className="w-[24rem] lg:w-[70rem] h-auto mt-0" 
           />
   
 
             <img
               src="/award.png" 
               alt="Work in Germany"
-              className="w-[27rem] h-[7rem]" 
+              className="w-[23rem] lg:w-[27rem] h-[7rem]" 
             />
 <Slider/>
        
