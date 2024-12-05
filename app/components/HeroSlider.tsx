@@ -99,19 +99,23 @@ const Slider = () => {
             >
               {sliderData[currentSlide].title}
             </h2>
+            <ul
+  className={`space-y-2 ${
+    currentSlide === 3 || currentSlide === 4 ? "mt-4" : "" // Add spacing only for 4th and 5th slides
+  }`}
+>
+  {sliderData[currentSlide].services.map((service, index) => (
+    <li key={index}>
+      <Link
+        href={service.link}
+        className={`text-sm lg:text-base underline transition text-white`}
+      >
+        {service.text}
+      </Link>
+    </li>
+  ))}
+</ul>
 
-            <ul className="space-y-2">
-              {sliderData[currentSlide].services.map((service, index) => (
-                <li key={index}>
-                  <Link
-                    href={service.link}
-                    className="text-sm lg:text-base text-white hover:text-orange-500 underline transition"
-                  >
-                    {service.text}
-                  </Link>
-                </li>
-              ))}
-            </ul>
           </motion.div>
         </AnimatePresence>
       </div>
