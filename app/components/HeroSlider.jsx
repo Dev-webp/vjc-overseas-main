@@ -3,111 +3,149 @@ import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 
-// Grouping services by country
 const sliderData = [
-  {
-    services: [
-      { text: "Apply For Canada Permanent Residency ", link: "/canada-pr-visa" },
-      { text: "Apply For Canada Study Visa", link: "/canada-study-visa" }
-    ],
-    backgroundImage: "/canada.webp", // Canada background
-  },
-  {
-    services: [
-      { text: "Apply For Australia Permanent Residency Visa", link: "/australia-pr-visa" },
-      { text: "Apply For Australia Study Visa", link: "/australia-study-visa" }
-    ],
-    backgroundImage: "/australia.jpg", // Australia background
-  },
-  {
-    services: [
-      { text: "Apply For Germany Opportunity Card Visa", link: "/germany-opportunity-card-visa" },
-      { text: "Apply For Germany Study Visa", link: "/germany-study-visa" }
-    ],
-    backgroundImage: "/germany.jpg", // Germany background
-  },
-  {
-    services: [
-      { text: "Apply For UK Study Visa", link: "/uk-study-visa" }
-    ],
-    backgroundImage: "/uk-flag.png", // UK background
-  },
-  {
-    services: [
-      { text: "Apply For Malta Study Visa", link: "/malta-study-visa" }
-    ],
-    backgroundImage: "/malta.png", // Malta background
-  }
-];
+    {
+      services: [
+        { text: "Apply For Canada Permanent Residency", link: "/canada-pr-visa" },
+        { text: "Apply For Canada Study Visa", link: "/canada-study-visa" },
+      ],
+      backgroundImage: "/canada.webp",
+      title: "Canada",
+      gradient: "bg-gradient-to-r from-red-300 to-white", // Canada color gradient
+    },
+    {
+      services: [
+        { text: "Apply For Australia Permanent Residency Visa", link: "/australia-pr-visa" },
+        { text: "Apply For Australia Study Visa", link: "/australia-study-visa" },
+      ],
+      backgroundImage: "/australia.jpg",
+      title: "Australia",
+      gradient: "bg-gradient-to-r from-green-500 to-yellow-500", // Australia color gradient
+    },
+    {
+      services: [
+        { text: "Apply For Germany Opportunity Card Visa", link: "/germany-opportunity-card-visa" },
+        { text: "Apply For Germany Study Visa", link: "/germany-study-visa" },
+      ],
+      backgroundImage: "/germany.jpg",
+      title: "Germany",
+      gradient: "bg-gradient-to-r from-white to-yellow-500", // Germany color gradient
+    },
+    {
+      services: [{ text: "Apply For UK Study Visa", link: "/uk-study-visa" }],
+      backgroundImage: "/uk-flag.png",
+      title: "United Kingdom",
+      gradient: "bg-gradient-to-r from-blue-500 to-white", // UK color gradient
+    },
+    {
+      services: [{ text: "Apply For Malta Study Visa", link: "/malta-study-visa" }],
+      backgroundImage: "/malta.png",
+      title: "Malta",
+      gradient: "bg-gradient-to-r from-red-700 to-white", // Malta color gradient
+    },
+  ];
+  
 
 const Slider = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isHovered, setIsHovered] = useState(false);
 
-  // Auto-slide functionality with hover pause
   useEffect(() => {
     if (!isHovered) {
       const interval = setInterval(() => {
-        setCurrentSlide((prev) => (prev + 1) % sliderData.length); // Ensure it loops infinitely
-      }, 4000); // Change slide every 4 seconds
-
-      return () => clearInterval(interval); // Cleanup interval on component unmount
+        setCurrentSlide((prev) => (prev + 1) % sliderData.length);
+      }, 5000);
+      return () => clearInterval(interval);
     }
   }, [isHovered]);
 
+  const nextSlide = () => setCurrentSlide((prev) => (prev + 1) % sliderData.length);
+  const prevSlide = () => setCurrentSlide((prev) => (prev - 1 + sliderData.length) % sliderData.length);
+
   return (
     <div
-      className="mt-0 text-center"
-      onMouseEnter={() => setIsHovered(true)} // Pause on hover
-      onMouseLeave={() => setIsHovered(false)} // Resume on leave
+      className="relative w-[28rem] h-[8rem] max-w-3xl mx-auto bg-gray-900 rounded-lg shadow-lg overflow-hidden"
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
     >
-      <div
-        className="relative text-black py-3 px-6 rounded-xl shadow-lg overflow-hidden w-[28rem] h-[auto] mx-auto"
-      >
+      {/* Background Image with Overlay */}
+      <AnimatePresence mode="wait">
+        <motion.div
+          key={currentSlide}
+          initial={{ x: "50%" }}  // Start from right
+          animate={{ x: 0 }}       // Slide in
+          exit={{ x: "-50%" }}    // Slide out to the left
+          transition={{ duration: 1.2 }}
+          className="absolute inset-0 bg-cover bg-center"
+          style={{
+            backgroundImage: `url(${sliderData[currentSlide].backgroundImage})`,
+          }}
+        >
+          <div className="absolute inset-0 bg-gradient-to-b from-black/50 to-black/80"></div>
+        </motion.div>
+      </AnimatePresence>
 
-        {/* Background image and services container with same animation */}
+      {/* Slider Content */}
+      <div className="relative z-10 text-center px-4 py-0 ">
         <AnimatePresence mode="wait">
           <motion.div
-            key={currentSlide} // Ensures the content changes with animation
-            initial={{ opacity: 0, x: 50 }} // Initial state for both background and content
-            animate={{ opacity: 1, x: 0 }} // Final state (smooth transition for both)
-            exit={{ opacity: 0, x: -50 }} // Exit state for smooth transition out
-            transition={{ duration: 0.5 }} // Smooth transition duration
-            className="relative"
+            key={sliderData[currentSlide].title}
+            initial={{ x: "100%", opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            exit={{ x: "-100%", opacity: 0 }}
+            transition={{ duration: 1 }}
           >
-            {/* Background image container */}
-            <motion.div
-              className="absolute inset-0 bg-black duration-1000 rounded-lg w-[30rem]"
-              style={{
-                backgroundImage: `url(${sliderData[currentSlide].backgroundImage})`,
-                backgroundSize: "cover",
-                backgroundPosition: "center",
-                opacity: 0.3, // Slight opacity for a subtle background fade effect
-              }}
-              key={`bg-${currentSlide}`} // Ensure the background changes with each slide
-            ></motion.div>
+            <h2
+  className={`text-3xl font-extrabold uppercase text-transparent bg-clip-text ${sliderData[currentSlide].gradient}`}
+>
+  {sliderData[currentSlide].title}
+</h2>
 
-            {/* Sliding Content with smooth transition */}
-            <div className="relative z-10 flex justify-center items-center">
-              <div className="text-lg font-semibold tracking-wide italic bg-none text-white px-8 py-2 rounded-lg shadow-md hover:bg-orange-100 hover:scale-105 transition-transform duration-300 text-center w-[28rem] h-[5rem] truncate">
-                {/* Render all services in one block */}
-                {sliderData[currentSlide].services.map((service, index) => (
-                  <div key={index}>
-                    <Link
-                      href={service.link}
-                      className="block py-1 underline hover:text-orange-500" // Added underline and hover effect
-                    >
-                      {service.text}
-                    </Link>
-                    {index === sliderData[currentSlide].services.length - 1 && (
-                      <br /> // Add a line break after the last service
-                    )}
-                  </div>
-                ))}
-              </div>
-            </div>
+            <ul className="space-y-2">
+              {sliderData[currentSlide].services.map((service, index) => (
+                <li key={index}>
+                  <Link
+                    href={service.link}
+                    className="text-base text-white hover:text-orange-500 underline transition"
+                  >
+                    {service.text}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+            {/* <button className="mt-4 px-4 py-2 bg-orange-500 text-white font-bold uppercase rounded-full shadow-md hover:bg-orange-600 transition">
+              Learn More
+            </button> */}
           </motion.div>
         </AnimatePresence>
+      </div>
+
+      {/* Navigation Buttons */}
+      <button
+        onClick={prevSlide}
+        className="absolute left-3 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white p-2 rounded-full shadow-lg hover:bg-gray-700 transition z-10"
+      >
+        &lt;
+      </button>
+      <button
+        onClick={nextSlide}
+        className="absolute right-3 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white p-2 rounded-full shadow-lg hover:bg-gray-700 transition z-10"
+      >
+        &gt;
+      </button>
+
+      {/* Progress Indicator */}
+      <div className="absolute bottom-3 left-1/2 transform -translate-x-1/2 flex space-x-1">
+        {sliderData.map((_, index) => (
+          <motion.span
+            key={index}
+            className={`w-2.5 h-2.5 rounded-full transition ${
+              index === currentSlide ? "bg-orange-500 scale-110" : "bg-gray-400"
+            }`}
+            animate={{ scale: index === currentSlide ? 1.2 : 1 }}
+            transition={{ duration: 0.3 }}
+          ></motion.span>
+        ))}
       </div>
     </div>
   );

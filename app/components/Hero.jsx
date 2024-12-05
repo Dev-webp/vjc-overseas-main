@@ -8,14 +8,6 @@ import Slider from "@/app/components/HeroSlider";
 
 export default function HeroSection() {
 
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentSlide((prevSlide) => (prevSlide + 1) % sliderData.length); // Loop through the slides
-    }, 3000); // Change slide every 3 seconds
-
-    return () => clearInterval(interval); // Cleanup the interval when the component is unmounted
-  }, []);
   return (
     <>
      <section className="py-4 lg:py-0 mt-2 md:mt-0 lg:mt-28 bg-gradient-to-bl from-white to-white">
@@ -61,12 +53,12 @@ export default function HeroSection() {
           />
   
 
-          <img
-            src="/award.png" 
-            alt="Work in Germany"
-            className="w-[27rem] h-[7rem]" 
-          />
-
+            <img
+              src="/award.png" 
+              alt="Work in Germany"
+              className="w-[27rem] h-[7rem]" 
+            />
+<Slider/>
        
         <motion.p
           variants={desVariants}
@@ -93,7 +85,7 @@ export default function HeroSection() {
       </div>
     </div> */}
 
-<Slider/>
+
 
 
       </motion.div>
