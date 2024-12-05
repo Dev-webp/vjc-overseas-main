@@ -178,9 +178,10 @@ const CountrySlider = () => {
               whileHover={{ opacity: 0.5 }} // Make overlay visible on hover
               transition={{ duration: 0.3 }}
             />
+
             
             <motion.h2
-  className="absolute bottom-6 left-4 text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-white via-orange-500 to-black z-20 uppercase"
+  className="absolute bottom-10 left-4 text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-gray-100 via-gray-200 to-white z-20 uppercase"
   initial={{ opacity: 0 }}
   animate={{ opacity: 1 }}
   exit={{ opacity: 0 }}
@@ -195,8 +196,8 @@ const CountrySlider = () => {
 
 
             {/* Subtle gradient black opacity at the top and bottom of the slider images */}
-            <div className="absolute top-0 left-0 w-full h-1/4 bg-gradient-to-b from-black via-transparent to-transparent"></div>
-            <div className="absolute -bottom-4 left-0 w-full h-1/4 bg-gradient-to-t from-black via-gray-800 to-transparent"></div>
+            <div className="absolute top-0 left-0 w-full h-1/2 bg-gradient-to-b from-black via-gray-900 to-transparent opacity-65"></div>
+            <div className="absolute -bottom-4 left-0 w-full h-1/2 bg-gradient-to-t from-black via-gray-900 to-transparent opacity-65"></div>
           </motion.div>
         ))}
       </motion.div>
