@@ -75,7 +75,7 @@ const Form = () => {
     <div className="bg-white p-4 py-2 rounded-lg shadow-sm max-w-md mx-auto w-full h-[35rem] md:h-[32rem] lg:h-[32rem] tablet:h-[35rem] shadow-orange-300 mb-6 lg:mb-2">
       <h2 className="text-2xl font-bold text-center uppercase text-gray-800 mt-0 lg:mt-3">Sign up & Get Free Assessment</h2>
       
-      <form onSubmit={handleSubmit} className="space-y-4 lg:space-y-3 mt-4 lg:mt-2">
+      <form onSubmit={handleSubmit} className="space-y-4 lg:space-y-3 mt-2 lg:mt-2">
         <div>
           <label htmlFor="name" className="sr-only">Name</label>
           <input
