@@ -1,5 +1,5 @@
 "use client";
-import { useState, useEffect } from "react";
+// import { useState, useEffect } from "react";
 
 const reviews = [
   { name: "John Doe", text: "Great service! Highly recommend!" },
