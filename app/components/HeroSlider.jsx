@@ -64,7 +64,7 @@ const Slider = () => {
 
   return (
     <div
-      className="relative w-[24.50rem] lg:w-[28rem] h-[8rem] max-w-3xl mx-auto bg-gray-900 rounded-lg shadow-lg overflow-hidden"
+      className="relative w-[20rem] lg:w-[28rem] h-[8rem] max-w-3xl mx-auto bg-gray-900 rounded-lg shadow-lg overflow-hidden"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
@@ -96,7 +96,7 @@ const Slider = () => {
             transition={{ duration: 1 }}
           >
             <h2
-  className={`text-3xl font-extrabold uppercase text-transparent bg-clip-text ${sliderData[currentSlide].gradient}`}
+  className={`text-xl lg:text-3xl font-extrabold uppercase text-transparent bg-clip-text ${sliderData[currentSlide].gradient}`}
 >
   {sliderData[currentSlide].title}
 </h2>
@@ -106,7 +106,7 @@ const Slider = () => {
                 <li key={index}>
                   <Link
                     href={service.link}
-                    className="text-base text-white hover:text-orange-500 underline transition"
+                    className="text-sm lg:text-base text-white hover:text-orange-500 underline transition"
                   >
                     {service.text}
                   </Link>

@@ -16,18 +16,18 @@ export default function Description() {
             />
         </svg>
     </div>
-    <div className="relative text-center mb-6">
+    <div className="relative text-center -mb-10 lg:mb-6">
         <h1 className="text-[6vw] lg:text-[4vw] font-bold uppercase leading-tight">
             Turn Dreams Into Destinations
         </h1>
 
-        <p className="mt-6 text-lg md:text-xl font-medium max-w-[80%] mx-auto">
+        <p className="mt-2 lg:mt-6 text-lg md:text-xl font-medium max-w-[80%] mx-auto">
             Empowering your journey with trusted visa and immigration solutions
             for a brighter future.
         </p>
     </div>
 
-    <div className="relative grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 mt-0 mx-auto lg:max-w-[95%] -space-y-16 md:-space-y-0 lg:-space-y-0">
+    <div className="relative grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 mt-0 mx-auto lg:max-w-[95%] -space-y-20 md:-space-y-0 lg:-space-y-0">
         {/* Box 1 - Canada */}
         <div
             className="relative bg-cover bg-center group hover:translate-y-[-10px] transition-all"

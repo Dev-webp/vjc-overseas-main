@@ -6,22 +6,22 @@ import { MdOutlineKeyboardDoubleArrowRight, MdOutlineKeyboardDoubleArrowLeft } f
 
 // Updated list with 15 countries (removed duplicate Spain)
 const countries = [
-  { name: 'Canada', image: '/c3.jpg', description: 'Canada is known for its beautiful landscapes and outdoor activities.' },
-  { name: 'Australia', image: '/c4.png', description: 'Australia is famous for its wildlife, beaches, and cultural diversity.' },
-  { name: 'Usa', image: '/c2.png', description: 'The USA is famous for its world-class education system and career opportunities.' },
-  { name: 'Germany', image: '/c5.png', description: 'Germany boasts a strong economy, rich history, and modern infrastructure.' },
-  { name: 'Uk', image: '/c1.png', description: 'The UK is one of the most sought-after destinations for international students and skilled professionals.' },
-  { name: 'France', image: '/c6.png', description: 'France is known for its art, cuisine, and historical landmarks.' },
-  { name: 'Italy', image: '/c7.png', description: 'Italy is famous for its art, architecture, and cuisine.' },
-  { name: 'Spain', image: '/c13.png', description: 'Spain is known for its vibrant culture, food, and festivals.' },
-  { name: 'Netherlands', image: '/c15.png', description: 'The Netherlands is famous for its windmills, tulips, and canals.' },
-  { name: 'UAE', image: '/c16.png', description: 'Japan offers a unique blend of ancient traditions and modern technology.' },
-  { name: 'Switzerland', image: '/c9.png', description: 'South Korea is known for its technology, culture, and K-pop.' },
-  { name: 'Sweden', image: '/c13.png', description: 'Sweden is famous for its design, technology, and sustainability.' },
-  { name: 'South Africa', image: '/c12.png', description: 'Norway offers stunning landscapes, fjords, and a rich cultural history.' },
-  { name: 'Singapore', image: '/c11.png', description: 'Switzerland is known for its Alps, chocolates, and financial services.' },
-  { name: 'New Zealand', image: '/c10.png', description: 'Finland is famous for its beautiful nature, lakes, and high education standards.' },
-  { name: 'Malaysia', image: '/c8.png', description: 'Portugal offers beautiful beaches, rich history, and amazing food.' },
+  { name: 'Canada study visa', image: '/c3.jpg', description: 'Canada is known for its beautiful landscapes and outdoor activities.' },
+  { name: 'Australia study visa', image: '/c4.png', description: 'Australia is famous for its wildlife, beaches, and cultural diversity.' },
+  { name: 'Usa study visa', image: '/c2.png', description: 'The USA is famous for its world-class education system and career opportunities.' },
+  { name: 'Germany study visa', image: '/c5.png', description: 'Germany boasts a strong economy, rich history, and modern infrastructure.' },
+  { name: 'Uk study visa', image: '/c1.png', description: 'The UK is one of the most sought-after destinations for international students and skilled professionals.' },
+  { name: 'France study visa', image: '/c6.png', description: 'France is known for its art, cuisine, and historical landmarks.' },
+  { name: 'Italy study visa', image: '/c7.png', description: 'Italy is famous for its art, architecture, and cuisine.' },
+  { name: 'Spain study visa', image: '/c13.png', description: 'Spain is known for its vibrant culture, food, and festivals.' },
+  { name: 'Netherlands study visa', image: '/c15.png', description: 'The Netherlands is famous for its windmills, tulips, and canals.' },
+  { name: 'UAE study visa', image: '/c16.png', description: 'Japan offers a unique blend of ancient traditions and modern technology.' },
+  { name: 'Switzerland study visa', image: '/c9.png', description: 'South Korea is known for its technology, culture, and K-pop.' },
+  { name: 'Sweden study visa', image: '/c13.png', description: 'Sweden is famous for its design, technology, and sustainability.' },
+  { name: 'South Africa study visa', image: '/c12.png', description: 'Norway offers stunning landscapes, fjords, and a rich cultural history.' },
+  { name: 'Singapore study visa', image: '/c11.png', description: 'Switzerland is known for its Alps, chocolates, and financial services.' },
+  { name: 'New Zealand study visa', image: '/c10.png', description: 'Finland is famous for its beautiful nature, lakes, and high education standards.' },
+  { name: 'Malaysia study visa', image: '/c8.png', description: 'Portugal offers beautiful beaches, rich history, and amazing food.' },
 ];
 
 const CountrySlider = () => {
@@ -150,7 +150,7 @@ const CountrySlider = () => {
       {/* Images grid (hidden behind the expanded image when clicked) */}
       <motion.div
         ref={sliderRef} // Reference for mouse wheel scroll
-        className="flex w-full h-screen overflow-x-scroll snap-x snap-mandatory gap-6 rounded-lg mt-10"
+        className="flex w-full h-screen  snap-x snap-mandatory gap-6 rounded-lg mt-0 lg:mt-10"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
@@ -180,7 +180,7 @@ const CountrySlider = () => {
             />
             
             <motion.h2
-  className="absolute bottom-6 left-4 text-4xl font-bold text-white z-20 uppercase"
+  className="absolute bottom-6 left-4 text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-red-700 via-yellow-500 to-orange-500 z-20 uppercase"
   initial={{ opacity: 0 }}
   animate={{ opacity: 1 }}
   exit={{ opacity: 0 }}

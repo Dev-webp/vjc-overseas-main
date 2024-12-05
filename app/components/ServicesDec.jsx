@@ -133,7 +133,7 @@ const ServicesDec = () => {
         {/* Overlay Content (Visible only on default image) */}
         {currentImage === "/ser.png" && (
           <motion.div
-            className="absolute inset-0 flex flex-col items-center justify-center text-black mt-56 lg:mt-52 ml-6 mb-[0rem] md:mb-0 lg:mb-0"
+            className="absolute inset-0 flex flex-col items-center justify-center text-black mt-52 lg:mt-52 ml-6 mb-[0rem] md:mb-0 lg:mb-0"
             whileHover={{ y: -10 }}
             transition={{ duration: 0.3, ease: "easeInOut" }}
           >
@@ -146,7 +146,7 @@ const ServicesDec = () => {
       </motion.div>
 
 {/* 0 to 4 */}
-      <div className="absolute w-full flex flex-col items-center justify-start top-[0%] lg:hidden mt-0 z-40">
+      <div className="absolute w-full flex flex-col items-center justify-start top-[2%] lg:hidden mt-0 z-40">
   {boxData.slice(0, 4).map((box, index) => (  // Limit to the first 4 items
     <motion.div
       key={index}

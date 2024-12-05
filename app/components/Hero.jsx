@@ -44,19 +44,19 @@ export default function HeroSection() {
       {/* Left Section (Text) */}
       <motion.div
         variants={containerVariants(0.4)}
-        className="flex flex-col space-y-8 lg:space-y-6 lg:items-center text-center lg:text-left max-w-2xl md:max-w-3xl mx-auto mb-0 lg:mb-0 relative z-10 ml-0 lg:ml-10 mt-0"
+        className="flex flex-col space-y-8 lg:space-y-6 items-center text-center lg:text-left max-w-2xl md:max-w-3xl mx-auto relative z-10"
       >
         <img
             src="/1.gif" 
             alt="Work in Germany"
-            className="w-[24rem] lg:w-[70rem] h-auto mt-0" 
+            className="w-[24rem] lg:w-[70rem] h-auto mt-0 items-center" 
           />
   
 
             <img
               src="/award.png" 
               alt="Work in Germany"
-              className="w-[23rem] lg:w-[27rem] h-[7rem]" 
+              className="w-[23rem] lg:w-[27rem] h-[7rem] items-center" 
             />
 <Slider/>
        
