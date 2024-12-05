@@ -16,12 +16,12 @@ export default function Description() {
             />
         </svg>
     </div>
-    <div className="relative text-center -mb-10 lg:mb-6">
+    <div className="relative text-center -mb-6">
         <h1 className="text-[6vw] lg:text-[4vw] font-bold uppercase leading-tight">
             Turn Dreams Into Destinations
         </h1>
 
-        <p className="mt-2 lg:mt-6 text-lg md:text-xl font-medium max-w-[80%] mx-auto">
+        <p className="mt-2 lg:mt-2 text-lg md:text-xl font-medium max-w-[80%] mx-auto">
             Empowering your journey with trusted visa and immigration solutions
             for a brighter future.
         </p>

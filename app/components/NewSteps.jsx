@@ -118,7 +118,7 @@ const VisaProcessSteps = () => {
             >
               {/* Content Section */}
               <div className={`flex flex-col items-center ${isLeftSide ? 'mr-auto w-1/2' : 'ml-auto w-1/2'}`}>
-                <h3 className="text-xl font-semibold text-gray-800 mt-16 md:mt-0 lg:mt-0">{step.title}</h3>
+                <h3 className="text-xl font-semibold text-gray-800 mt-16 md:mt-0 lg:mt-10">{step.title}</h3>
                 <p className="text-gray-600 max-w-60 mb-10">{step.description}</p>
                 
                 {/* Horizontal line below the description */}
@@ -139,7 +139,7 @@ const VisaProcessSteps = () => {
 
               {/* Image Section */}
               <div className={`w-1/2 ${isLeftSide ? '' : 'order-last'}`}>
-                <img src={step.image} alt={step.title} className="w-full h-auto lg:h-full rounded-lg mb-0 lg:mb-4 mt-10 md:mt-0 lg:mt-0" />
+                <img src={step.image} alt={step.title} className="w-full h-auto lg:h-full rounded-lg mb-0 lg:mb-6 mt-10 md:mt-0 lg:mt-0" />
               </div>
             </div>
           );
