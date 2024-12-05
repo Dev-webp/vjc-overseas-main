@@ -136,7 +136,7 @@
   .column:nth-of-type(2),
   .column:nth-of-type(3),
   .column:nth-of-type(4) {
-    bottom: 10%; /* Reset top positioning for vertical stacking */
+    bottom: 0%; /* Reset top positioning for vertical stacking */
   }
 }
 

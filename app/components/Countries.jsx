@@ -83,7 +83,7 @@ const CountrySlider = () => {
       {/* Background image animation for expanded image */}
       {expandedIndex !== null && (
         <motion.div
-          className="absolute top-0 left-0 w-full h-full bg-cover bg-center z-50"
+          className="absolute top-0 left-0 w-full h-[75vh] lg:h-full bg-cover bg-center z-50"
           style={{
             backgroundImage: `url(${countries[expandedIndex].image})`,
           }}
@@ -180,7 +180,7 @@ const CountrySlider = () => {
             />
             
             <motion.h2
-  className="absolute bottom-6 left-4 text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-red-700 via-yellow-500 to-orange-500 z-20 uppercase"
+  className="absolute bottom-6 left-4 text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-white via-orange-500 to-black z-20 uppercase"
   initial={{ opacity: 0 }}
   animate={{ opacity: 1 }}
   exit={{ opacity: 0 }}

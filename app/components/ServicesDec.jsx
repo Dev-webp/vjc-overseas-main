@@ -120,7 +120,7 @@ const ServicesDec = () => {
           alt="Services"
           className={`object-cover rounded-full ${
             currentImage === "/ser.png"
-              ? "w-[30rem] h-[30rem] mb-[0rem] md:mb-0 lg:mb-0" // Default image dimensions
+              ? "w-[30rem] h-[30rem] mb-[1rem] md:mb-0 lg:mb-0" // Default image dimensions
               : "w-[38rem] h-[38rem] mb-[0rem] md:mb-8 lg:mb-8" // Changing image dimensions
           }`}
           initial={{ opacity: 0, scale: 1.05 }} // Start slightly scaled up for smoother transition
@@ -179,7 +179,7 @@ const ServicesDec = () => {
 </div>
 
 {/* 4 to 8 */}
-<div className="absolute w-full flex flex-col items-center justify-start top-[60%] lg:hidden z-40">
+<div className="absolute w-full flex flex-col items-center justify-start top-[61%] lg:hidden z-40">
   {boxData.slice(4, 8).map((box, index) => (  // Limit to the first 4 items
     <motion.div
       key={index}

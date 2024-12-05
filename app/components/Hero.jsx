@@ -10,7 +10,7 @@ export default function HeroSection() {
 
   return (
     <>
-     <section className="py-4 lg:py-0 mt-20 md:mt-0 lg:mt-28 bg-gradient-to-bl from-white to-white">
+     <section className="py-4 lg:py-14 mt-20 md:mt-0 lg:mt-10 bg-gradient-to-bl from-white to-white">
 
       <motion.div
         variants={""}

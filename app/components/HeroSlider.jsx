@@ -64,7 +64,7 @@ const Slider = () => {
 
   return (
     <div
-      className="relative w-[20rem] lg:w-[28rem] h-[8rem] max-w-3xl mx-auto bg-gray-900 rounded-lg shadow-lg overflow-hidden"
+      className="relative w-[22rem] lg:w-[28rem] h-[8rem] max-w-3xl mx-auto bg-gray-900 rounded-lg shadow-lg overflow-hidden"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
