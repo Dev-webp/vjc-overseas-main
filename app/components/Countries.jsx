@@ -83,7 +83,7 @@ const CountrySlider = () => {
       {/* Background image animation for expanded image */}
       {expandedIndex !== null && (
         <motion.div
-          className="absolute top-0 left-0 w-full h-[75vh] lg:h-full bg-cover bg-center z-50"
+          className="absolute top-0 left-0 w-full h-[60vh] lg:h-full bg-cover bg-center z-50"
           style={{
             backgroundImage: `url(${countries[expandedIndex].image})`,
           }}
@@ -130,7 +130,7 @@ const CountrySlider = () => {
 
       {/* Slider navigation buttons */}
       <motion.button
-        className="absolute top-[40rem] lg:top-1/2  left-4 z-20 transform -translate-y-1/2 bg-neutral-200 text-neutral-400 p-2 rounded-full"
+        className="absolute top-[33.20rem] lg:top-1/2  left-4 z-20 transform -translate-y-1/2 bg-neutral-200 text-neutral-400 p-2 rounded-full"
         onClick={scrollLeft}
         whileHover={{ scale: 1.1 }} // Scale button slightly on hover
         transition={{ duration: 0.3 }}
@@ -139,7 +139,7 @@ const CountrySlider = () => {
       </motion.button>
 
       <motion.button
-        className="absolute top-[40rem] lg:top-1/2  right-4 z-20 transform -translate-y-1/2 bg-neutral-200 text-neutral-400 p-2 rounded-full"
+        className="absolute top-[33.20rem]  lg:top-1/2  right-4 z-20 transform -translate-y-1/2 bg-neutral-200 text-neutral-400 p-2 rounded-full"
         onClick={scrollRight}
         whileHover={{ scale: 1.1 }} // Scale button slightly on hover
         transition={{ duration: 0.3 }}
@@ -181,7 +181,7 @@ const CountrySlider = () => {
 
             
             <motion.h2
-  className="absolute bottom-10 left-4 text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-gray-100 via-gray-200 to-white z-20 uppercase"
+  className="absolute bottom-12 left-4 text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-gray-100 via-gray-200 to-white z-20 uppercase"
   initial={{ opacity: 0 }}
   animate={{ opacity: 1 }}
   exit={{ opacity: 0 }}

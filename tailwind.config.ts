@@ -8,10 +8,6 @@ export default {
   ],
   theme: {
     extend: {
-      fontFamily: {
-        jaro: ['"Jaro"', 'sans-serif'], // Add Jaro font
-        abril: ['"Abril Fatface"', 'cursive'], // Add Abril Fatface font
-      },
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
