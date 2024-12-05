@@ -6,44 +6,66 @@ const Footer = () => {
   return (
     <>
     <footer className="bg-gradient-to-r from-gray-800 via-gray-700 to-gray-900 text-white py-12">
-    <div className="max-w-6xl mx-auto px-5 text-center md:text-left border-b border-gray-700 mb-10">
+    <div className="max-w-7xl mx-auto px-5 text-center md:text-left border-b border-gray-700 mb-10">
         {/* Grid for Content */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8 mb-10">
             {/* Navigation */}
             <div>
-                <h3 className="text-lg font-bold text-orange-500 mb-1 md:mb-4 lg:mb-2 text-center lg:text-left uppercase">Navigation</h3>
+                <h3 className="text-lg font-bold text-orange-500 mb-1 md:mb-4 lg:mb-2 text-center lg:text-left uppercase">About Us</h3>
                 <ul className="space-y-2 text-center lg:text-left mb-6 md:mb-0 lg:mb-0">
-                    <li><a href="#" className="hover-underline">Home</a></li>
-                    <li><a href="#" className="hover-underline">About Us</a></li>
-                    <li><a href="#" className="hover-underline">Our Services</a></li>
-                    <li><a href="#" className="hover-underline">Contact</a></li>
+                    <li><a href="#" className="hover-underline">Services</a></li>
+                    <li><a href="#" className="hover-underline">Our CEO Message</a></li>
+                    <li><a href="#" className="hover-underline">Our Network</a></li>
+                    <li><a href="#" className="hover-underline">Careers</a></li>
                 </ul>
             </div>
             {/* Services */}
             <div>
-                <h3 className="text-lg font-bold text-orange-500 mb-1 md:mb-4 lg:mb-2 text-center lg:text-left uppercase">Services</h3>
+                <h3 className="text-lg font-bold text-orange-500 mb-1 md:mb-4 lg:mb-2 text-center lg:text-left uppercase">Our Blogs</h3>
                 <ul className="space-y-2 text-center lg:text-left mb-6 md:mb-0 lg:mb-0">
-                    <li><a href="#" className="hover-underline">Study Visa Consultation</a></li>
-                    <li><a href="#" className="hover-underline">Visa Application Assistance</a></li>
-                    <li><a href="#" className="hover-underline">Immigration Advice</a></li>
-                    <li><a href="#" className="hover-underline">Resume Marketing</a></li>
+                    <li><a href="#" className="hover-underline">Canada Immigration</a></li>
+                    <li><a href="#" className="hover-underline">Australia Immigration</a></li>
+                    <li><a href="#" className="hover-underline">USA Immigration</a></li>
+                    <li><a href="#" className="hover-underline">Germany Immigration</a></li>
+                    <li><a href="#" className="hover-underline">Germany Jobs</a></li>
                 </ul>
             </div>
+
+             
             <div>
-    <h3 className="text-lg font-bold text-orange-500 mb-1 md:mb-4 lg:mb-2 text-center lg:text-left uppercase">Our Expertise</h3>
-    <ul className="space-y-2 text-center lg:text-left mb-6 md:mb-0 lg:mb-0">
-        <li><a href="#" className="hover-underline">Immigration Support</a></li>
-        <li><a href="#" className="hover-underline">Career Counseling for Students</a></li>
-        <li><a href="#" className="hover-underline">Work Permit Guidance</a></li>
-        <li><a href="#" className="hover-underline">Skill Assessment Assistance</a></li>
+    <h3 className="text-lg  font-bold text-orange-500 mb-1 md:mb-4 lg:mb-2 text-center lg:text-left uppercase">Settle your future in Abroad</h3>
+    <ul className="space-y-1 text-center lg:text-left mb-6 md:mb-0 lg:mb-0">
+        <li><a href="#" className="hover-underline">Settle in Canada</a></li>
+        <li><a href="#" className="hover-underline">Settle in Australia</a></li>
+        <li><a href="#" className="hover-underline">Settle in Germany</a></li>
+        <li><a href="#" className="hover-underline">Settle in UK</a></li>
+        <li><a href="#" className="hover-underline">Settle in USA</a></li>
+        {/* <li><a href="#" className="hover-underline">Settle in New Zealand</a></li>
+        <li><a href="#" className="hover-underline">Settle in South Africa</a></li>
+        <li><a href="#" className="hover-underline">Settle in Ireland</a></li>
+        <li><a href="#" className="hover-underline">Settle in UAE</a></li>
+        <li><a href="#" className="hover-underline">Settle in Denmark</a></li> */}
     </ul>
 </div>
+
+{/* Services */}
+<div>
+                <h3 className="text-lg font-bold text-orange-500 mb-1 md:mb-4 lg:mb-2 text-center lg:text-left uppercase">Other Services</h3>
+                <ul className="space-y-2 text-center lg:text-left mb-6 md:mb-0 lg:mb-0">
+                    <li><a href="#" className="hover-underline">Free Eligibility Check</a></li>
+                    <li><a href="#" className="hover-underline">Free Counselling</a></li>
+                    <li><a href="#" className="hover-underline">Free Assessment Online</a></li>
+                    <li><a href="#" className="hover-underline">Fast and Easy Process</a></li>
+                    <li><a href="#" className="hover-underline">Professional Job Assistance</a></li>
+                    <li><a href="#" className="hover-underline">High Quality Resume Marketing</a></li>
+                </ul>
+            </div>
 
                 
             {/* Social Media */}
             <div>
-                <h3 className="text-lg font-bold text-orange-500 mb-4 uppercase text-center">Follow Us</h3>
-                <div className="flex space-x-4 text-center justify-center">
+                <h3 className="text-lg font-bold text-orange-500 mb-4 uppercase text-center lg:text-left">Follow us</h3>
+                <div className="flex space-x-4 text-center lg:text-left justify-center lg:justify-start">
                     <a href="#" className="group">
                         <FaFacebook className="text-white group-hover:text-orange-500" />
                     </a>
@@ -61,8 +83,8 @@ const Footer = () => {
                     </a>
                 </div>
                 <div className="flex flex-col items-center justify-center md:items-start mb-6 md:mb-0 mt-10 w-full md:w-auto ml-0 tablet:ml-20 md:ml-0 lg:ml-0">
-            <p className="text-gray-300 font-semibold">Email : <a href="mailto:info@vjcoverseas.com" className="hover:text-saffron">info@vjcoverseas.com</a></p>
-            <p className="mt-2 font-semibold text-gray-300 ml-0 tablet:ml-2 md:ml-0 lg:ml-0">CONTACT : <a href="tel:+919160449000" className="hover:text-saffron">+91 9160449000</a></p>
+            <p className="text-gray-200 font-medium">Email : <a href="mailto:info@vjcoverseas.com" className="hover:text-saffron">info@vjcoverseas.com</a></p>
+            <p className="mt-2 font-medium text-gray-200 ml-0 tablet:ml-2 md:ml-0 lg:ml-0">Contact : <a href="tel:+919160449000" className="hover:text-saffron">+91 9160449000</a></p>
           </div>
             </div>
         </div>

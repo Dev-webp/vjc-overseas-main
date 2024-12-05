@@ -6,20 +6,20 @@ import Three from "@/app/about/files/three";
 import Four from "@/app/about/files/four";
 import Price from "@/app/components/Price";
 import Footer from "@/app/about/files/Footer";
-import HeroNext from "./files/heroNext";
-import Reviews from "@/app/about/files/reviews";
+// import HeroNext from "./files/heroNext";
+// import Reviews from "@/app/about/files/reviews";
 
 const page = () => {
   return (
     <>
     <Hero/>
-    <HeroNext/>
+    {/* <HeroNext/> */}
     <Two/>
     <CTA/>
     <Four/>
     <Price/>
     <Three/>
-    <Reviews/>
+    {/* <Reviews/> */}
     <Footer />
     </>
   )

@@ -18,10 +18,10 @@ const FeatureItem = ({ id, title, description, advantages, icon, image }) => {
                 <ul role="list" className="space-y-5 children:flex children:items-center children:gap-4 children:text-gray-600">
                     {
                         advantages.map(advantage => (
-                            <li key={advantage.id} className="flex items-center">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-5 h-5 fill-orange-600 mr-2">
+                            <li key={advantage.id} className="flex items-center text-base">
+                                {/* <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-5 h-5 fill-orange-600 mr-2">
                                     <path fillRule="evenodd" d="M16.403 12.652a3 3 0 000-5.304 3 3 0 00-3.75-3.751 3 3 0 00-5.305 0 3 3 0 00-3.751 3.75 3 3 0 000 5.305 3 3 0 003.75 3.751 3 3 0 005.305 0 3 3 0 003.751-3.75zm-2.546-4.46a.75.75 0 00-1.214-.883l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clipRule="evenodd" />
-                                </svg>
+                                </svg> */}
                                 {advantage.text}
                             </li>
                         ))
@@ -41,37 +41,37 @@ import { FaGlobe, FaFileAlt, FaHandsHelping } from 'react-icons/fa';
 const features = [
     {
         id: 1,
-        title: "Global Expertise for Multiple Countries",
+        title: "Continuous Improvement",
         icon: <FaGlobe className="h-10 w-10" />,
         description: "We specialize in visa and immigration services for a wide range of countries, offering expert advice on the best immigration options based on your goals.",
         advantages: [
-            { id: 1, text: "Visa services for countries including the UK, USA, Canada, and more" },
-            { id: 2, text: "Knowledgeable consultants familiar with each country's immigration laws" },
-            { id: 3, text: "Assistance with work, student, and family visas across the globe" }
+            { id: 1, text: "We believe in the power of learning and evolving. " },
+            { id: 2, text: "Our team is committed to staying updated with the latest trends, policies, and opportunities in the field  " },
+            { id: 3, text: "This dedication helps us provide our clients with the most current and effective solutions." }
         ],
         image: "/b1.webp"
     },
     {
         id: 2,
-        title: "Seamless Document Processing and Submission",
+        title: "Client Satisfaction",
         icon: <FaFileAlt className="h-10 w-10" />,
         description: "We handle all the documentation, ensuring all forms are correctly filled out and submitted on time to avoid delays in your visa processing.",
         advantages: [
-            { id: 1, text: "Thorough document checks to meet all visa requirements" },
-            { id: 2, text: "Ensuring timely and accurate document submission" },
-            { id: 3, text: "Helping you avoid common mistakes that cause application delays" }
+            { id: 1, text: "Over the years, we have built a reputation for delivering exceptional service." },
+            { id: 2, text: "we are proud of the positive feedback we receive from our clients. " },
+            { id: 3, text: "Our focus on client satisfaction has earned us the trust of hundreds of students and professionals who have successfully achieved their goals abroad." }
         ],
         image: "/b2.webp"
     },
     {
         id: 3,
-        title: "Post-Visa Support for a Smooth Transition",
+        title: "Recognised Excellence",
         icon: <FaHandsHelping className="h-10 w-10" />,
         description: "Our services don’t stop once your visa is approved. We provide assistance with your relocation and settlement, ensuring a smooth transition to your new country.",
         advantages: [
-            { id: 1, text: "Post-visa counseling to help you adjust to life in a new country" },
-            { id: 2, text: "Help with finding housing, schools, and job opportunities" },
-            { id: 3, text: "Ongoing support to help you navigate your new life abroad" }
+            { id: 1, text: "Our commitment to excellence has been recognised through numerous awards. " },
+            { id: 2, text: "These accolades reflect our unwavering dedication to providing the best service to our clients." },
+            { id: 3, text: "In 2022, 2023, and 2024, we were honoured with the title of India’s Most Trusted Brand of the Year, awarded to us consecutively in Delhi and Bengaluru. " }
         ],
         image: "/b3.webp"
     }
@@ -95,7 +95,7 @@ const Features = () => {
                 <div className="flex flex-col  space-y-16">
                     <div className="flex flex-col justify-center text-center  mx-auto md:max-w-4xl space-y-5">
                         <h1 className="text-3xl font-semibold text-orange-500 md:text-4xl xl:text-5xl leading-tight uppercase">
-                            Unlock Efficiency and Drive Success with Our<br /> Cutting-Edge Solutions
+                         Why Choose VJC Overseas?
                         </h1>
 
                         <p className="text-gray-700 max-w-xl mx-auto">

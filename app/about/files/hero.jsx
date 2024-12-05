@@ -1,6 +1,6 @@
 "use client"
 import React from 'react';
-import Link from "next/link";
+// import Link from "next/link";
 import { motion } from "framer-motion";
 import { containerVariants, titleVariants, desVariants  } from "../../animation";
 import Nav from "@/app/components/Nav";
@@ -52,16 +52,16 @@ const CompOne = () => {
           className="font-semibold uppercase leading-tight text-center text-teal-950 text-4xl sm:text-5xl lg:text-[3.50rem] mt-20"
         >
           <span className="text-transparent bg-clip-text bg-gradient-to-tr from-gray-100 to-orange-600">
-              Empowering Your Global Journey with Expertise 
+          About Us <br/>VJC Overseas 
             </span>
         </motion.h1>
         <motion.p
           variants={desVariants}
-          className="flex text-gray-300 tracking-tight text-center md:font-medium max-w-xl mx-auto lg:max-w-none"
+          className="flex text-gray-300 tracking-tight text-center md:font-medium max-w-xl mx-auto lg:max-w-lg"
         >
-          As a leading force in the global immigration and consultancy industry, we take pride in our legacy of success. With multiple accolades, including India’s Most Trusted Brand (2022 & 2024) and the prestigious Global Icon Award (2023), our mission at VJC Overseas is clear — to help you turn your international dreams into reality. 
+          Welcome to VJC Overseas, a trusted name in the field of overseas education and immigration services. Founded in 2009, we began as a local firm with a simple yet powerful goal: to provide the highest quality services to students aspiring to study abroad and professionals seeking to build their careers overseas. Over the years, our commitment to excellence has transformed us into a leading name in the industry.
         </motion.p>
-        <motion.div
+        {/* <motion.div
           variants={containerVariants(0.6)}
           className="hidden sm:flex flex-col sm:flex-row items-center justify-center lg:justify-center gap-4 w-full "
         >
@@ -77,7 +77,7 @@ const CompOne = () => {
           >
             Book a call
           </Link>
-        </motion.div>
+        </motion.div> */}
       </motion.div>
 
       {/* Right Section (Image and Form) */}

@@ -8,11 +8,13 @@ import ScrollChangeImage from './ScrollTriggeer';
 // import ScrollPerRev from "@/app/components/ScrollPerRev/Index";
 // import Swap from "../components/Swap";
 import Steps from "@/app/components/NewSteps";
+import SideBar from "./SideBar";
 const page = () => {
   return (
     <>
-        <Steps/>
-        <ScrollChangeImage />
+        {/* <Steps/>
+        <ScrollChangeImage /> */}
+        <SideBar/>
         
     </>
   )

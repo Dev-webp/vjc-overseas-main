@@ -1,7 +1,7 @@
 .gallery {
   height: 175vh;
   // background: #fa8322;
-  background: url('/rose-petals.webp') no-repeat center top / cover;
+  background: url('/test1.png') no-repeat center top / cover;
   position: relative;
   display: flex;
   gap: 2vw;
@@ -21,7 +21,8 @@
 
     .gridItem {
       height: 300px; /* Adjust height as needed */
-      background-color: rgb(255, 255, 255);
+      // background-color: rgb(255, 255, 255);
+      background: url('/dot.webp  ') no-repeat center top / cover;
       border-radius: 1vw;
       border: 1px solid #949494; /* Black border */
       display: flex;
@@ -42,10 +43,11 @@
     
     .name {
       font-size: 1rem; /* Adjust size as needed */
-      color: #ff6e14; /* Slightly muted color for the name */
+      color: #006eb9; /* Slightly muted color for the name */
       text-align: center;
+      font-style: italic;
       font-weight: bold;
-      margin-top: 10px; /* Adds space between text and name */
+      margin-top: 6px; /* Adds space between text and name */
     }
 
     .stars {
