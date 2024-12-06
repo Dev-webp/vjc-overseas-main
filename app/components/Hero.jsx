@@ -44,7 +44,7 @@ export default function HeroSection() {
       {/* Left Section (Text) */}
       <motion.div
         variants={containerVariants(0.4)}
-        className="flex flex-col space-y-8 lg:space-y-6 items-center text-center lg:text-left max-w-2xl md:max-w-3xl mx-auto relative z-10"
+        className="flex flex-col space-y-8 lg:space-y-6 items-center text-center lg:text-left max-w-2xl md:max-w-3xl mx-auto relative z-10 mb-0 lg:mb-14"
       >
         <img
             src="/1.gif" 

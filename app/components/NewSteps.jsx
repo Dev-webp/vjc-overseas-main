@@ -89,14 +89,14 @@ const VisaProcessSteps = () => {
 
   return (
     <section className="px-4 bg-cover bg-center overflow-x-hidden" style={{ backgroundImage: "url('/comp-1.webp')" }}>
-  <div className="mx-auto text-center -space-y-16">
+  <div className="mx-auto text-center -space-y-14">
     <h1 className={`text-[2.75rem] font-semibold uppercase text-transparent bg-clip-text bg-gradient-to-tr from-orange-500 to-orange-600 md:text-4xl xl:text-5xl leading-tight text-center`}>
       Easy Visa Process<br/> <span className="text-lg text-gray-600">Follow these steps for a smooth visa application process.</span>
     </h1>
     
     <div className="relative flex items-center justify-center">
       {/* Black Vertical Line */}
-      <div className="w-[3px] bg-black min-h-[60rem] lg:min-h-[86rem] absolute"></div>
+      <div className="w-[3px] bg-black min-h-[57rem] lg:min-h-[80rem] absolute"></div>
       
       {/* Icons positioned above the vertical line */}
       <div className="flex flex-col items-center -space-y-32 lg:-space-y-40">
