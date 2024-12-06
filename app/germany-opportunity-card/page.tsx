@@ -2,7 +2,6 @@
 import dynamic from 'next/dynamic';
 import Hero from "@/app/germany-opportunity-card/components/Hero";
 import Footer from "@/app/germany-opportunity-card/components/Footer";
-import { FaWhatsapp } from 'react-icons/fa'; // Import the WhatsApp icon
 
 // Dynamically import non-critical components with { ssr: false } to ensure they load on the client side
 const RoadmapComponent = dynamic(() => import("@/app/germany-opportunity-card/components/RoadmapComponent"), { ssr: false });
