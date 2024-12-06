@@ -65,25 +65,25 @@ export default function Description() {
 
         {/* Box 3 - Usa */}
         <div
-            className="relative bg-cover bg-center group hover:translate-y-[-10px] transition-all"
+            className="relative bg-cover bg-center group hover:translate-y-[-10px] transition-all top-14 left-3"
             style={{
-                backgroundImage: "url('/canada.png')",
-                width: '250px',
-                height: '500px',
+                backgroundImage: "url('/Usa.png')",
+                width: '210px',
+                height: '420px',
             }}
         >
-            <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 px-6 py-4 flex flex-col justify-between text-center mb-28">
+            <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 px-6 py-4 flex flex-col justify-between text-center mb-[5.50rem]">
                 <h3 className="text-2xl font-bold text-black uppercase mb-0">USA</h3>
                 <button className="px-6 py-2 text-md font-semibold text-white uppercase whitespace-nowrap ml-6 mb-2">
                 Free Assessment
                 </button>
-                <p className="text-sm text-black max-w-44 ml-1">Check your possibilities and planning of expenses to move on to USA.</p>
+                <p className="text-sm text-black max-w-44 ml-4">Check your possibilities and planning of expenses to move on to USA.</p>
             </div>
         </div>
 
         {/* Box 4 - Germany */}
         <div
-            className="relative bg-cover bg-center group hover:translate-y-[-10px] transition-all"
+            className="relative bg-cover bg-center group hover:translate-y-[-10px] transition-all top-16 lg:top-0 "
             style={{
                 backgroundImage: "url('/germany.png')",
                 width: '250px',
@@ -101,7 +101,7 @@ export default function Description() {
 
         {/* Box 5 - UK */}
         <div
-            className="relative bg-cover bg-center group hover:translate-y-[-10px] transition-all"
+            className="relative bg-cover bg-center group hover:translate-y-[-10px] transition-all top-14 lg:top-0"
             style={{
                 backgroundImage: "url('/uk.png')",
                 width: '250px',

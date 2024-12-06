@@ -12,6 +12,10 @@ export default {
         background: "var(--background)",
         foreground: "var(--foreground)",
         'custom-blue': '#006eb9',
+        saffron: '#FF7722',
+      },
+      screens: {
+        tablet: '800px',
       },
       animation: {
         "wobble-rotate-zoom": "wobble 4s ease-in-out infinite, rotateZoom 6s linear infinite, swing 5s ease-in-out infinite",
