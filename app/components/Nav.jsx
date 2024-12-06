@@ -92,8 +92,8 @@ const Navbar = () => {
       </div>
 
 {/* Orange background section for large screens */}
-<div className="bg-orange-500 fixed top-12 w-screen z-50 hidden md:block">
-  <nav className="flex justify-between items-center py-1.5">
+<div className="bg-orange-500 fixed top-12 w-screen z-50  hidden md:block">
+  <nav className="flex justify-between items-center px-2 max-w-7xl py-1.5">
     
     {/* Navigation links for large screens */}
     <div className="flex flex-row -space-x-2 whitespace-nowrap">

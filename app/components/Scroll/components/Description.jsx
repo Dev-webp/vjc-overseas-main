@@ -22,8 +22,7 @@ export default function Description() {
         </h1>
 
         <p className="mt-2 lg:mt-2 text-lg md:text-xl font-medium max-w-[80%] mx-auto">
-            Empowering your journey with trusted visa and immigration solutions
-            for a brighter future.
+        Empower Your journey with Most Trusted visa & immigration Brand of India for a brighter future
         </p>
     </div>
 

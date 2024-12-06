@@ -375,7 +375,7 @@ const ServicesDec = () => {
 
 {/* Box 7 (Bottom Center) */}
 <motion.div
-  className="absolute w-72 h-28 cursor-pointer bg-white border border-gray-300 shadow-lg hidden sm:flex items-center justify-between p-4 rounded-lg bottom-10 transform -translate-y-1/2 left-[4rem] lg:left-[31rem] -translate-x-1/2 transition-transform duration-300 ease-in-out hover:scale-105 hover:shadow-xl hover:border-black hover:bg-orange-400 group"
+  className="absolute w-72 h-28 cursor-pointer bg-white border border-gray-300 shadow-lg hidden sm:flex items-center justify-between p-4 rounded-lg bottom-10  transform -translate-y-1/2 left-[4rem] lg:left-[31rem] -translate-x-1/2 transition-transform duration-300 ease-in-out hover:scale-105 hover:shadow-xl hover:border-black hover:bg-orange-400 group"
   initial="hidden"
   animate="visible"
   variants={fadeInVariants}

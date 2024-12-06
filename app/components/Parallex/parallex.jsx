@@ -118,6 +118,37 @@ const Column = ({ y }) => {
         <div className={styles.stars}>★★★★☆</div> {/* Add star ratings */}
         <p className={styles.name}>- Dileep Nandavarapu</p>
       </div>
+      <div className={styles.gridItem}>
+        <p className={styles.text}>
+        We successfully received our F2 visa through the guidance of VJC Overseas. The team’s quick responses and dedicated support were truly commendable.
+        </p>
+        <div className={styles.stars}>★★★★★</div> {/* Add star ratings */}
+        <p className={styles.name}>- Mahesh Kumar</p>
+      </div>
+
+      <div className={styles.gridItem}>
+        <p className={styles.text}>
+        Hi, Everyone on my behalf the staff is very polite.they are always in touch, whenever I want to communicate regarding MY application.Thanks very much for your Genuine Visa Services.
+        </p>
+        <div className={styles.stars}>★★★★★</div> {/* Add star ratings */}
+        <p className={styles.name}>- Jasbir Sheoran</p>
+      </div>
+
+      <div className={styles.gridItem}>
+        <p className={styles.text}>
+        Vjc overseas provided outstanding service for our Singapore visas. Their expertise, efficiency, and dedication ensured a smooth and stress-free process. 
+        </p>
+        <div className={styles.stars}>★★★★★</div> {/* Add star ratings */}
+        <p className={styles.name}>- nandam monica</p>
+      </div>
+
+      <div className={styles.gridItem}>
+        <p className={styles.text}>
+        Amazing services. All the documentation was done diligently and on time. They are all Very helpful at anytime and have great suggestions for any kind of doubts I had.
+        </p>
+        <div className={styles.stars}>★★★★★</div> {/* Add star ratings */}
+        <p className={styles.name}>- Roopak Mittal</p>
+      </div>
     </motion.div>
   );
 };
