@@ -8,12 +8,14 @@ import Price from "@/app/components/Price";
 import Footer from "@/app/about/files/Footer";
 // import HeroNext from "./files/heroNext";
 // import Reviews from "@/app/about/files/reviews";
+import Why from "./files/Why";
 
 const page = () => {
   return (
     <>
     <Hero/>
     {/* <HeroNext/> */}
+    <Why/>
     <Two/>
     <CTA/>
     <Four/>
