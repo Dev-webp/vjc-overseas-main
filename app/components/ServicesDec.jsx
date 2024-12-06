@@ -161,7 +161,7 @@ const ServicesDec = () => {
       
       <div className="w-0.5 h-12 bg-orange-400 group-hover:bg-white mr-1 ml-2" />
       <div className="flex flex-col justify-between text-center">
-        <Link href="/investor-visas" passHref>
+        <Link href="/" passHref>
           <p className="text-base font-semibold uppercase hover:underline cursor-pointer">
             {box.title}
           </p>
@@ -194,7 +194,7 @@ const ServicesDec = () => {
       
       <div className="w-0.5 h-12 bg-orange-400 group-hover:bg-white mr-1 ml-2" />
       <div className="flex flex-col justify-between text-center">
-        <Link href="/investor-visas" passHref>
+        <Link href="/" passHref>
           <p className="text-base font-semibold uppercase hover:underline cursor-pointer">
             {box.title}
           </p>
@@ -231,7 +231,7 @@ const ServicesDec = () => {
   <div className="w-0.5 h-12 bg-orange-400 group-hover:bg-white mr-1 ml-2" />
   <div className="flex flex-col justify-between text-center">
     {/* Wrap the title with Link */}
-    <Link href="/investor-visas" passHref>
+    <Link href="/" passHref>
       <p className="text-base font-semibold uppercase hover:underline cursor-pointer">
         {boxData[0].title}
       </p>
@@ -259,7 +259,7 @@ const ServicesDec = () => {
           <FaUniversity className="w-16 h-16 text-orange-500 group-hover:text-white mr-2" />
           <div className="w-0.5 h-12 bg-orange-400 group-hover:bg-white" />
           <div className="flex flex-col justify-between text-center">
-          <Link href="/investor-visas" passHref>
+          <Link href="/" passHref>
             <p className="text-base font-semibold uppercase hover:underline cursor-pointer">{boxData[1].title}</p>
             </Link>
             <p className="text-sm text-gray-600">{boxData[1].content}</p>
@@ -284,7 +284,7 @@ const ServicesDec = () => {
   <FaRegHandshake className="w-16 h-16 text-orange-500 group-hover:text-white mr-2" />
   <div className="w-0.5 h-12 bg-orange-400 group-hover:bg-white" />
   <div className="flex flex-col justify-between text-center">
-  <Link href="/investor-visas" passHref>
+  <Link href="/" passHref>
     <p className="text-base font-semibold uppercase hover:underline cursor-pointer">{boxData[2].title}</p>
     </Link>
     <p className="text-sm text-gray-600">{boxData[2].content}</p>
@@ -310,7 +310,7 @@ const ServicesDec = () => {
   <FaMapMarkerAlt className="w-16 h-16 text-orange-500 group-hover:text-white mr-2" />
   <div className="w-0.5 h-12 bg-orange-400 group-hover:bg-white" />
   <div className="flex flex-col justify-between text-center">
-  <Link href="/investor-visas" passHref>
+  <Link href="/" passHref>
     <p className="text-base font-semibold uppercase hover:underline">{boxData[3].title}</p></Link>
     <p className="text-sm text-gray-600">{boxData[3].content}</p>
     <motion.span
@@ -335,7 +335,7 @@ const ServicesDec = () => {
   <FaChalkboardTeacher className="w-16 h-16 text-orange-500 group-hover:text-white mr-2" />
   <div className="w-0.5 h-12 bg-orange-400 group-hover:bg-white" />
   <div className="flex flex-col justify-between text-center">
-  <Link href="/investor-visas" passHref>
+  <Link href="/" passHref>
     <p className="text-base font-semibold uppercase hover:underline">{boxData[4].title}</p></Link>
     <p className="text-sm text-gray-600">{boxData[4].content}</p>
     <motion.span
@@ -360,7 +360,7 @@ const ServicesDec = () => {
   <FaMoneyCheckAlt className="w-16 h-16 text-orange-500 group-hover:text-white mr-2" />
   <div className="w-0.5 h-12 bg-orange-400 group-hover:bg-white" />
   <div className="flex flex-col justify-between text-center">
-  <Link href="/investor-visas" passHref>
+  <Link href="/" passHref>
     <p className="text-base font-semibold uppercase hover:underline">{boxData[5].title}</p></Link>
     <p className="text-sm text-gray-600">{boxData[5].content}</p>
     <motion.span
@@ -385,7 +385,7 @@ const ServicesDec = () => {
   <FaFileAlt className="w-16 h-16 text-orange-500 group-hover:text-white mr-2" />
   <div className="w-0.5 h-12 bg-orange-400 group-hover:bg-white" />
   <div className="flex flex-col justify-between text-center">
-  <Link href="/investor-visas" passHref>
+  <Link href="/" passHref>
     <p className="text-base font-semibold uppercase hover:underline">{boxData[6].title}</p></Link>
     <p className="text-sm text-gray-600">{boxData[6].content}</p>
     <motion.span
@@ -411,7 +411,7 @@ const ServicesDec = () => {
   <FaAirbnb className="w-16 h-16 text-orange-500 group-hover:text-white mr-2" />
   <div className="w-0.5 h-12 bg-orange-400 group-hover:bg-white" />
   <div className="flex flex-col justify-between text-center">
-  <Link href="/investor-visas" passHref>
+  <Link href="/" passHref>
     <p className="text-base font-semibold uppercase hover:underline">{boxData[7].title}</p></Link>
     <p className="text-sm text-gray-600">{boxData[7].content}</p>
     <motion.span

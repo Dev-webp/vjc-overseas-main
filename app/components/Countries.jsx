@@ -120,7 +120,7 @@ const CountrySlider = () => {
 
               {/* Link button */}
               <a
-                href={`/country/${countries[expandedIndex].name.toLowerCase()}`} // Adjust URL structure if needed
+                href={`/`} // Adjust URL structure if needed
                 className="inline-flex items-center bg-orange-500 text-white py-1 px-4 rounded-lg text-center transition duration-300 ease-in-out hover:bg-orange-700 mt-4"
               >
                 Read More

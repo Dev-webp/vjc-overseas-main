@@ -8,7 +8,7 @@ const Footer = () => {
     <footer className="bg-gradient-to-r from-gray-800 via-gray-700 to-gray-900 text-white py-12">
     <div className="max-w-7xl mx-auto px-5 text-center md:text-left border-b border-gray-700 mb-10">
         {/* Grid for Content */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8 mb-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8 mb-2">
             {/* Navigation */}
             <div>
                 <h3 className="text-lg font-bold text-orange-500 mb-1 md:mb-4 lg:mb-2 text-center lg:text-left uppercase">About Us</h3>
@@ -66,19 +66,19 @@ const Footer = () => {
             <div>
                 <h3 className="text-lg font-bold text-orange-500 mb-4 uppercase text-center lg:text-left">Follow us</h3>
                 <div className="flex space-x-4 text-center lg:text-left justify-center lg:justify-start">
-                    <a href="#" className="group">
+                    <a href="https://www.facebook.com/VJCOVERSEAS/" className="group">
                         <FaFacebook className="text-white group-hover:text-orange-500" />
                     </a>
-                    <a href="#" className="group">
+                    <a href="https://twitter.com/vjcoverseas" className="group">
                         <FaTwitter className="text-white group-hover:text-orange-500" />
                     </a>
-                    <a href="#" className="group">
+                    <a href="https://www.instagram.com/vjc_overseas_bangalore/?utm_source=qr&igsh=MXZzNXY3dGV1YXg1bw%3D%3D" className="group">
                         <FaInstagram className="text-white group-hover:text-orange-500" />
                     </a>
-                    <a href="#" className="group">
+                    <a href="https://www.linkedin.com/company/vjc-overseas/" className="group">
                         <FaLinkedin className="text-white group-hover:text-orange-500" />
                     </a>
-                    <a href="#" className="group">
+                    <a href="https://www.youtube.com/@vjcoverseas9434" className="group">
                         <FaYoutube className="text-white group-hover:text-orange-500" />
                     </a>
                 </div>

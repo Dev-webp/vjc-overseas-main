@@ -29,7 +29,7 @@ export default function RootLayout({
     <html lang="en">
       <head>
         {/* Tawk.to Chat Widget */}
-        {/* <script
+        <script
           dangerouslySetInnerHTML={{
             __html: `
               var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
@@ -43,7 +43,7 @@ export default function RootLayout({
               })();
             `,
           }}
-        /> */}
+        />
         <link
           href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
           rel="stylesheet"

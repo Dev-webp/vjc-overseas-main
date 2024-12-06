@@ -9,17 +9,17 @@ const Navbar = () => {
 
   const menuItems = [
     { name: "Home", path: "/" },
-    { name: "Assessment", path: "/about" },
-    { name: "Migrate", path: "/migrate" },
-    { name: "Study Abroad", path: "/study-abroad" },
-    { name: "PR Visas", path: "/permanent-residency-visas" },
-    { name: "Work Abroad", path: "/work-abroad" },
-    { name: "Job Seeker Visas", path: "/job-seeker-visas" },
-    { name: "Visit Visas", path: "/visit-visas" },
-    { name: "Investor Visas", path: "/investor-visas" },
-    { name: "Schengen Visas", path: "/schengen-visas" },
-    { name: "Resume Marketing", path: "/resume-marketing" },
-    { name: "Coaching/Training", path: "/coaching-training" },
+    { name: "Assessment", path: "/" },
+    { name: "Migrate", path: "/" },
+    { name: "Study Abroad", path: "/" },
+    { name: "PR Visas", path: "/" },
+    { name: "Work Abroad", path: "/" },
+    { name: "Job Seeker Visas", path: "/" },
+    { name: "Visit Visas", path: "/" },
+    { name: "Investor Visas", path: "/" },
+    { name: "Schengen Visas", path: "/" },
+    { name: "Resume Marketing", path: "/" },
+    { name: "Coaching/Training", path: "/" },
   ];
   
 
