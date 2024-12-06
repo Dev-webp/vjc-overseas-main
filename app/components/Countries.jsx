@@ -6,23 +6,25 @@ import { MdOutlineKeyboardDoubleArrowRight, MdOutlineKeyboardDoubleArrowLeft } f
 
 // Updated list with 15 countries (removed duplicate Spain)
 const countries = [
-  { name: 'Canada study visa', image: '/c3.jpg', description: 'Canada is known for its beautiful landscapes and outdoor activities.' },
-  { name: 'Australia study visa', image: '/c4.png', description: 'Australia is famous for its wildlife, beaches, and cultural diversity.' },
-  { name: 'Usa study visa', image: '/c2.png', description: 'The USA is famous for its world-class education system and career opportunities.' },
-  { name: 'Germany study visa', image: '/c5.png', description: 'Germany boasts a strong economy, rich history, and modern infrastructure.' },
-  { name: 'Uk study visa', image: '/c1.png', description: 'The UK is one of the most sought-after destinations for international students and skilled professionals.' },
-  { name: 'France study visa', image: '/c6.png', description: 'France is known for its art, cuisine, and historical landmarks.' },
-  { name: 'Italy study visa', image: '/c7.png', description: 'Italy is famous for its art, architecture, and cuisine.' },
-  { name: 'Spain study visa', image: '/c13.png', description: 'Spain is known for its vibrant culture, food, and festivals.' },
-  { name: 'Netherlands study visa', image: '/c15.png', description: 'The Netherlands is famous for its windmills, tulips, and canals.' },
-  { name: 'UAE study visa', image: '/c16.png', description: 'Japan offers a unique blend of ancient traditions and modern technology.' },
-  { name: 'Switzerland study visa', image: '/c9.png', description: 'South Korea is known for its technology, culture, and K-pop.' },
-  { name: 'Sweden study visa', image: '/c13.png', description: 'Sweden is famous for its design, technology, and sustainability.' },
-  { name: 'South Africa study visa', image: '/c12.png', description: 'Norway offers stunning landscapes, fjords, and a rich cultural history.' },
-  { name: 'Singapore study visa', image: '/c11.png', description: 'Switzerland is known for its Alps, chocolates, and financial services.' },
-  { name: 'New Zealand study visa', image: '/c10.png', description: 'Finland is famous for its beautiful nature, lakes, and high education standards.' },
-  { name: 'Malaysia study visa', image: '/c8.png', description: 'Portugal offers beautiful beaches, rich history, and amazing food.' },
+  { name: 'Canada study visa', image: '/c3.jpg', description: 'Canada is known for its beautiful landscapes and outdoor activities.', color: 'bg-gradient-to-r from-red-600 to-white' }, // Canada flag gradient
+  { name: 'Australia study visa', image: '/c4.png', description: 'Australia is famous for its wildlife, beaches, and cultural diversity.', color: 'bg-gradient-to-r from-blue-700 to-white' }, // Australia flag gradient
+  { name: 'Usa study visa', image: '/c2.png', description: 'The USA is famous for its world-class education system and career opportunities.', color: 'bg-gradient-to-r from-red-600 to-red-600' }, // USA flag gradient
+  { name: 'Germany study visa', image: '/c5.png', description: 'Germany boasts a strong economy, rich history, and modern infrastructure.', color: 'bg-gradient-to-r from-black to-yellow-600' }, // Germany flag gradient
+  { name: 'Uk study visa', image: '/c1.png', description: 'The UK is one of the most sought-after destinations for international students and skilled professionals.', color: 'bg-gradient-to-r from-red-700 to-blue-700' }, // UK flag gradient
+  { name: 'France study visa', image: '/c6.png', description: 'France is known for its art, cuisine, and historical landmarks.', color: 'bg-gradient-to-r from-blue-500 to-white' }, // France flag gradient
+  { name: 'Italy study visa', image: '/c7.png', description: 'Italy is famous for its art, architecture, and cuisine.', color: 'bg-gradient-to-r from-green-600 to-white' }, // Italy flag gradient
+  { name: 'Spain study visa', image: '/c13.png', description: 'Spain is known for its vibrant culture, food, and festivals.', color: 'bg-gradient-to-r from-red-600 to-yellow-600' }, // Spain flag gradient
+  { name: 'Netherlands study visa', image: '/c15.png', description: 'The Netherlands is famous for its windmills, tulips, and canals.', color: 'bg-gradient-to-r from-red-600 to-blue-600' }, // Netherlands flag gradient
+  { name: 'UAE study visa', image: '/c16.png', description: 'The UAE offers a unique blend of ancient traditions and modern technology.', color: 'bg-gradient-to-r from-green-700 to-white' }, // UAE flag gradient
+  { name: 'Switzerland study visa', image: '/c9.png', description: 'Switzerland is known for its Alps, chocolates, and financial services.', color: 'bg-gradient-to-r from-red-600 to-white' }, // Switzerland flag gradient
+  { name: 'Sweden study visa', image: '/c13.png', description: 'Sweden is famous for its design, technology, and sustainability.', color: 'bg-gradient-to-r from-blue-500 to-yellow-500' }, // Sweden flag gradient
+  { name: 'South Africa study visa', image: '/c12.png', description: 'South Africa offers stunning landscapes, fjords, and a rich cultural history.', color: 'bg-gradient-to-r from-green-500 to-yellow-500' }, // South Africa flag gradient
+  { name: 'Singapore study visa', image: '/c11.png', description: 'Singapore is known for its high-tech infrastructure and cleanliness.', color: 'bg-gradient-to-r from-red-500 to-white' }, // Singapore flag gradient
+  { name: 'New Zealand study visa', image: '/c10.png', description: 'New Zealand is famous for its beautiful nature, lakes, and high education standards.', color: 'bg-gradient-to-r from-blue-500 to-white' }, // New Zealand flag gradient
+  { name: 'Malaysia study visa', image: '/c8.png', description: 'Malaysia offers beautiful beaches, rich history, and amazing food.', color: 'bg-gradient-to-r from-blue-600 to-yellow-600' }, // Malaysia flag gradient
 ];
+
+
 
 const CountrySlider = () => {
   const [expandedIndex, setExpandedIndex] = useState(null); // Track expanded image
@@ -181,7 +183,7 @@ const CountrySlider = () => {
 
             
             <motion.h2
-  className="absolute bottom-12 left-4 text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-gray-100 via-gray-200 to-white z-20 uppercase"
+   className={`absolute bottom-16 left-6 text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-gray-100 via-gray-200 to-white z-20 uppercase ${country.color}`}
   initial={{ opacity: 0 }}
   animate={{ opacity: 1 }}
   exit={{ opacity: 0 }}
@@ -193,6 +195,20 @@ const CountrySlider = () => {
 >
   {country.name}
 </motion.h2>
+
+<motion.p
+      className="absolute bottom-16 left-16 text-lg font-semibold text-white z-20"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 0.6 }}
+      style={{
+        writingMode: 'vertical-rl',  // Vertical writing mode
+        transform: 'rotate(180deg)', // Rotate text to make it more readable (optional)
+      }}
+    >
+      Explore the best universities
+    </motion.p>
 
 
             {/* Subtle gradient black opacity at the top and bottom of the slider images */}

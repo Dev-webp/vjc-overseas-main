@@ -1,9 +1,11 @@
-import React, { useRef } from 'react';
+import React, { useState, useRef } from 'react';
 import Image from 'next/image';
 import Background from '../../../../public/bg-2.png';
 import { useScroll, useTransform, motion } from 'framer-motion';
+import Form from '@/app/components/Form'; // Importing your existing form component
 
 export default function Hero() {
+    const [showForm, setShowForm] = useState(false); // State to control form visibility
     const container = useRef();
     const { scrollYProgress } = useScroll({
         target: container,
@@ -12,8 +14,16 @@ export default function Hero() {
 
     const y = useTransform(scrollYProgress, [0, 1], ["0vh", "150vh"]);
 
+    const handleFormToggle = () => {
+        setShowForm(!showForm); // Toggle form visibility
+    };
+
+    const handleCloseForm = () => {
+        setShowForm(false); // Close form
+    };
+
     return (
-        <div className="relative  h-[80vh] lg:h-[80vh] overflow-hidden bg-gray-700" ref={container}>
+        <div className="relative h-[80vh] lg:h-[80vh] overflow-hidden bg-gray-700" ref={container}>
             {/* Background Image with Parallax Effect */}
             <motion.div style={{ y }} className="absolute inset-0">
                 <Image src={Background} fill alt="background" style={{ objectFit: "cover" }} />
@@ -22,7 +32,7 @@ export default function Hero() {
 
             {/* Hero Content */}
             <div className="relative z-10 flex flex-col justify-center items-center h-full px-6 text-center">
-            <motion.h1
+                <motion.h1
                     className="text-[6vw] md:text-[3vw] font-bold text-transparent bg-clip-text bg-gradient-to-tr from-orange-500 to-orange-600 drop-shadow-lg uppercase"
                     initial={{ opacity: 0, y: -50 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -57,11 +67,29 @@ export default function Hero() {
                     <button className="bg-orange-500 hover:bg-orange-600 text-white font-semibold py-2 px-6 ml-4 md:ml-0 lg:ml-0 rounded-lg shadow-lg transition-all">
                         Explore Services
                     </button>
-                    <button className="bg-transparent border border-orange-500 text-orange-500 hover:bg-orange-500 hover:text-white font-semibold py-2 px-6 mt-4 md:mt-0 lg:mt-0 rounded-lg shadow-lg transition-all">
+                    <button 
+                        className="bg-transparent border border-orange-500 text-orange-500 hover:bg-orange-500 hover:text-white font-semibold py-2 px-6 mt-4 md:mt-0 lg:mt-0 rounded-lg shadow-lg transition-all"
+                        onClick={handleFormToggle} // Trigger form visibility toggle
+                    >
                         Contact Our Experts
                     </button>
                 </motion.div>
             </div>
+
+            {/* Conditionally Render the Form */}
+            {showForm && (
+                <div className="fixed top-16 inset-0 flex items-center justify-center bg-gray-900 bg-opacity-50 z-20">
+                    <div className="relative bg-white rounded-lg p-8 w-[30rem]">
+                        <button 
+                            onClick={handleCloseForm} // Close the form
+                            className="absolute top-4 right-2 text-xl w-16 h-16 text-gray-700 hover:text-gray-900"
+                        >
+                            &times;
+                        </button>
+                        <Form /> {/* Importing your form here */}
+                    </div>
+                </div>
+            )}
         </div>
     );
 }

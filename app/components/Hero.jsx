@@ -95,7 +95,7 @@ export default function HeroSection() {
         variants={containerVariants(0.8)}
         initial="offscreen"
         animate="onscreen"
-        className="z-40"
+        className="z-20"
       >
 <div className="flex justify-center items-center">
   <Form />
