@@ -57,7 +57,7 @@ const Hero = () => {
               variants={desVariants}
               className="flex text-gray-300 tracking-tight text-center md:font-medium max-w-xl mx-auto lg:max-w-lg"
             >
-              Discover endless opportunities with our expert immigration services. Whether you're looking to study or work abroad, we help make your dreams a reality.
+              Discover endless opportunities with our expert immigration services. Whether you&apos;re looking to study or work abroad, we help make your dreams a reality.
             </motion.p>
           </motion.div>
 
