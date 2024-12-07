@@ -98,7 +98,7 @@ const Features = () => {
                         </h1>
 
                         <p className="text-gray-700 max-w-xl mx-auto">
-                        At VJC Overseas, we offer a wide range of services designed to support individuals and businesses in achieving their international goals. Our expertise and experience in immigration, travel, and financial services allow us to provide comprehensive solutions for those looking to explore new opportunities abroad. Here's a breakdown of our key services:
+                        At VJC Overseas, we offer a wide range of services designed to support individuals and businesses in achieving their international goals. Our expertise and experience in immigration, travel, and financial services allow us to provide comprehensive solutions for those looking to explore new opportunities abroad. Here&apos;s a breakdown of our key services:
                         </p>
 
                     </div>
