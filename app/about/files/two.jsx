@@ -1,10 +1,11 @@
 import Image from "next/image";
+import { FaCheckCircle } from "react-icons/fa";
 
 const FeatureItem = ({ id, title, description, advantages, icon, image }) => {
     return (
         <div className={`flex flex-col md:items-center gap-10 lg:gap-14 ${id % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"}`}>
             <div className="md:w-[48%] xl:w-[45%] md:py-6 xl:py-4 space-y-8">
-                <div className="space-y-6">
+                <div className="space-y-4">
                     <span className="p-2 rounded-md bg-gray-100 text-orange-500 flex w-max">
                         {icon}
                     </span>
@@ -19,11 +20,9 @@ const FeatureItem = ({ id, title, description, advantages, icon, image }) => {
                     {
                         advantages.map(advantage => (
                             <li key={advantage.id} className="flex items-center text-base">
-                                {/* <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-5 h-5 fill-orange-600 mr-2">
-                                    <path fillRule="evenodd" d="M16.403 12.652a3 3 0 000-5.304 3 3 0 00-3.75-3.751 3 3 0 00-5.305 0 3 3 0 00-3.751 3.75 3 3 0 000 5.305 3 3 0 003.75 3.751 3 3 0 005.305 0 3 3 0 003.751-3.75zm-2.546-4.46a.75.75 0 00-1.214-.883l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clipRule="evenodd" />
-                                </svg> */}
-                                {advantage.text}
-                            </li>
+                            <FaCheckCircle className="w-5 h-5 text-orange-600 mr-2" />
+                            {advantage.text}
+                          </li>
                         ))
                     }
                 </ul>
@@ -41,25 +40,25 @@ import { FaGlobe, FaFileAlt, FaHandsHelping } from 'react-icons/fa';
 const features = [
     {
         id: 1,
-        title: "Continuous Improvement",
+        title: "Permanent Residency Visas:",
         icon: <FaGlobe className="h-10 w-10" />,
-        description: "We specialize in visa and immigration services for a wide range of countries, offering expert advice on the best immigration options based on your goals.",
+        description: "We expertise in processing Permanent Residency Visa services to individuals and families seeking to establish long-term residency in countries such as Canada, Australia, and New Zealand. ",
         advantages: [
-            { id: 1, text: "We believe in the power of learning and evolving. " },
-            { id: 2, text: "Our team is committed to staying updated with the latest trends, policies, and opportunities in the field  " },
-            { id: 3, text: "This dedication helps us provide our clients with the most current and effective solutions." }
+            { id: 1, text: "We guide you through the entire process, from eligibility assessment to documentation submission. " },
+            { id: 2, text: "Ensuring that your application stands the best chance of success. " },
+            { id: 3, text: "Our team stays updated with the latest immigration policies and provides personalised advice to help you make informed decisions.." }
         ],
         image: "/b1.webp"
     },
     {
         id: 2,
-        title: "Client Satisfaction",
+        title: "Student Visas:",
         icon: <FaFileAlt className="h-10 w-10" />,
-        description: "We handle all the documentation, ensuring all forms are correctly filled out and submitted on time to avoid delays in your visa processing.",
+        description: "At VJC Overseas, we specialise in assisting students who wish to pursue education abroad. Our Student Visa services cover a range of destinations, including the United States, Canada, Australia, the UK, and more. ",
         advantages: [
-            { id: 1, text: "Over the years, we have built a reputation for delivering exceptional service." },
-            { id: 2, text: "we are proud of the positive feedback we receive from our clients. " },
-            { id: 3, text: "Our focus on client satisfaction has earned us the trust of hundreds of students and professionals who have successfully achieved their goals abroad." }
+            { id: 1, text: "We provide guidance on university selection, visa documentation, and interview preparation " },
+            { id: 2, text: "Ensure a smooth transition from application to arrival at your chosen educational institution." },
+            // { id: 3, text: "Our focus on client satisfaction has earned us the trust of hundreds of students and professionals who have successfully achieved their goals abroad." }
         ],
         image: "/b2.webp"
     },
@@ -95,11 +94,11 @@ const Features = () => {
                 <div className="flex flex-col  space-y-16">
                     <div className="flex flex-col justify-center text-center  mx-auto md:max-w-4xl space-y-5">
                         <h1 className="text-3xl font-semibold text-orange-500 md:text-4xl xl:text-5xl leading-tight uppercase">
-                         Why Choose VJC Overseas?
+                        Our Services
                         </h1>
 
                         <p className="text-gray-700 max-w-xl mx-auto">
-                            At VJC Overseas, we offer more than just services; we provide tailored solutions that streamline your international journey. Whether you&apos;re seeking educational opportunities, career advancements, or immigration advice, our expertise and tools will help you achieve your goals with confidence and ease.
+                        At VJC Overseas, we offer a wide range of services designed to support individuals and businesses in achieving their international goals. Our expertise and experience in immigration, travel, and financial services allow us to provide comprehensive solutions for those looking to explore new opportunities abroad. Here's a breakdown of our key services:
                         </p>
 
                     </div>
