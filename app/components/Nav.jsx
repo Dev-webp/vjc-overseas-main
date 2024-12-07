@@ -10,7 +10,7 @@ const Navbar = () => {
   const menuItems = [
     { name: "Home", path: "/" },
     { name: "Assessment", path: "/" },
-    { name: "Migrate", path: "/" },
+    { name: "Migrate To", path: "/" },
     { name: "Study Abroad", path: "/" },
     { name: "PR Visas", path: "/" },
     { name: "Work Abroad", path: "/" },
@@ -21,6 +21,21 @@ const Navbar = () => {
     { name: "Resume Marketing", path: "/" },
     { name: "Coaching/Training", path: "/" },
   ];
+
+  const migrateSubPages = [
+    { name: "Germany", path: "/migrate#germany" },
+    { name: "Canada", path: "/migrate#canada" },
+    { name: "United States", path: "/migrate#usa" },
+    { name: "Australia", path: "/migrate#australia" },
+    { name: "United Kingdom", path: "/migrate#uk" },
+    { name: "New Zealand", path: "/migrate#new-zealand" },
+    { name: "South Africa", path: "/migrate#south-africa" },
+    { name: "Hong Kong", path: "/migrate#hong-kong" },
+    { name: "Denmark", path: "/migrate#denmark" },
+    { name: "UAE", path: "/migrate#uae" },
+  ];
+  
+  
   
 
   return (
@@ -92,27 +107,44 @@ const Navbar = () => {
       </div>
 
 {/* Orange background section for large screens */}
-<div className="bg-orange-500 fixed top-12 w-screen z-50  hidden md:block">
+<div className="bg-orange-500 fixed top-12 w-screen z-50 hidden md:block">
   <nav className="flex justify-between items-center px-2 max-w-7xl py-1.5">
-    
-    {/* Navigation links for large screens */}
     <div className="flex flex-row -space-x-2 whitespace-nowrap">
       {menuItems.map((item, index) => (
         <React.Fragment key={item.name}>
-          <Link
-            href={item.path}
-            className="text-white text-sm lg:text-xs font-semibold px-3.5 hover:bg-white hover:bg-opacity-20 uppercase mt-1"
-          >
-            {item.name}
-          </Link>
-          {index < menuItems.length - 1 && (
-            <span className="text-white hidden lg:inline-block">|</span>
+          {item.name === "Migrate To" ? (
+            <div className="relative group">
+              <span className="text-white text-sm lg:text-xs font-semibold px-3.5 hover:bg-white hover:bg-opacity-20 uppercase mt-1">
+                {item.name}
+              </span>
+              {/* Migrate Submenu */}
+              <div className="absolute left-0 hidden group-hover:block bg-gray-50 p-2 space-y-2 rounded-lg shadow-lg ">
+                {migrateSubPages.map((subItem) => (
+                  <Link
+                    href={subItem.path}
+                    key={subItem.name}
+                    className="text-orange-500 text-sm font-semibold px-4 py-2 rounded-lg hover:bg-orange-200 hover:bg-opacity-30 transition-all ease-in-out block"
+                  >
+                    {subItem.name}
+                  </Link>
+                ))}
+              </div>
+            </div>
+          ) : (
+            <Link
+              href={item.path}
+              className="text-white text-sm lg:text-xs font-semibold px-3.5 hover:bg-white hover:bg-opacity-20 uppercase mt-1"
+            >
+              {item.name}
+            </Link>
           )}
+          {index < menuItems.length - 1 && <span className="text-white hidden lg:inline-block">|</span>}
         </React.Fragment>
       ))}
     </div>
   </nav>
 </div>
+
 
 {/* Small devices */}
 <div className="bg-orange-500 fixed top-12 w-screen z-50 md:hidden">
@@ -171,11 +203,6 @@ const Navbar = () => {
     </div>
   </nav>
 </div>
-
-
-
-
-
 
       {/* Add margin to ensure content below is not hidden */}
       <div className="mt-0"></div> {/* Adjust the margin if necessary */}

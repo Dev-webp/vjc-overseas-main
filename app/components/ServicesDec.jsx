@@ -217,7 +217,7 @@ const ServicesDec = () => {
 
 
       {/* Boxes - Circular Layout */}
-      <div className="absolute w-full h-full flex justify-center items-center">
+      <div className="absolute w-full h-full justify-center items-center hidden lg:block">
         {/* Box 1 (Top Left) */}
         <motion.div
   className="absolute w-72 h-28 cursor-pointer bg-white border border-gray-300 shadow-lg hidden sm:flex items-center justify-between p-4 rounded-lg top-16 left-20 transition-transform duration-300 ease-in-out hover:scale-105 hover:shadow-xl hover:border-black hover:bg-orange-400 group"
@@ -249,7 +249,7 @@ const ServicesDec = () => {
 
         {/* Box 2 (Top Center) */}
         <motion.div
-          className="absolute w-72 h-28 cursor-pointer bg-white border border-gray-300 shadow-lg hidden sm:flex items-center justify-between p-4 rounded-lg top-8 transition-transform duration-300 ease-in-out hover:scale-105 hover:shadow-xl hover:border-black hover:bg-orange-400 group"
+          className="absolute w-72 h-28 cursor-pointer bg-white border border-gray-300 shadow-lg hidden sm:flex items-center justify-between p-4 rounded-lg top-8 left-[31rem] transition-transform duration-300 ease-in-out hover:scale-105 hover:shadow-xl hover:border-black hover:bg-orange-400 group"
           initial="hidden"
           animate="visible"
           variants={fadeInVariants}

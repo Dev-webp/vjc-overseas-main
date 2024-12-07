@@ -60,7 +60,7 @@ const VisaProcessSteps = () => {
         
         <div className="relative flex items-center justify-center">
           {/* Black Vertical Line */}
-          <div className="w-[3px] bg-black min-h-[57rem] lg:min-h-[80rem] absolute"></div>
+          <div className="w-[3px] bg-black min-h-[57rem] tablet:min-h-[10rem] lg:min-h-[80rem] absolute"></div>
           
           {/* Icons positioned above the vertical line */}
           <div className="flex flex-col items-center -space-y-32 lg:-space-y-40">
