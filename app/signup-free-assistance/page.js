@@ -1,52 +1,48 @@
 "use client";
 
-import { useState } from "react";
-import Form from "./components/Form";
+import { useState, useEffect } from "react";
+import { motion } from "framer-motion"; // Import motion
+import Form from "@/app/components/Form";
 
 const ContactPage = () => {
   const [isImageLoaded, setIsImageLoaded] = useState(false);
 
-  const handleImageLoad = () => {
-    setIsImageLoaded(true);
-  };
+  // Function to preload the background image and set the state when it's loaded
+  useEffect(() => {
+    const img = new Image();
+    img.src = "/form-bg.jpg";
+    img.onload = () => setIsImageLoaded(true); // Set to true once the image is loaded
+  }, []); // Empty dependency array ensures this runs only once after the first render
 
   return (
     <div className="contact-page">
-      {/* Background Image Section */}
-      <div
-        className={`relative bg-cover bg-center min-h-screen ${
-          isImageLoaded ? "bg-loaded" : "bg-loading"
-        }`}
+      {/* Background Image Section with Framer Motion */}
+      <motion.div
+        className={`relative bg-cover bg-center min-h-screen`}
         style={{ backgroundImage: "url('/form-bg.jpg')" }}
-        onLoad={handleImageLoad}
+        initial={{ opacity: 0 }} // Set initial opacity to 0
+        animate={{ opacity: isImageLoaded ? 1 : 0 }} // Animate opacity change based on image load
+        transition={{ duration: 1.5 }} // Smooth transition for opacity
       >
         {/* Overlay */}
-        <div className="absolute inset-0 bg-black/40 animate-fadeIn"></div>
+        <div className="absolute inset-0 bg-black/40"></div>
 
         {/* Content Container */}
-        <div className="relative max-w-screen-lg mx-auto px-6 py-2">
-          <div className="mt-20 max-w-[40rem] mx-auto bg-white bg-opacity-90 rounded-lg shadow-lg p-7">
+        <div className="relative max-w-screen-lg mx-auto px-4 py-2">
+          <div className="mt-[4.70rem] max-w-[40rem] mx-auto bg-white bg-opacity-90 rounded-lg shadow-lg p-4">
             {/* Logo */}
-            <div className="flex justify-center mb-4">
-              <img
-                src="/logo-1.webp"
-                alt="Logo"
-                className="h-16 w-16"
-              />
-              <img
-                src="/logo-2.webp"
-                alt="Logo"
-                className="h-16 w-28"
-              />
-            </div>
-
-            <h1 className="uppercase text-2xl text-center font-semibold font-serif animate-slideInDown">
-              Sign up & Get Free Assistance
-            </h1>
+            
             <Form />
           </div>
         </div>
-      </div>
+      </motion.div>
+
+      {/* This div is used for initial loading before the image is fully loaded */}
+      {!isImageLoaded && (
+        <div className="absolute inset-0 bg-white flex items-center justify-center">
+          <span>Loading...</span> {/* Or a loader component here */}
+        </div>
+      )}
     </div>
   );
 };
