@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion"; // Import motion
 import Form from "@/app/components/Form";
+import { FaSpinner } from "react-icons/fa";
 
 const ContactPage = () => {
   const [isImageLoaded, setIsImageLoaded] = useState(false);
@@ -39,9 +40,9 @@ const ContactPage = () => {
 
       {/* This div is used for initial loading before the image is fully loaded */}
       {!isImageLoaded && (
-        <div className="absolute inset-0 bg-white flex items-center justify-center">
-          <span>Loading...</span> {/* Or a loader component here */}
-        </div>
+         <div className="absolute inset-0 bg-white flex items-center justify-center">
+         <FaSpinner className="animate-spin text-blue-600" size={40} /> {/* Using React Icon for spinner */}
+       </div>
       )}
     </div>
   );
