@@ -3,7 +3,6 @@ import React, { useState } from "react";
 import {  AiOutlineBook, AiOutlineCodepen, AiOutlineShop, AiOutlineUsergroupAdd, AiOutlineCompass, AiOutlineKey } from "react-icons/ai";
 import { FaShieldAlt, FaBriefcase } from "react-icons/fa";
 import { AiFillCaretRight } from "react-icons/ai";
-
 const countriesData = {
     "Migrate to Germany": {
       description: "Germany is a key player in Europe and provides many opportunities for workers and students. It's known for its strong economy and excellent universities.",
@@ -122,33 +121,27 @@ const countriesData = {
       ]
     }
   };
-
 const Migrate = () => {
   const [selectedCountry, setSelectedCountry] = useState(null); // No country selected initially
   const [selectedVisa, setSelectedVisa] = useState(null); // To store selected visa type
   const [showVisaTypes, setShowVisaTypes] = useState(false); // State to toggle between country list and visa types
   const [viewingVisaDetail, setViewingVisaDetail] = useState(false); // State for viewing details of a specific visa
-
   const handleCountrySelect = (country) => {
     setSelectedCountry(country);
     setSelectedVisa(null); // Reset selected visa when country is selected
     setShowVisaTypes(true); // Show visa types after country selection
     setViewingVisaDetail(false); // Reset the visa detail view
   };
-
   const handleVisaSelect = (visa) => {
     setSelectedVisa(visa);
   };
-
   const handleBackToCountries = () => {
     setShowVisaTypes(false); // Go back to the countries list
     setViewingVisaDetail(false); // Reset visa detail view
   };
-
   const handleBackToVisaTypes = () => {
     setViewingVisaDetail(false); // Go back to the visa types list
   };
-
   const getIconForVisaType = (visaType) => {
     return (
       <div className="bg-gray-100 p-2 rounded-full">
@@ -163,10 +156,7 @@ const Migrate = () => {
       </div>
     );
   };
-
   return (
-
-    
     <section className="py-10 bg-gradient-to-bl from-white to-orange-50">
       <div className="max-w-screen-xl mx-auto flex gap-8">
         {/* Left Sidebar (Country or Visa List) */}
@@ -174,7 +164,6 @@ const Migrate = () => {
           <h2 className="text-2xl text-orange-500 font-bold mb-6 uppercase text-center tracking-wide">
             {viewingVisaDetail ? "Visa Details" : selectedVisa ? "Visa Types" : "Countries to Migrate To"}
           </h2>
-
           <ul className="space-y-3 text-gray-700">
             {/* Show countries list if not in visa types view */}
             {!showVisaTypes && !viewingVisaDetail &&
@@ -190,7 +179,6 @@ const Migrate = () => {
                   <AiFillCaretRight className="h-4 w-4 text-gray-900" />
                 </li>
               ))}
-
             {/* Show visa types if in visa types view */}
             {showVisaTypes &&
               countriesData[selectedCountry]?.visaTypes.map((visa, index) => (
@@ -206,7 +194,6 @@ const Migrate = () => {
                 </li>
               ))}
           </ul>
-
           {/* Back button to go back to countries list */}
           {showVisaTypes && !viewingVisaDetail && (
             <button
@@ -216,7 +203,6 @@ const Migrate = () => {
               Back to Countries
             </button>
           )}
-
           {/* Back button to go back to visa types */}
           {viewingVisaDetail && (
             <button
@@ -227,7 +213,6 @@ const Migrate = () => {
             </button>
           )}
         </div>
-
         {/* Right Content (Country description and visa details) */}
         <div className="lg:w-[70%] w-full">
           {/* Display default content if no country selected */}
@@ -275,24 +260,7 @@ const Migrate = () => {
           )}
         </div>
       </div>
-
-      <div className="relative">
-  <button
-    onClick={() =>
-      window.open(
-        "https://www.vjcoverseas.com/uk-student-study-visa-benefits-requirments",
-        "_blank",
-        "noopener,noreferrer"
-      )
-    }
-    className="absolute top-2 right-0 px-4 py-2 bg-orange-500 text-white rounded-lg font-semibold hover:bg-orange-600 transition"
-  >
-    Claim Offer
-  </button>
-</div>
-
     </section>
   );
 };
-
 export default Migrate;

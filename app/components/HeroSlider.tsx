@@ -24,27 +24,40 @@ const sliderData = [
   },
   {
     services: [
-      { text: "Apply For Germany Opportunity Card Visa", link: "/germany-opportunity-card-visa" },
-      { text: "Apply For Germany Study Visa", link: "/germany-study-visa" },
+      {
+        text: "Apply For Germany Opportunity Card Visa",
+        link: "https://www.vjcoverseas.com/germany-opportunity-card",
+      },
+      {
+        text: "Apply For Germany  Study Visa",
+        link: "https://www.vjcoverseas.com/germany-opportunity-card",
+      }
+      
+      
     ],
     backgroundImage: "/germany.jpg",
     title: "Germany",
     gradient: "bg-gradient-to-r from-white to-yellow-500", // Germany color gradient
   },
   {
-    services: [{ text: "Apply For UK Study Visa", link: "/uk-study-visa" }],
+    services: [
+      { text: "Apply For UK Study Visa", 
+      link: "https://www.vjcoverseas.com/uk-student-study-visa-benefits-requirments"
+     }
+    ],
     backgroundImage: "/uk-flag.png",
     title: "United Kingdom",
     gradient: "bg-gradient-to-r from-blue-500 to-white", // UK color gradient
   },
   {
-    services: [{ text: "Apply For Malta Study Visa", link: "/malta-study-visa" }],
+    services: [
+      { text: "Apply For Malta Study Visa", 
+        link: "/" }],
     backgroundImage: "/malta.png",
     title: "Malta",
     gradient: "bg-gradient-to-r from-red-700 to-white", // Malta color gradient
   },
 ];
-
 const Slider = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isHovered, setIsHovered] = useState(false);
