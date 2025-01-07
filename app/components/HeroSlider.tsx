@@ -26,11 +26,11 @@ const sliderData = [
     services: [
       {
         text: "Apply For Germany Opportunity Card Visa",
-        link: "https://www.vjcoverseas.com/germany-opportunity-card",
+        link: "https://germanyopportunitycard.vjcoverseas.com/",
       },
       {
         text: "Apply For Germany  Study Visa",
-        link: "https://www.vjcoverseas.com/germany-opportunity-card",
+        link: "https://germanyopportunitycard.vjcoverseas.com/",
       }
       
       
@@ -42,7 +42,7 @@ const sliderData = [
   {
     services: [
       { text: "Apply For UK Study Visa", 
-      link: "https://www.vjcoverseas.com/uk-student-study-visa-benefits-requirments"
+      link: "https://ukstudyvisa.vjcoverseas.com/"
      }
     ],
     backgroundImage: "/uk-flag.png",
