@@ -277,7 +277,7 @@ const Migrate = () => {
       </div>
 
       <div className="relative">
-  <button
+  {/* <button
     onClick={() =>
       window.open(
         "https://www.vjcoverseas.com/uk-student-study-visa-benefits-requirments",
@@ -288,7 +288,7 @@ const Migrate = () => {
     className="absolute top-2 right-0 px-4 py-2 bg-orange-500 text-white rounded-lg font-semibold hover:bg-orange-600 transition"
   >
     Claim Offer
-  </button>
+  </button> */}
 </div>
 
     </section>
