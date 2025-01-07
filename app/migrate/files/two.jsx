@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import {  AiOutlineBook, AiOutlineCodepen, AiOutlineShop, AiOutlineUsergroupAdd, AiOutlineCompass, AiOutlineKey } from "react-icons/ai";
 import { FaShieldAlt, FaBriefcase } from "react-icons/fa";
 import { AiFillCaretRight } from "react-icons/ai";
+import Content from "./Content"; 
 
 const countriesData = {
     "Migrate to Germany": {
@@ -233,8 +234,10 @@ const Migrate = () => {
           {/* Display default content if no country selected */}
           {!selectedCountry ? (
             <div>
-              <h3 className="text-3xl font-semibold text-black mb-4 text-center uppercase mt-20">Welcome to Our Immigration Services</h3>
-              <p className="text-lg text-gray-600 mb-8 text-center">Explore1 our wide range of migration options and visa types to help you settle in your dream destination.</p>
+               <h3 className="text-3xl font-semibold text-black text-center">
+  Germany Opportunity Card - <span style={{ color: 'rgb(247, 109, 58)' }}>VJC Overseas</span>
+ 
+</h3>
               {/* Your other default content */}
             </div>
           ) : (
@@ -273,24 +276,11 @@ const Migrate = () => {
               )}
             </>
           )}
+           <Content />
         </div>
       </div>
 
-      <div className="relative">
-  {/* <button
-    onClick={() =>
-      window.open(
-        "https://www.vjcoverseas.com/uk-student-study-visa-benefits-requirments",
-        "_blank",
-        "noopener,noreferrer"
-      )
-    }
-    className="absolute top-2 right-0 px-4 py-2 bg-orange-500 text-white rounded-lg font-semibold hover:bg-orange-600 transition"
-  >
-    Claim Offer
-  </button> */}
-</div>
-
+      
     </section>
   );
 };
