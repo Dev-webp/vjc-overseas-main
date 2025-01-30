@@ -4,9 +4,10 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "next build && mkdir -p dist && cp -r .next dist/.next",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "export": "next export"
   },
   "dependencies": {
     "@fortawesome/free-regular-svg-icons": "^6.7.1",
@@ -28,7 +29,6 @@
     "react-router-dom": "^7.1.1",
     "react-swipeable": "^7.0.2",
     "react-world-flags": "^1.6.0",
-    "sass": "^1.83.0",
     "swiper": "^11.1.15"
   },
   "devDependencies": {
@@ -39,6 +39,8 @@
     "eslint": "^8",
     "eslint-config-next": "15.0.3",
     "postcss": "^8",
+    "sass": "^1.83.1",
+    "sass-loader": "^16.0.4",
     "tailwindcss": "^3.4.1",
     "typescript": "^5"
   }

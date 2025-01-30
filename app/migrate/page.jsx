@@ -1,6 +1,7 @@
 import React from 'react';
-import Hero from "./files/hero";
+import Hero from "./files/hero";  
 const MigrateSection = dynamic(() => import('./files/two'));
+
 import Footer from './files/Footer';
 import dynamic from 'next/dynamic';
 
@@ -8,7 +9,7 @@ import dynamic from 'next/dynamic';
 const page = () => {
   return (
     <>
-    <Hero/>
+    <Hero/>  
     <MigrateSection/>
     <Footer/>
     </>
