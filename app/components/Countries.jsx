@@ -67,19 +67,19 @@ const CountrySlider = () => {
   };
 
   useEffect(() => {
-    // Add event listener for mouse wheel scroll
-    if (sliderRef.current) {
-      sliderRef.current.addEventListener('wheel', handleWheel, { passive: false });
+    const sliderElement = sliderRef.current; // Store ref in a variable
+  
+    if (sliderElement) {
+      sliderElement.addEventListener('wheel', handleWheel, { passive: false });
     }
-
-    // Clean up event listener when component unmounts
+  
     return () => {
-      if (sliderRef.current) {
-        sliderRef.current.removeEventListener('wheel', handleWheel);
+      if (sliderElement) {
+        sliderElement.removeEventListener('wheel', handleWheel);
       }
     };
   }, []);
-
+  
   return (
     <div className="relative w-screen h-screen overflow-hidden ">
       {/* Background image animation for expanded image */}
