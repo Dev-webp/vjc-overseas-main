@@ -76,84 +76,87 @@ const ContactForm = () => {
   );
 
   return (
-    <form
-      className="isolate space-y-8 rounded-2xl bg-gradient-to-b from-n-8/15 to-n-8/5 border border-n-0 p-12 max-w-[50rem] mb-24"
-      onSubmit={handleSubmit}
-    >
-      {/* Name and Email */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-        <div className="border-r border-neutral-400 pr-4">
+    <div className="relative">
+      <form
+        className="isolate space-y-8 rounded-2xl bg-gradient-to-b from-n-8/15 to-n-8/5 border border-n-0 p-12 max-w-[50rem] mb-24"
+        onSubmit={handleSubmit}
+      >
+        {/* Name and Email */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <TextInput
-            label="Name"
+            label="Your Name"
             name="name"
-            autoComplete="name"
             value={formData.name}
             onChange={handleChange}
-            required
+          />
+          <TextInput
+            label="Your Email"
+            name="email"
+            value={formData.email}
+            onChange={handleChange}
           />
         </div>
-        <TextInput
-          label="Email"
-          type="email"
-          name="email"
-          autoComplete="email"
-          value={formData.email}
-          onChange={handleChange}
-          required
-        />
-      </div>
 
-      {/* Phone and City */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-        <div className="border-r border-neutral-400 pr-4">
+        {/* Phone and City */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <TextInput
             label="Phone"
-            type="tel"
             name="phone"
             value={formData.phone}
             onChange={handleChange}
-            pattern="[0-9\s\-\(\)]*"
-            inputMode="numeric"
-            required
-            maxLength={10}
-            minLength={10}
+          />
+          <TextInput
+            label="City"
+            name="city"
+            value={formData.city}
+            onChange={handleChange}
           />
         </div>
+
+        {/* Qualification and Marital Status */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <TextInput
+            label="Qualification"
+            name="qualification"
+            value={formData.qualification}
+            onChange={handleChange}
+          />
+          <TextInput
+            label="Marital Status"
+            name="maritalStatus"
+            value={formData.maritalStatus}
+            onChange={handleChange}
+          />
+        </div>
+
+        {/* Message */}
         <TextInput
-          label="City"
-          name="city"
-          value={formData.city}
+          label="Message"
+          name="message"
+          value={formData.message}
           onChange={handleChange}
-          required
+          textarea
         />
-      </div>
 
-      {/* Message */}
-      <TextInput
-        label="Message"
-        name="message"
-        value={formData.message}
-        onChange={handleChange}
-        required
-      />
+        {/* Submit Button */}
+        <Button type="submit">Submit</Button>
+      </form>
 
-      {/* Submit Button */}
-      <Button type="submit" className="mt-4 ml-64 w-36 p-2 text-white hover:text-orange-400 rounded-lg mx-auto bg-black">
-        Submit
-      </Button>
-
-      {/* Success Message (Auto Disappears after 3 seconds) */}
+      {/* Success Popup - Disappears after 3 seconds */}
       {isSubmitted && (
-        <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
-          <div className="bg-white p-4 rounded shadow-lg text-center">
-            <p className="text-black font-semibold">
+        <div className="absolute inset-0 flex items-center justify-center">
+          <div className="bg-white shadow-lg rounded-lg p-4 text-center">
+            <p className="text-lg font-semibold">
               Submission received, we’ll get back to you shortly!
             </p>
           </div>
         </div>
       )}
-    </form>
+    </div>
   );
 };
 
 export default ContactForm;
+
+    
+  
