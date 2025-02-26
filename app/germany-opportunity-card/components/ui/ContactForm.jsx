@@ -29,7 +29,8 @@ const ContactForm = () => {
   }, [isSubmitted]);
 
   const handleChange = useCallback((e) => {
-    setFormData((prev) => ({ ...prev, [e.target.name]: e.target.value }));
+    const { name, value } = e.target;
+    setFormData((prev) => ({ ...prev, [name]: value }));
   }, []);
 
   const handleSubmit = useCallback(
@@ -66,7 +67,7 @@ const ContactForm = () => {
           message: "",
         });
 
-        setIsSubmitted(true);
+        setIsSubmitted(true); // Show success message
       } catch (error) {
         console.error("Form submission error:", error);
         setIsSubmitted(false);
@@ -141,12 +142,17 @@ const ContactForm = () => {
         {/* Submit Button */}
         <Button type="submit">Submit</Button>
       </form>
+
+      {/* Success Message */}
+      {isSubmitted && (
+        <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
+          <div className="bg-white p-6 rounded-lg shadow-lg">
+            <p className="text-lg font-semibold">Submission received, we'll get back to you shortly!</p>
+          </div>
+        </div>
       )}
     </div>
   );
 };
 
 export default ContactForm;
-
-    
-  
