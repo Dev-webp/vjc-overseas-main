@@ -142,21 +142,18 @@ const ContactForm = () => {
         Submit
       </Button>
 
-      {/* Success Message (Disappears after 3 seconds) */}
+      {/* Success Message (Auto Disappears after 3 seconds) */}
       {isSubmitted && (
-        <p className="fixed bottom-10 left-1/2 transform -translate-x-1/2 bg-green-500 text-white p-3 rounded">
-          Form successfully submitted!
-        </p>
+        <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
+          <div className="bg-white p-4 rounded shadow-lg text-center">
+            <p className="text-black font-semibold">
+              Submission received, we’ll get back to you shortly!
+            </p>
+          </div>
+        </div>
       )}
     </form>
   );
 };
 
 export default ContactForm;
-
-        
-      
-         
-            
-     
-  
