@@ -20,7 +20,7 @@ const ContactPage = () => {
 
   // Function to close the popup when clicking outside
   const closePopup = () => {
-    setIsPopupVisible(false);
+    setIsPopupVisible(false); // Hide the popup
     router.push("/"); // Redirect to home or any other page
   };
 
