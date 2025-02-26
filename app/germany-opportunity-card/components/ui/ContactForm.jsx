@@ -141,16 +141,6 @@ const ContactForm = () => {
         {/* Submit Button */}
         <Button type="submit">Submit</Button>
       </form>
-
-      {/* Success Popup - Disappears after 3 seconds */}
-      {isSubmitted && (
-        <div className="absolute inset-0 flex items-center justify-center">
-          <div className="bg-white shadow-lg rounded-lg p-4 text-center">
-            <p className="text-lg font-semibold">
-              Submission received, we’ll get back to you shortly!
-            </p>
-          </div>
-        </div>
       )}
     </div>
   );
