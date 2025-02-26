@@ -1,17 +1,20 @@
 import React, { useState, useEffect } from 'react';
 import AnimateHeader from "./AnimateHeader";
+import { FaSpinner } from 'react-icons/fa';
 
 const Form = () => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [phone, setPhone] = useState('');
   const [age, setAge] = useState('');
-  const [experience, setExperience] = useState('');  // New state for Experience
-  const [qualification, setQualification] = useState('');  // New state for Qualification
+  const [experience, setExperience] = useState('');
+  const [qualification, setQualification] = useState('');
   const [message, setMessage] = useState('');
   const [formStatus, setFormStatus] = useState(null);
   const [loading, setLoading] = useState(false);
   const [popupVisible, setPopupVisible] = useState(false);
+  const [errorMessage, setErrorMessage] = useState('');
+  const [phoneError, setPhoneError] = useState('');
 
   // Close the success popup after 4 seconds
   useEffect(() => {
@@ -20,22 +23,49 @@ const Form = () => {
         setPopupVisible(false);
       }, 4000);
 
-      return () => clearTimeout(timeout); // Cleanup timeout
+      return () => clearTimeout(timeout);
     }
   }, [popupVisible]);
+
+  const validatePhone = (phone) => {
+    const phoneRegex = /^\d{10}$/;
+    return phoneRegex.test(phone);
+  };
+
+  const handlePhoneChange = (e) => {
+    const value = e.target.value;
+    setPhone(value);
+    if (!validatePhone(value)) {
+      setPhoneError('Please enter a valid 10-digit phone number.');
+    } else {
+      setPhoneError('');
+    }
+  };
+
+  const isFormValid = () => {
+    return (
+      name.trim() !== '' &&
+      email.trim() !== '' &&
+      validatePhone(phone) &&
+      age.trim() !== '' &&
+      experience.trim() !== '' &&
+      qualification.trim() !== '' &&
+      message.trim() !== ''
+    );
+  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    setLoading(true); // Set loading to true when form is being submitted
+    setLoading(true);
 
     const formData = {
       name,
       email,
       phone,
       age,
-      experience,  // Include experience in formData
-      qualification,  // Include qualification in formData
+      experience,
+      qualification,
       message,
     };
 
@@ -54,25 +84,26 @@ const Form = () => {
         setEmail('');
         setPhone('');
         setAge('');
-        setExperience('');  // Clear experience
-        setQualification('');  // Clear qualification
+        setExperience('');
+        setQualification('');
         setMessage('');
-        setPopupVisible(true); // Show success popup
+        setPopupVisible(true);
       } else {
         setFormStatus('error');
+        setErrorMessage('Failed to submit the form. Please try again.');
       }
     } catch (error) {
       console.error('Error:', error.message);
       setFormStatus('error');
+      setErrorMessage('An unexpected error occurred. Please try again.');
     } finally {
-      setLoading(false); // Set loading to false once the request is complete
+      setLoading(false);
     }
   };
 
   return (
     <div className="bg-white p-4 py-2 rounded-lg shadow-md max-w-md mx-auto w-full h-[35rem] md:h-[32rem] lg:h-[32rem] tablet:h-[35rem] shadow-orange-300 mb-6 lg:mb-14">
-      {/* <h2 className="text-2xl font-bold text-center uppercase text-gray-800 mt-0 lg:mt-1">Sign up & Get Germany Assessment</h2> */}
-      <AnimateHeader/>
+      <AnimateHeader />
       <form onSubmit={handleSubmit} className="space-y-4 lg:space-y-3 mt-4 lg:mt-0">
         <div>
           <label htmlFor="name" className="sr-only">Name</label>
@@ -85,6 +116,7 @@ const Form = () => {
             required
             value={name}
             onChange={(e) => setName(e.target.value)}
+            aria-label="Your Name"
           />
         </div>
 
@@ -99,6 +131,7 @@ const Form = () => {
             required
             value={email}
             onChange={(e) => setEmail(e.target.value)}
+            aria-label="Your Email"
           />
         </div>
 
@@ -116,8 +149,10 @@ const Form = () => {
             maxLength={10}
             minLength={10}
             value={phone}
-            onChange={(e) => setPhone(e.target.value)}
+            onChange={handlePhoneChange}
+            aria-label="Phone Number"
           />
+          {phoneError && <p className="text-red-500 text-sm mt-1">{phoneError}</p>}
         </div>
 
         <div>
@@ -131,48 +166,46 @@ const Form = () => {
             required
             value={age}
             onChange={(e) => setAge(e.target.value)}
+            aria-label="Your Age"
           />
         </div>
 
-        {/* Experience Input */}
         <div>
-  <label htmlFor="experience" className="sr-only">Experience</label>
-  <select
-    id="experience"
-    name="experience"
-    className="w-full px-4 py-1.5 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-orange-400 transition"
-    value={experience}
-    onChange={(e) => setExperience(e.target.value)}
-  >
-    <option value="">Select Experience</option> {/* Default option */}
-    <option value="1-2 years">1-2 years</option>
-    <option value="3-5 years">3-5 years</option>
-    <option value="5-7 years">5-7 years</option>
-    <option value="7+ years">7+ years</option>
-  </select>
-</div>
+          <label htmlFor="experience" className="sr-only">Experience</label>
+          <select
+            id="experience"
+            name="experience"
+            className="w-full px-4 py-1.5 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-orange-400 transition"
+            value={experience}
+            onChange={(e) => setExperience(e.target.value)}
+            aria-label="Experience"
+          >
+            <option value="">Select Experience</option>
+            <option value="1-2 years">1-2 years</option>
+            <option value="3-5 years">3-5 years</option>
+            <option value="5-7 years">5-7 years</option>
+            <option value="7+ years">7+ years</option>
+          </select>
+        </div>
 
-
-     {/* Qualification Dropdown */}
-<div>
-  <label htmlFor="qualification" className="sr-only">Qualification</label>
-  <select
-    id="qualification"
-    name="qualification"
-    className="w-full px-4 py-1.5 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-orange-400 transition"
-    value={qualification}
-    onChange={(e) => setQualification(e.target.value)}
-  >
-    <option value="">Select your qualification</option>
-    <option value="High School">High School</option>
-    <option value="Bachelor's Degree">Bachelor&apos;s Degree</option>
-    <option value="Master's Degree">Master&apos;s Degree</option>
-    <option value="Ph.D.">Ph.D.</option>
-    <option value="Diploma">Diploma</option>
-    {/* Add more options as needed */}
-  </select>
-</div>
-
+        <div>
+          <label htmlFor="qualification" className="sr-only">Qualification</label>
+          <select
+            id="qualification"
+            name="qualification"
+            className="w-full px-4 py-1.5 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-orange-400 transition"
+            value={qualification}
+            onChange={(e) => setQualification(e.target.value)}
+            aria-label="Qualification"
+          >
+            <option value="">Select your qualification</option>
+            <option value="High School">High School</option>
+            <option value="Bachelor's Degree">Bachelor&apos;s Degree</option>
+            <option value="Master's Degree">Master&apos;s Degree</option>
+            <option value="Ph.D.">Ph.D.</option>
+            <option value="Diploma">Diploma</option>
+          </select>
+        </div>
 
         <div>
           <label htmlFor="message" className="sr-only">Message</label>
@@ -184,23 +217,36 @@ const Form = () => {
             className="w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-orange-400 transition resize-none"
             value={message}
             onChange={(e) => setMessage(e.target.value)}
+            aria-label="Your Message"
           ></textarea>
         </div>
 
         <button
           type="submit"
-          className="w-full bg-gray-950 text-white py-2 rounded-lg font-semibold hover:bg-saffron transition-all duration-200 shadow-lg"
-          disabled={loading}
+          className="w-full bg-gray-950 text-white py-2 rounded-lg font-semibold hover:bg-saffron transition-all duration-200 shadow-lg flex justify-center items-center"
+          disabled={loading || !isFormValid()}
         >
+          {loading ? (
+            <FaSpinner className="animate-spin mr-2" />
+          ) : null}
           {formStatus === 'success' ? 'Form Submitted!' : loading ? 'Submitting...' : 'Submit'}
         </button>
+
+        {formStatus === 'error' && (
+          <p className="text-red-500 text-sm mt-2 text-center">{errorMessage}</p>
+        )}
       </form>
 
-      {/* Success Popup */}
       {popupVisible && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
-          <div className="bg-white p-6 rounded-lg shadow-lg max-w-md w-full text-center">
+          <div className="bg-white p-6 rounded-lg shadow-lg max-w-md w-full text-center relative">
             <p className="text-xl font-semibold">Submission received, we’ll get back to you shortly!</p>
+            <button
+              onClick={() => setPopupVisible(false)}
+              className="mt-4 bg-gray-950 text-white px-4 py-2 rounded-lg hover:bg-saffron transition-all duration-200"
+            >
+              Close
+            </button>
           </div>
         </div>
       )}
@@ -209,3 +255,16 @@ const Form = () => {
 };
 
 export default Form;
+       
+   
+       
+
+ 
+          
+            
+
+     
+    
+            
+         
+  
